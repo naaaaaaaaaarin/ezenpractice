@@ -258,3 +258,191 @@ vs코드가 기본제공하는 반응형 코딩을 위한 필수코드
   </ul>
   ```
 
+# 21.11.10
+## Tabel(표)
+### 기본 구조
+```
+<table>
+  <tr>
+    <td>1행1열</td>
+    <td>1행2열</td>
+    <td>1행3열</td>
+  </tr>
+  <tr>
+    <td>2행1열</td>
+    <td>2행2열</td>
+    <td>2행3열</td>
+  </tr> 
+</table>
+
+or
+
+table>tr*2>td{1행1열$}*3
+```
+<table border=1px>
+  <tr>
+    <td>1행1열</td>
+    <td>1행2열</td>
+    <td>1행3열</td>
+  </tr>
+  <tr>
+    <td>2행1열</td>
+    <td>2행2열</td>
+    <td>2행3열</td>
+  </tr> 
+</table>
+
+(테이블 태그 안에 border은 안쓰는것이 원칙)
+
+### 셀 합치기, 테이블 제목
+ - colspan(가로합), rowspan(세로합)
+ - caption : 표의 제목. 가운데정렬, 굵게 표시됨
+ - th : th의 형제요소이나 제목 등 강조에 쓰임
+
+ ```
+  <table>
+    <caption>
+      <p>공연 요금표</p>
+    </caption>
+    <tr>
+      <th colspan="3">공연요금</th>
+    </tr>
+    <tr>
+      <td>구분</td>
+      <td>S석</td>
+      <td>VIP</td>
+    </tr>
+    <tr>
+      <td>성인</td>
+      <td>30,000원</td>
+      <td>40,000원</td>
+    </tr>
+    <tr>
+      <td>청소년</td>
+      <td>40,000원</td>
+      <td>60,000원</td>
+    </tr>
+    <tr>
+      <td>소인</td>
+      <td colspan="2">미취학 아동 일반 요금의 50%</td>
+    </tr>
+    <tr>
+      <td rowspan="2">공연시간</td>
+      <td>1회</td>
+      <td>13:00 ~ 15:00</td>
+    </tr>
+    <tr>
+      <td>2회</td>
+      <td>15:00 ~ 17:00</td>
+    </tr>
+  </table>
+  ```
+  <table>
+    <caption>
+      <p>공연 요금표</p>
+    </caption>
+    <tr>
+      <th colspan="3">공연요금</th>
+    </tr>
+    <tr>
+      <td>구분</td>
+      <td>S석</td>
+      <td>VIP</td>
+    </tr>
+    <tr>
+      <td>성인</td>
+      <td>30,000원</td>
+      <td>40,000원</td>
+    </tr>
+    <tr>
+      <td>청소년</td>
+      <td>40,000원</td>
+      <td>60,000원</td>
+    </tr>
+    <tr>
+      <td>소인</td>
+      <td colspan="2">미취학 아동 일반 요금의 50%</td>
+    </tr>
+    <tr>
+      <td rowspan="2">공연시간</td>
+      <td>1회</td>
+      <td>13:00 ~ 15:00</td>
+    </tr>
+    <tr>
+      <td>2회</td>
+      <td>15:00 ~ 17:00</td>
+    </tr>
+  </table>
+
+  ### 테이블의 구분
+  - thead : 표의 머리부분
+  - tbody : 표의 내용
+  - tfoot : 표의 끝부분. 합계 등의 결과값이 있는 내용
+
+  ## 시멘틱 태그
+  - 의미가 있는 구조를 형성하는 태그
+
+  ### header 태그
+   - 웹의 최상단 부분. 로고, 메뉴 등이 포함됨.
+   ```
+   <header>
+    <h1>로고</h1>
+    <nav>  =>네비게이션. 메뉴 등을 나타내는 태그
+      <ul>
+        <li><a href="javascript:void(0)>메뉴 1</a></li>
+        <li><a href="javascript:void(0)>메뉴 2</a></li>
+      </ul>
+    </nav>
+  </header>
+  ```
+
+  ### main 태그
+  - 웹의 내용을 표시하는 부분
+  ```
+  <main>
+    <section>
+      <h2>동물</h2>
+      <article>
+        <ul>
+          <li>강아지</li>
+          <li>고양이</li>
+        </ul>
+      </article>
+    </scetion>
+  </main>
+  ```
+  
+  ### footer 태그
+  - 웹의 하단 내용. 사업자정보, 저작권 등을 나타냄
+  ```
+  <footer>
+    <p>Copyright~~~~ </p>
+  </footer>
+  ```
+
+  ## 가상클래스
+  - 실제로 존재하지 않으나 어떠한 동작에 반응하는 클래스. 스타일태그 혹은 css에서 사용
+
+  클래스 | 효과 | 예
+  :--:|:--:|:--:
+  link | 링크된 글을 누르기 전의 상태 | a:link
+  visited | 링크된 글을 누른 후의 상태 | a:visited
+  hover | 마우스를 올렸을 때의 상태 | a:hover
+  active | 클릭중일 때 나타나는 상태 | a:active 
+  - 순서대로 사용해야 오류가 나지 않음
+<hr>
+
+  ## 멀티미디어 (영상 등)
+  - figure 태그
+    - 멀티미디어 등을 담는 태그. 본문을 설명, 소개하는 용도로 감싸는 태그
+    - figcaption이라는 자식태그를 사용하기도 함. 글로 설명할 때 쓴다. (1회성)
+  - video 태그
+    - 영상을 업로드 할 수 있는 태그
+    - 속성
+     1. controls : 재생, 멈춤 등 영상 컨트롤 UI 표시
+     2. autoplay muted : UI없이 영상 재생
+     3. loop : 무한반복
+     4. poster : 썸네일
+  - iframe 태그
+   - 유튜브 영상을 올릴 수 있는 태그. 유튜브 소스를 붙여넣으면 자동으로 생성된다.
+   - 영상의 크기는 스타일태그 혹은 태그 내의 속성값으로 변경 가능
