@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS3 스타일시트</title>
+    <!-- 1. 내부스타일 -->
+    <style>
+        /* a. 전체전택자 */
+        *{
+            color: red;
+        }
+        /* b. 요소명 선택자 */
+        h1 {
+            color: green;
+        }
+        /* c. 클래스 선택자 */
+        .txt_1 {
+            color: cyan;
+        }
+        .txt_2{
+            color: white;
+            background-color: orange;
+            font-size: 36px;
+        }
+        /* 캐스케이딩 원리 */
+        .txt_2{
+            font-size: 18px;
+            font-weight: bold;
+        }
+        /* d. 아이디 선택자 */
+        #txt_3 {
+            color: magenta;
+            background-color: yellow;
+        }
+        /* 그룹 선택자 */
+        .group, .group1 {
+            background-color: darkgray;
+        }
+        /* 실습 */
+        .txt_4, .txt_5, .txt_6 {
+            font-size: 60px;
+        }
+        .txt_4{
+            color: black;
+        }
+        .txt_5 {
+            color: blue;
+        }
+        .txt_6 {
+            color: brown;
+        }
+    </style>
+    <!-- 3. 외부스타일 -->
+    <!-- <link rel="stylesheet" href="./css/reset.css"> -->
+</head>
+<body>
+    <h1>
+        CSS(Cascading Style Sheet)
+    </h1>
+    <p>
+        웹표준에 의한 웹문서는 디자인과 내용이 분리되어 있습니다.
+    </p>
+    <p>
+        내용과 구조는 HTML을 이용해 구성하고, 디자인은 CSS를 이용해 꾸미는 것 입니다.
+    </p>
+    <!-- 2. 인라인 스타일 -->
+    <h2 style="color:blue;">
+        인라인 스타일시트 적용하기
+    </h2>
+    <h3 class="txt_1">
+        class 스타일시트 
+    </h3>
+    <p>
+        class로 스타일 정의시 구분기호로 <span class="txt_4">.</span>을 사용
+    </p>
+    <!-- 캐스케이딩 원리 -->
+    <h3 class="txt_2">
+        스타일 캐스케이딩 원리
+    </h3>
+    <p>
+        같은 이름의 선택자에 같은 속성명이 정의 되어 있을 때, <br>
+        속성값이 다르다면, 하단에 있는 스타일의 속성값 적용
+    </p>
+    <h3 id="txt_3">
+        ID 스타일시트
+    </h3>
+    <p>
+        id로 스타일 정의시 구분기호로 <span class="txt_5">#</span>을 사용
+    </p>
+    <h3 class="group">
+        그룹선택자
+    </h3>
+    <p class="group1">
+        그룹선택자 구분기호는 <span class="txt_6">,</span>를 사용하여 여러개의 요소를 선택
+    </p>
+</body>
+</html>

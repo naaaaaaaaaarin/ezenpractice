@@ -1,4 +1,4 @@
-# 21.11.08 (1일차)
+# 21.11.08
 
 ## <웹 구동방식> 
 C(client)S(server)방식<br>
@@ -113,7 +113,7 @@ del | 내용삭제 | <del>내용삭제</del>
 ```
 <a href="http://www.naver.com" target="_blank">네이버</a>
 
-# 21.11.09 (2일차)
+# 21.11.09
 ```
 meta name="viewport" content="width=device-width, initial-scale=1.0">
 ```
@@ -292,12 +292,12 @@ table>tr*2>td{1행1열$}*3
   </tr> 
 </table>
 
-(테이블 태그 안에 border은 안쓰는것이 원칙)
+(테이블 태그 안에 border는 안쓰는것이 원칙)
 
 ### 셀 합치기, 테이블 제목
  - colspan(가로합), rowspan(세로합)
  - caption : 표의 제목. 가운데정렬, 굵게 표시됨
- - th : th의 형제요소이나 제목 등 강조에 쓰임
+ - th : td의 형제요소이나 제목 등 강조에 쓰임
 
  ```
   <table>
@@ -447,229 +447,4 @@ table>tr*2>td{1행1열$}*3
    - 유튜브 영상을 올릴 수 있는 태그. 유튜브 소스를 붙여넣으면 자동으로 생성된다.
    - 영상의 크기는 스타일태그 혹은 태그 내의 속성값으로 변경 가능
 
-   # 21.11.11 (목)
-   ## reset css
-  - 브라우저의 기본 css를 초기화하는 설정
-  ```
-  * {
-    margin: 0;
-    padding: 0;
-  }
-  h1, h2 {
-    font-weight: nomal;
-    font-size: 16px; /* 브라우적 기본 폰트사이즈 */
-  }
-  a {
-    text-decoration: none;
-    color: inherit;
-  }
-  li {
-    list-style: none;
-  }
-  igm {
-    vatical-align: top;
-  }
-  .wrap { /* 웹페이지의 중심을 잡는 과정. */
-    width: 960px; /* 원하는 가로사이즈 중심 */
-    margin: 0 auto; /* 가운데정렬하는 코드 */
-  }
-  ```
-  
-  ## HTML5 form 태그
-  - 기본 구조
-  ```
-  <form action="폼을 보낼 서버주소" method="host">
-    <fieldset>
-      <legend>제목</legend>
-      <ul>
-        <li>
-          <label for="id값">내용</label>
-          <input type="text" id="id값" />
-        </li>  
-      </ul>
-    </fieldset>
-  </form>
-  ```
-  - input태그의 type 종류
-    - text: 글자를 쓸 수 있는 박스
-    - password: 비밀번호를 입력하는 박스
-    - tel: 전화번호 입력할 수 있는 박스
-    - file: 파일을 첨부할 수 있는 버튼
-    - email: email을 입력할 수 있는 박스
-    - submit: form태그의 action속성에 있는 서버로 전송하는 버튼
-    - reset: 작성한 모든 것을 리셋하는 버튼
-    - radio: 한가지만 선택할 수 있는 버튼<br>
-    ```
-    <input type="radio" name="동일한이름" value="서버전송값">사용자출력내용
-    ```
-    - checkbox: 다중선택이 가능한 버튼<br>
-    ```
-      <input type="checkbox" name="다른이름" value="서버전송값">사용자출력내용
-    ```
-    - ulr: 사이트 주소를 입력할 수 있는 박스
-    - number: 수량선택이 가능한 박스
-      1. value: 기본값
-      2. min: 최소 수량
-      3. max: 최대 수량
-      4. step: 상승 갯수
-    - date: 날짜선택 창
-    <hr> 
-  - input 태그의 추가 속성
-    - size: 크기
-    - maxlength: 최대 작성가능한 글자 수
-    - minlength: 최소로 작성할 수 있는 글자 수
-    - placeholder: 안내, 예시문구
-    - autocomplete: 자동완성 (on, off)
-    - required: 필수입력요소 속성
-    - disabled : 비활성화 (옅게 처리됨)
-    - readonly : 읽기만 가능하며 임의로 수정할 수 없음
-  - selelt 태그  (데이터 나열)
-  ```
-  <p>
-    <label for="web">웹 퍼블리싱</label>
-  </p>
-  <select id="web" multiple>
-    <option value="html">HTML</option>
-    <option value="css">CSS</option>
-    <option value="javascript">javascript</option>
-  </select>
-  ```
-  - select의 속성값 multiple
-    - 有 : 데이터가 펼쳐져서 보여짐. ctrl, shift로 다중선택 가능.
-    - 無 : 박스형태의 한 줄로 보여지며 클릭 시 아래로 펼쳐짐.
-
-  - optgroup (그룹이 있는 데이터)
-  ```
-  <p>
-    <label for="webdesign">웹퍼블리싱 웹디자인</label>
-  </p>
-  <select id="webdesign">
-    <optgroup label="웹퍼블리싱">
-      <option value="html">HTML</option>
-      <option value="css">CSS</option>
-      <option value="javascript">javascript</option>
-    </optgroup>
-    <optgroup label="웹디자인">
-      <option value="photoshop">photoshop</option>
-      <option value="illust">illustrator</option>
-    </optgroup>  
-  </select>
-  ```
-  - 클릭하여 펼쳤을 때 제목과 내용처럼 그룹이 지어져서 보여짐
-  - <b>웹퍼블리싱</b><br>
-    &nbsp;&nbsp;&nbsp;&nbsp;HTML<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;CSS<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;javascript<br>
-    <b>웹디자인</b><br>
-    &nbsp;&nbsp;&nbsp;&nbsp;photoshop<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;illustrator<br>
-
-  - datalist 태그 : 데이터 목록에 있는 값을 선택하면 텍스트 박스에 자동으로 입력됨
-  ```
-  <label for="interest">관심분야</label>
-  <input type="text" id="interest" list="choice" />
-  <datalist id="choice">
-    <option value="grammer">문법</option>
-    <option value="voca">어휘</option>
-  </datalist>
-  ```
-   <b>grammer</b><br>
-    &nbsp;&nbsp;&nbsp;&nbsp;문법<br>
-    <b>voca</b><br>
-    &nbsp;&nbsp;&nbsp;&nbsp;어휘<br>
-
-  --------- 위 내용 중 하나를 클릭하면 텍스트박스에 문법 혹은 어휘가 작성됨
-
-
-# 21.11.12
-  > margin
-  >> border
-  >>> padding
-  >>>> contens
-  - 컨텐츠(박스)의 구성
-  - text는 위아래 간격이 10px 존재함.
-
-  ## reset css (브라우저 css 리셋)
-  ```
-  * {
-    margin: 0;
-    padding: 0;
-  }
-  .wrap { /* 본문을 가운데정렬 시 id 혹은 클래스값을 설정하여 작성. wrap는 예시 */
-  width: 960px; /* 원하는 본문의 가로너비 */
-  margin: 0 auto /* 위아래 마진0, 좌우 auto로 창 사이즈에 상관없이 중앙정렬 됨 */
-  }
-  h1, h2, h3, h4, h5, h6 {
-    font-weight: nomal;
-    font-size: 16px /* 브라우저 기본 폰트사이즈 */
-  }
-  a {
-    text-decoration: none;
-    color: inherit;
-  }
-  li {
-    list-style: none;
-  }
-  img {
-    vatical-align: top;
-  }
-  ```
-  위 외에도 필요한 리셋 내용이 있으면 추가
-
-
-# 21.11.12
-## CSS
-- Cascading Style Sheet
-- html의 구조를 꾸미는 기능
-- 캐스케이딩 : 위->아래로 데이터를 읽어들임. 동일한 속성값이 있을 경우 아래에 있는 값을 적용함.
-
-### 선택자
-- class :  중복 사용 가능. >.< 으로 사용함
-- id : 중복 사용 불가능. >#< 으로 사용함
-- 선택자 우선순위 : * < 요소명 < class < id < 인라인스타일 < !important
-- !important는 속성값 뒤에 작성하면 됨.
-```
-<style>
-      * {
-          color: blue;
-      }
-      p {
-          color: red;
-      }
-      .txt_2 {
-          color: pink !important;
-      }
-      #txt_1 {
-          color: black;
-      }
-      .txt_3 {
-          color: yellowgreen;
-      }
-  </style>
----------------------------------------------
-  <h1>
-      내용 1
-  </h1>
-  <p id="txt_1" class="txt_2">
-      내용 2
-  </p>
-  <p class="txt_3">
-      내용 3
-  </p>
-  <p class="txt_3" style="color: aqua;">
-      내용 4
-  </p>
-```
-- 내용 1: blue
-- 내용 2: pink
-- 내용 3: yellowgreen
-- 내용 4: aqua
-<hr>
-
-- css파일을 만들어 html에 링크를 걸 수 있음
-- link rel="stylesheet" href="./css/reset.css"
-    - 경로는 css파일이 있는 경로를 작성하면 됨
-
-### 텍스트 중앙정렬 방법
-- text-align: center; /* 텍스트 가운데 정렬 */
-- line-height: ___px; /* 텍스트 중앙 정렬. 해당 요소가 속해있는 영역의 높이 값을 입력 */
+   
