@@ -669,7 +669,72 @@ table>tr*2>td{1행1열$}*3
 - css파일을 만들어 html에 링크를 걸 수 있음
 - link rel="stylesheet" href="./css/reset.css"
     - 경로는 css파일이 있는 경로를 작성하면 됨
+```
+<a href="naver.com>naver</a>
+<a href="googlenaver.com>google</a>
+```
+- a[href^="naver"] {
+  color: purple;
+} : a태그의 속성값에서 naver로 시작하는 것만 선택하여 스타일 변경
+- a[href$=".com'] {
+  color: blue;
+} : a태그의 속성값에서 .com으로 끝나는 것만 선택하여 스타일 변경
+
 
 ### 텍스트 중앙정렬 방법
 - text-align: center; /* 텍스트 가운데 정렬 */
 - line-height: ___px; /* 텍스트 중앙 정렬. 해당 요소가 속해있는 영역의 높이 값을 입력 */
+
+# 21.11.16~21.1119
+## 일러스트 실습
+
+# 21.11.22
+## 폰트 적용방법
+1. @font-face
+    : 사용할 폰트를 파일로 갖고있어야 한다. 웹 브라우저에게 서체와 다운받을 위치를 알려줌.
+      css, style 태그 안에서 사용한다.
+  ```
+  <style>
+    @font-face {
+      font-family: 'trana'
+      src: local('trana')
+          /* MS에서 만든 폰트, font-face 처음 도입 = IE8이하버전 .eot만 인식 */
+           url(폰트경로/trana.eot)
+          /* TTF/OTF 압축버전, 다른 글꼴 형식보다 빠르게 로드 = 웹에서 사용할 목적으로 개발*/
+           url(폰트경로/trana.woff)
+          /* 맥, 윈도우의 가장 일반적인 글꼴. IE8 지원 안됨 | 단점은 용량이 큼 */
+           url(폰트경로/trana.ttf) 
+    }
+  </style>
+  ```
+2. cdn방식 (구글폰트) - 폰트스타일.html, font..css 참고
+    1. link : head안에 link를 사용하여 폰트를 사용하는 방식.
+        - 원하는 폰트와 사이즈를 선택(+select this style)
+        -  link탭에서 두번째 link태그를 복사하여 붙여넣기
+        - css, style 태그 안에서 적용 (font-family~ 복사)
+    2. import: : 스타일태그 내부에 url 적용 후 클래스 등으로 사용 (상단에 모아두기)
+        - 원하는 폰트와 사이즈를 선택(+select this style)
+        - @import 탭 복사하여 붙여넣기
+        - 폰트에 클래스를 부여하여 사용하고싶은 태그에 클래스값 넣기
+
+## 박스모델속성
+- display
+  - block
+  - inline
+  - inline-block : 인라인요소의 특성과 블럭요소의 가로세로값을 가질 수 있는 특성을 다 가짐
+  - display: block, inline, inline-block 등으로 속성값을 바꿀 수 있음
+
+- tip
+  - box-sizing: border-box;   : margin, boder값을 계산하여 자동으로 박스넓이를 계산해줌
+  - css에서 속성값을 부여할 때에는 최하위 요소에게 적용하는 것이 좋음
+  ```
+  <style>
+    ul li a {
+      color: red;
+    }
+  </style>
+  <ul>
+    <li><a href="#">사과</a></li>
+    <li><a href="#">배</a></li>
+  </ul>
+  ```
