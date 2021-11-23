@@ -738,3 +738,26 @@ table>tr*2>td{1행1열$}*3
     <li><a href="#">배</a></li>
   </ul>
   ```
+
+  # 21.11.23(화)
+## float
+- 이미지를 삽화로 삽입하거나 레이아웃을 잡을 때 사용하는 태그.
+- float의 조건
+    1. 너비(width)값을 갖는다.
+    2. float을 설정하면 해제를 해야한다.
+- flaot의 해제방법
+    1. float을 설정한 요소의 부모요소에 `overflow:hidden;` 적용<br>
+       임시방편이므로 잘 사용하지 않는다.
+       >01_float레이아웃.html 참조
+    2. ex)3개의 형제요소 중 위의 2개만 float를 적용할 경우 마지막 형제요소에 `clear:both;`를 적용하여 플롯속성을 해제한다.
+        >01_float레이아웃2.html 참조
+    3. float을 설정한 요소의 부모요소에 가상요소(:after)를 만들어 `clear:both;`를 적용한다.<br>
+       가상요소에는 다음과 같은 속성을 적용한다.
+        ```
+        #content:after {
+            content: ""; /* 빈 내용을 넣음 */
+            display: block; /* 만들어진 가상요소는 인라인요소이므로 블록요소로 바꿔준다 */
+            clear:both; /* clear 속성 : left, right, both */
+        }
+        ```
+        >01_float레이아웃3, 4.html 참조 
