@@ -1,77 +1,64 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+li {
+  list-style: none;
+}
+
+h1, h2, h3 {
+  font-size: 16px;
+}
+a {
+  text-decoration: none;
+  color: #000;
+}
+
 #wrap {
-  width: 600px;
+  width: 900px;
   margin: 0 auto;
-  text-align: center;
-  color: #fff;
+  padding: 20px;
+  background-color: skyblue;
 }
 
-/* 플롯해제 */
-header::after {
-  content: "";
-  display: block;
-  clear: both;
+header {
+  background-color: blue;
 }
-header h1, nav {
-  height: 100px;
-  line-height: 100px;
-  /* 플롯 */
-  float: left;
-}
+
 header h1 {
-  width: 200px;
-  background-color: rosybrown;
-  
-}
-header nav {
-  width: 400px;
-  background-color: salmon;
+  font-size: 40px;
+  font-weight: bold;
 }
 
-/* 플롯해제 */
-main .slide:after {
+main::after{
   content: "";
   display: block;
   clear: both;
 }
-main .slide .slide_left, .slide_right {
-  width: 300px;
-  height: 40px;
-  line-height: 40px;
-  /* 플롯 */
+main h2 {
+  font-size: 30px;
+  font-weight: bold;
+}
+main .main {
+  width: 500px;
   float: left;
-}
-main .slide .slide_left {
-  background-color: goldenrod;
-}
-main .slide .slide_right {
-  background-color: gray;
+  background-color: cyan;
+  margin-top: 20px;
+  padding: 10px;
 }
 
-main .section .sec_left, .sec_center, .sec_right {
+main .side {
   width: 200px;
-  height: 120px;
-  line-height: 120px;
-    /* 플롯 */
-  float: left;
+  float: right;
+  background-color: darkgray;
+  margin-top: 20px;
+  padding: 10px;
 }
-main .section::after{
-  content: "";
-  display: block;
-  clear: both;
-}
-main .section .sec_left {
-  background-color: aquamarine;
-}
-main .section .sec_center {
-  background-color: wheat;
-}
-main .section .sec_right {
-  background-color: khaki;
-}
-
-/* 플롯해제 */
 footer {
-  height: 30px;
-  line-height: 30px;
-  background-color: lawngreen;
+  text-align: center;
+  background-color: gray;
+  margin-top: 20px;
+  padding: 30px;
 }

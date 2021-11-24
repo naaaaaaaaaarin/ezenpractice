@@ -725,7 +725,7 @@ table>tr*2>td{1행1열$}*3
   - display: block, inline, inline-block 등으로 속성값을 바꿀 수 있음
 
 - tip
-  - box-sizing: border-box;   : margin, boder값을 계산하여 자동으로 박스넓이를 계산해줌
+  - box-sizing: border-box; : margin, boder값을 계산하여 자동으로 박스넓이를 계산해줌
   - css에서 속성값을 부여할 때에는 최하위 요소에게 적용하는 것이 좋음
   ```
   <style>
@@ -760,4 +760,5 @@ table>tr*2>td{1행1열$}*3
             clear:both; /* clear 속성 : left, right, both */
         }
         ```
-        >01_float레이아웃3, 4.html 참조 
+        >01_float레이아웃3, 4.html 참조
+    - 플롯 해제 예외 : 플롯을 해제하는 요소에 이미 플롯요소가 있을 경우에는 따로 후처리를 하지 않아도 된다.         
