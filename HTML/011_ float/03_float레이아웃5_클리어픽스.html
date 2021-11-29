@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/font.css">
+    <link rel="stylesheet" href="./css/reset.css">
+    <title>float 기초 실습</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        #wrap {
+            width: 960px;
+            margin: 0  auto;
+            text-align: center;
+            color: #fff;
+        }
+        div {
+            height: 70px;
+            line-height: 70px;
+        }
+        /* 플롯 */
+        header h1, nav {
+            float: left;
+        }
+        header .logo {
+            width: 400px;
+            background-color: orange;
+        }
+        header .gnb {
+            width: 560px;
+            background-color: pink;
+        }
+        /* 플롯해제 */
+        header, main:after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+         /* 플롯 */
+         main .slide .slide_left {
+             float: left;
+             width: 480px;
+             background-color: gray;
+            }
+        /* 플롯 */
+        main .slide .slide_right {
+            float: right;
+            width: 480px;
+            background-color: #000;
+        }
+        /* 플롯 */
+        main .section div {
+            float: left;
+        }
+        main .section .section_left {
+            width: 300px;
+            background-color: red;
+        }
+        main .section .section_center {
+            width: 360px;
+            background-color: green;
+        }
+        main .section .section_right {
+            width: 300px;
+            background-color: blue;
+        }
+        footer {
+            background-color: yellowgreen;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <header class="cf">
+            <h1 class="logo">
+                로고영역
+            </h1>
+            <nav class="gnb">
+                GNB영역
+            </nav>
+        </header>
+        <main>
+            <section class="slide">
+                <div class="slide_left">
+                    슬라이드 왼쪽
+                </div>
+                <div class="slide_right">
+                    슬라이드 오른쪽
+                </div>
+            </section>
+            <section class="section">
+                <div class="section_left">
+                    섹션 왼쪽
+                </div>
+                <div  class="section_center">
+                    섹션 가운데
+                </div>
+                <div  class="section_right">
+                    섹션 오른쪽
+                </div>
+            </section>
+        </main>
+        <footer>
+                하단메뉴
+        </footer>
+    </div>
+</body>
+</html>

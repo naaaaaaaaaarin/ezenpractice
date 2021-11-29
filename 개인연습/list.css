@@ -17,48 +17,34 @@ a {
 }
 
 #wrap {
-  width: 900px;
+  width: 1000px;
   margin: 0 auto;
-  padding: 20px;
-  background-color: skyblue;
+  text-align: center;
+  position: relative;
 }
 
 header {
-  background-color: blue;
+  line-height: 100px;
 }
-
-header h1 {
-  font-size: 40px;
-  font-weight: bold;
-}
-
-main::after{
+header:after {
   content: "";
   display: block;
   clear: both;
 }
-main h2 {
-  font-size: 30px;
-  font-weight: bold;
-}
-main .main {
-  width: 500px;
+header h1{
+  background-color: gray;
   float: left;
-  background-color: cyan;
-  margin-top: 20px;
-  padding: 10px;
+  width: 300px;
+  height: 100px;
+}
+header nav ul {
+  background-color: orangered;
+  float: right;
+  width: 700px;
+  height: 100px;
+}
+header nav ul li {
+  float: left;
+  
 }
 
-main .side {
-  width: 200px;
-  float: right;
-  background-color: darkgray;
-  margin-top: 20px;
-  padding: 10px;
-}
-footer {
-  text-align: center;
-  background-color: gray;
-  margin-top: 20px;
-  padding: 30px;
-}

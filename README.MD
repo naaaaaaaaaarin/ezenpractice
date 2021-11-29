@@ -739,7 +739,7 @@ table>tr*2>td{1행1열$}*3
   </ul>
   ```
 
-  # 21.11.23(화)
+# 21.11.23(화)
 ## float
 - 이미지를 삽화로 삽입하거나 레이아웃을 잡을 때 사용하는 태그.
 - float의 조건
@@ -761,4 +761,433 @@ table>tr*2>td{1행1열$}*3
         }
         ```
         >01_float레이아웃3, 4.html 참조
-    - 플롯 해제 예외 : 플롯을 해제하는 요소에 이미 플롯요소가 있을 경우에는 따로 후처리를 하지 않아도 된다.         
+    - 플롯 해제 예외 : 플롯을 해제하는 요소에 이미 플롯요소가 있을 경우에는 따로 후처리를 하지 않아도 된다.
+
+# 21.11.25 (목)
+## position
+  - 요소의 위치를 지정할 수 있는 기준. 위치값을 가질 수 있다.
+  ```
+          top
+      -----------
+      |   ^y    |
+      |   |     |
+  left|  --->x  |rignt
+      |   |     |
+      -----------
+         bottom
+  ```
+  - +값: 중앙으로 이동함
+  - -값: 외곽으로 이동함
+  - top/bottom, left/right 하나씩만 쓸 수 있다
+  - relative : 자신을 기준으로 이동함 (부모요소에 포지션값을 부여할 때 많이 씀)
+    - 조건 1: 위치 기준값을 알아야 함
+    - 조건 2: hole이 있다.
+    - static과의 차이점: 위치값의 유무
+  - absolute : 부모요소에 포지션값이 있을 때 자유롭게 이동할 수 있다.
+   - hole이 없음
+  - fixed : 브라우저(뷰포트)기준으로 이동하며 스크롤을 이동해도 그 자리에 고정되어있음.
+  - z-index : 포지션의 레이어같은 태그. 숫자가 높을수록 사용자와 가까이 있다.
+
+## background
+- background-image
+  - 요소에 이미지삽입
+  - 기본값: none. 없음
+  - url("경로");
+
+- background-position
+  - 요소의 배경이미지 위치
+  - 방향: top, bottom, left, right, center
+          각 방향의 끝으로 가서 붙음<br>
+          : 방향1 방향2 
+  - 직접지정: px, em, rem 등 <br>
+             : x축 y축
+
+- background-repeat
+  - 기본값: repeat. 반복
+  - no-repeat: 반복없음
+  - repeat-x: 수평반복(→)
+  - repeat-y: 수직반복(↓)
+
+- background-size
+  - 요소의 이미지 크기
+  - 기본값: auto. 이미지 원본크기
+  - 단위: px, em, rem 등
+  - cover: 비율을 유지하며 요소의 더 넓은 부분에 맞춤
+  - contain: 비율을 유지하며 요소의 더 짧은 부분에 맞춤
+>21_배경이미지.html 참고
+
+- background-attachment
+  - 요소의 배경이미지 스크롤 특성
+  - scroll: 이미지가 요소를 따라서 같이 스크롤
+  - fixed: 이미지가 뷰포트에 고정됨. 스크롤x
+
+# 21.11.26(금)
+## prefix
+ - css표준으로 인정되지 않은 것을 각 브라우저별로 적용하여 사용하기 위해 맨 앞에 붙여 사용하는 것
+
+ - -webkit- : safari, chrome, android, ios, webkit 엔진을 사용하는 브라우저
+ - -moz- : Firefox, 모질라 엔진을 사용하는 브라우저
+ - -ms- : 인터넷 익스플로러
+ - -o- : 오페라
+ >22_그라데이션.html 참조
+
+ ## 그라디언트
+1. 선형 그라디언트 : background: linear-gradient(방향|각도(deg) 시작색,중간색--,끝색)
+2. 구형 그라디언트 : background: radial-gradient(circle 속성 부여 시 타원에서 정원이 됨)
+
+## 선택자
+```
+<div id="wrap">
+  <header>
+    <h1>웹퍼블리싱 수업</h1>
+  </header>
+  <p>웹퍼블리싱을 잘 하려면?</p>
+  <p>원리이해, 연습코딩</p>
+  <ul>
+    <li>공부방법
+      <ul>
+        <li>원리이해</li>
+        <li>연습코딩</li>
+      </ul>
+    </li>
+  </ul>
+</div>
+```
+1. 자손선택자(하위선택자)<br>
+  -> #wrap ul
+2. 자식선택자<br>
+  -> #wrap>ul
+3. 인접형제선택자(첫번째 형제만 선택)<br>
+  -> header+p
+4. 형제선택자(모든 형제를 선택)<br>
+  -> header~p
+
+```
+<ul>
+  <li><a href="http://www.daum.net" target="_blank">다음</a></li>
+  <li><a href="http://www.naver.com" target="_blank">네이버</a></li>
+  <li><a href="http://www.google.co.kr" class="portal portal1">구글</a></li>
+  <li><a href="ftp://www.nate.com" class="portal portal1">네이트</a></li>
+</ul>
+```
+1. 일치선택자(=)<br>
+->a[target="_blank"] : 다음, 네이버
+2. 포함선택자(~)<br>
+->a[class~="portal"] : 구글, 네이트
+3. 시작하는 선택자(^)<br>
+->a[href^="http"] : 다음, 네이버, 구글
+4. 끝나는 선택자($)<br>
+->a[href$="net"] : 다음
+5. 모든(값의 일부도 포함)선택자(*)<br>
+->a[href*="www"] : 다음, 네이버, 구글, 네이트
+
+```
+<style>
+  #intro:target {
+    background-color: blue;
+    color: #fff
+  }
+</style>
+
+<ul>
+  <li><a href="#intro">이용안내</a></li>
+</ul>
+<section id="intro">
+  <h2>이용안내</h2>
+  <p>이용안내 내용들~~~~~~~~~~~~~~</p>
+</section>
+```
+#intro 링크가 걸려있는 목록을 선택하면 같은 id값이 있는 곳으로 이동하며 작성한 스타일이 적용된다.
+>25_가상선택자1.html 참조
+
+```
+<form action="#" id="signup">
+  <fieldset>
+      <legend>개인정보</legend>
+      <ul>
+          <li>
+              <label for="a_name">이름</label>
+              <input type="text" id="a_name" required>
+          </li>
+          <li>
+              <label for="a_tel">연락처</label>
+              <input type="tel" id="a_tel">
+          </li>
+      </ul>
+  </fieldset>
+  <fieldset>
+      <legend>객실 형태</legend>
+      <ul>
+          <li>
+              <input type="radio" name="room" id="basic" value="기본2인">
+              <label for="basic">기본형(최대2인)</label>
+          </li>
+          <li>
+              <input type="radio" name="room" id="family" value="가족8인">
+              <label for="family">가족형(최대8인)</label>
+          </li>
+      </ul>
+  </fieldset>
+</form>
+```
+- signup input:checked+label{color: red;}<br>
+: input이 체크가 되면 라벨을 빨갛게 함 (checked는 radio, checkbox 등 특정 요소에만 적용)
+- signup input:not([type=radio]){width:100px; height:20px;}<br>
+: input속성이 radio가 아닌 input요소에 스타일 적용. :hover 등을 붙여쓰기도 함
+>25_가상선택자2.html 참조
+
+## transform
+- 요소의 변환효과 (이동, 회전, 축소, 확대 등)
+- transform: transrale 등으로 씀
+- translate
+  - px단위
+    - translate(x, y) : x, y축으로 이동
+    - translateX(x) : x축으로 이동
+    - translateY(y) : y축으로 이동
+    - scale(x, y): x축, y축으로 크기가 바뀜
+    - scale(숫자) : 숫자의 배수만큼 크기가 바뀜
+  - deg단위
+    - rotate(deg) : 정수(오른쪽회전), 음수(왼쪽회전)
+    - skewX(x): x축으로 기울어짐
+    - skewY(y): y축으로 기울어짐
+>26_트랜스폼.html 참조
+
+## transition
+- 요소의 전환(시작과 끝)효과를 지정하는 단축속성
+- transition: 속성명(property) 지속시간(duration) 타이밍함수(timing-funtion) 대기시간(delay)
+  - 속성명(transition-property)
+    - 전환효과를 적용할 속성 이름을 지정
+    - all: 모든 속성에 적용
+    - ex. trasition: width 1s; ->전환효과 발생 시 가로로 1초동안 바뀜
+  - 지속시간(transition-duration)
+    - 전환효과의 지속시간을 지정
+    - 0s : 전환효과 없음
+    - 시간 : 지속시간(s)를 지정
+    - ex. transition: width .5s; background-color 2s; <br>
+    ->가로가 늘어나는 시간은 0.5초, 배경색이 바뀌는 시간은 2초
+  - 타이밍함수(transition-timing-funtion)
+    - 전환 효과의 타이밍(Easing)함수를 지정
+    - ease: 기본값. 느리게-빠르게-느리게
+    - linear: 일정하게
+    - ease-in: 느리게-빠르게
+    - ease-out: 빠르게-느리게
+    - ease-in-out: 느리게-빠르게-느리게
+  - 대기시간(transition-timing-delay)
+    - 전환효과가 몇 초 뒤에 시작할지 대기시간 지정
+    - 0s: 기본값. 대기시간 없음
+    - 시간 : 대기시간(s) 지정
+>27_트랜지션.html 참조
+
+## animation
+- animation-delay
+  - 엘리먼트가 로드되고 나서 언제 애니메이션이 시작될지 지정합니다.
+  - 초(s)단위. 음수도 가능.
+- animation-direction
+  - 애니메이션이 종료되고 다시 처음부터 시작할지 역방향으로 진행할지 지정합니다.
+  - normal: 반복할 때마다 애니메이션이 시작 상태로 재설정되고 다시 시작함. 기본값.
+  - reverse: 반복할 때마다 애니메이션이 종료 상태로 재설정되고 다시 시작함. 애니메이션 단계가 거꾸로 수행되고 타이밍 기능 또한 반대로 됨. 예를 들어, ease-in 타이밍 기능은  ease-out형태로 변경
+  - alternate: 애니메이션은 매 사이클마다 각 주기의 방향을 뒤집으며, 첫 번째 반복은 정방향으로 진행됩니다. (반복)
+  - alternate-reverse: 애니메이션은 매 사이클마다 각 주기의 방향을 뒤집으며, 첫 번째 반복은 역방향으로 진행됩니다. (역반복)
+- animation-duration
+  - 한 싸이클의 애니메이션이 얼마에 걸쳐 일어날지 지정합니다.
+  - 단위 : 초(s), 밀리초(ms). 음수X
+- animation-iteration-count (en-US)
+  - 애니메이션이 몇 번 반복될지 지정합니다.
+  - infinite:무한 반복
+  - 단위: 정수, 소수
+- animation-name (en-US)
+  - 이 애니메이션의 중간 상태를 지정합니다. 중간 상태는  @keyframes 규칙을 이용하여 기술합니다.
+- animation-play-state (en-US)
+  - 애니메이션을 멈추거나 다시 시작할 수 있습니다.
+- animation-timing-function (en-US)
+  - 중간 상태들의 전환을 어떤 시간간격으로 진행할지 지정합니다.
+- animation-fill-mode
+  - 애니메이션이 시작되기 전이나 끝나고 난 후 어떤 값이 적용될지 지정합니다.
+- @keyframes : 애니메이션 중간중간의 특정 지점들을 거칠 수 있는 키프레임들을 설정
+```
+<style>
+  #box2 {
+    margin: 50px;
+    background-color: purple;
+    animation: ani 1.5s infinite alternate;
+  }
+  @keyframes ani {
+    /* 0%{}
+    25%{}
+    50%{}
+    75%{}
+    100%{} */
+    form {
+        transform: rotate(0deg);
+    }
+    to {
+        background-color: orange;
+        transform: rotate(45deg);
+    }
+  }
+</style>
+
+@keyframes 이름 {
+  from {
+    시작할 애니메이션 설정들
+  }
+  to {
+    끝날 애니메이션 설정들
+  }
+}
+```
+
+# 21.11.29(월) - JavaScript
+## 표기법
+1. dash-case(kebab-case) : '-'로 각 단어를 구분. HTML, CSS
+2. snake_case : '_'로 각 단어를 구분. HTML, CSS
+3. camelCase : 첫 단어만 소문자이고 그 뒤의 단어는 대문자로 표기하여 단어를 구분. JS
+4. PascalCase : 각 단어를 대문자를 사용하여 구분. JS
+
+## html에서의 연결 방법
+```
+<head>
+  <script scr="js파일 경로"></script>
+</head>
+```
+
+## 데이터의 종류
+1. string(문자데이터)
+  - 따옴표를 사용함
+  ```
+  let myMame = "KimAeli";
+  let email = "kal_1991@naver.com";
+
+  console.log(myName); -> KimAeli
+  console.log(email); -> kal_1991@naver.com
+  ```
+2. Number
+  - 정수 및 부동소수점 숫자를 나타냄
+  ```
+  let number= = 123;
+  let opacity = 1.57;
+
+  console.log(number); -> 123
+  console.log(opacity); -> 1.57
+  ```
+3. Boolean (불린데이터)
+  - true, false 두 가지 값만 가진 논리데이터.
+  ```
+  let checked = true; // true = 1 의 값을 가짐
+  let isShow = false; // false = 0 의 값을 가짐
+
+  console.log(checked); -> true
+  console.log(isShow); -> false
+
+  let result = checked == 1; -> 변수 checked에 할당된 값과 숫자1이 같은지(==)를 정의하는 메소드
+    console.log(result); -> checked가 1의 값을 갖고 있으므로 true가 출력됨
+  ```
+4. Undefined
+  - 값이 할당되지 않은 상태
+  ```
+  let undef;
+  let obj = {abc : 123};
+
+  console.log(undef); -> undefined
+  console.log(obj.abc); -> 123 (obj 안에 있는 abc의 데이터를 읽음) 
+  console.log(obj.xyz); -> undefined
+  ```
+5. Null
+  - 어떤 값이 의도적으로 비어있음
+  ```
+  let empty = null;
+  console.log(empty); -> null
+  ```
+6. Object (객체 데이터)    
+  - 여러 데이터를 key:value 형태로 저장. { }
+  ```
+  let user = {
+    name : 'kimaeli',
+    age : 30,
+    isValid : true // isValid(key) : true(value)
+  };
+
+  console.log(user.name) -> kimaeli
+  console.log(user.name) -> 30
+  console.log(user.name) -> true
+  ```
+7. Array (배열데이터)
+  - 여러 데이터를 순차적으로 저장. [ ]
+  ```
+  let fruits = ['Apple', 'Banana', 'Cherry'];
+
+  console.log(fruits[0]) -> Apple
+  console.log(fruits[1]) -> Banana
+  console.log(fruits[2]) -> Cherry
+  ```
+
+## js 기초문법
+1. 기본 작성방법
+    1. 변수선언 <br>
+      ```
+      var box;
+      ```
+    2. 값 할당
+      ```
+      box = "100"; ->string
+      box = 100; ->number
+      ```
+    3. 사용
+      ```
+      console.log(typeof box); -> 값 할당에서 top-down 형식으로 보면 숫자 100이 할당되므로 콘솔에 number이 출력된다. (typeof : 변수의  데이터 종류를 지칭)
+      ``` 
+      <br>
+
+2. 문자열 결합 = +
+  ```
+  var num1, num2;
+  num1 = 10;
+  num2 = 20;
+  var result = num1 + num2;
+  document.write("두 인자의 합은 : " + result + "<br><br>");
+   -> 두 인자의 합은 : 30  (br은 띄어쓰기로 해석됨)
+  ```
+  - document는 html에서의 body를 뜻한다.
+  <br>
+
+3. `<body>`영역에 출력하기
+  ```
+  document.write("<h1>javascript</h1>")
+  -> body 부분에 `<h1>javascript</h1>`이 작성되어 결과적으로는 h1크기의 javascript가 출력된다.
+  ```
+  <br>
+
+4. 데이터 형 변환 : 문자열 ->숫자형
+  ```
+  let com3 = "30";
+  let com4 = "40";
+
+  // 변수 재정의 -> string을 number로 바꿈
+  com3 = Number(com3);
+  com4 = Number(com4);
+
+  let result5 = com3 + com4;
+  document.write("데이터형 변환 : " + result5); -> 데이터형 변환 : 70
+  ```
+  <br>
+
+5. 동적 변수
+  ```
+  alert("입력하신 정보는 사용 후 파기됩니다.");
+  var num = 100;
+  var name = prompt("당신의 이름은 무엇입니까?");
+  var tall = prompt("당신의 키는 몇입니까?");
+  var weight = prompt("당신의 몸무게는 몇입니까?");
+  var result = (tall-num)*0.9;
+  
+  document.write("접속자의 이름은 " + name + "입니다.<br>");
+  document.write("계산식에 사용된 키는 " + tall + "cm입니다.<br>");
+  document.write("계산식에 사용된 몸무게는 " + weight + "kg입니다.<br>");
+  document.write("적정 몸무게는 " + result + "kg입니다.");
+```
+- alert
+  - 경고창을 띄우는 메소드
+  - window의 메소드이며 생략가능
+- prompt
+  - 문자열을 입력받기 위해 사용하는 메소드 (팝업됨)
+  - prompt(팝업메세지, text입력창에 기본값으로 입력되는 문자)

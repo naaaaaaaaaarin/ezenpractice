@@ -1,0 +1,55 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: 'noto sans kr', sans-serif;
+  background-color: #ebedee;
+}
+#wrap {
+  width: 1200px;
+  margin: 0 auto;
+  padding: 76px 60px;
+}
+
+/* Header */
+header {
+  text-align: center;
+  margin-bottom: 36px;
+}
+header h1 {
+  font-size: 52px;
+  color: #b71d43;
+  font-weight: 600;
+  letter-spacing: -2px;
+}
+header p:nth-child(2) {
+  font-size: 12px;
+  color: #b71d43;
+}
+header p:nth-child(3) {
+  font-size: 18px;
+  color: #4f4f51;
+  margin-bottom: 24px;
+}
+/* Secion 공통 css */
+section {
+  color: #3d3d3f;
+  line-height: 2;
+  margin-bottom: 80px;
+}
+section h2 {
+  font-size: 18px;
+  font-weight: 700;
+  color: #b71d43;
+  border-bottom: 1px solid #d1d2d4;
+  padding-bottom: 14px;
+  margin-bottom: 22px;
+}
+section span {
+  font-weight: bold;
+}
+/* Footer */
+footer {
+  text-align: center;
+  color: #b71d43;
+}

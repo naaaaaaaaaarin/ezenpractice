@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>
+    변수 : 변할 수 있는 데이터 | 선언-> 초기값 할당 -> 사용
+  </title>
+  <script>
+    // 1. 변수선언
+    var box;
+    // 2. 값 할당
+    box = "100";
+    box = 100;
+    // 3. 사용
+    console.log(typeof box);
+    // 문자열 결합 = +
+    document.write("변수에 할당된 데이터는 : " + box + "<br><br>");
+    document.write("변수에 할당된 데이터는 : " + box + "<br><br>");
+
+    // 변수선언
+    var num1, num2;
+    num1 = 10;
+    num2 = 20;
+    var result = num1 + num2;
+    document.write("두 인자의 합은 : " + result + "<br><br>");
+
+    // 실습
+    var number1, number2;
+    number1 = 50;
+    number2 = 80;
+    var result2 = number1 + number2
+    document.write("계산의 결괏값은 " + result2 + " 입니다.")
+
+    // B. <body>영역에 출력하기
+    document.write("<h1>javascript</h1>")
+
+    // C. 논리형 데이터 = true, false
+    var bool = true; // true : 1과 같음
+    var bool2 = false; // false : 0과 같음
+    // == : 같다의 뜻 
+    var result3 = bool == 1;
+    console.log(result3);
+
+    // D. 데이터형 변환 = 자바스크립트의 자동 형변환
+    var com1 = 10;
+    var com2 = 20;
+    var com3 = "30";
+    var com4 = "40";
+    var com5 = true;
+    var com6 = false;
+    console.log("com5의 데이터 유형은 : " + typeof com5 + " 입니다.");
+
+    // (중요)데이터형이 하나라도 문자열일 경우 [+연산]일 때 문자열 결합으로 연산된다.
+    var result4 = com2 + com4;
+    document.write('문자열 결합 : ' + result4 + "<br><br>")
+
+    // 데이터 형 변환 : 문자열 ->숫자형
+    // 변수 재정의
+    com3 = Number(com3);
+    com4 = Number(com4);
+    var result5 = com3 + com4;
+    document.write("데이터형 변환 : " + result5)
+  </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="./css/font.css">
+	<link rel="stylesheet" href="./css/reset.css">
+	<link rel="stylesheet" href="./css/플롯실습1.css">
+	<title>플롯실습</title>
+	<style>
+		.wrap {
+			width: 960px;
+			margin: 0 auto;
+			background-color: #50b5ea;
+			padding: 20px;
+		}
+		header {
+			background-color: #2b51b5;
+			padding: 20px;
+			margin-bottom: 20px;
+		}
+		header h1 {
+			font-size: 32px;
+		}
+		/* 플롯해제 */
+		#container::after {
+			content: "";
+			display: block;
+			clear: both;
+		}
+		#contents {
+			width: 620px;
+			background-color: #50eaea;
+			padding: 20px;
+			margin-bottom: 20px;
+			/* 플롯 */
+			float: left;
+		}
+		#sidebar {
+			width: 220px;
+			background-color: #eee;
+			padding: 20px;
+			margin-bottom: 20px;
+			/* 플롯 */
+			float: right;
+		}
+		#footer {
+			background-color: #b9ccd8;
+			padding: 20px;
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+	<!-- <div id="wrap">
+		<header>
+			<h1>사이트 제목</h1>
+		</header>
+		<main>
+			<section class="main_text">
+				<h2>
+					본문
+				</h2>
+				<p>
+					HTML(HyperText Markup Language)은 웹을 이루는 가장 기초적인 구성 요소로, 웹 콘텐츠의 의미와 구조를 정의할 때 사용합니다. HTML 이외의 다른 기술은
+					일반적으로 웹 페이지의 모양/표현 (CSS), 또는 기능/동작 (JavaScript)을 설명하는 데 사용됩니다.
+					"Hypertext(하이퍼텍스트)"란 웹 페이지를 다른 페이지로 연결하는 링크를 말합니다. 링크는 웹의 근본적인 속성으로, 인터넷에 자료를 올리고 다른 사람이 만든 페이지로
+					링크함으로써 여러분도 월드 와이드 웹 세계의 능동적인 일원이 될 수 있습니다.
+				</p>
+			</section>
+			<section class="side_bar">
+				<h2>
+					사이드바
+				</h2>
+				<p>
+					HTML 요소는 대소문자를 구분하지 않습니다.(소문자사용 추천)
+				</p>
+			</section>
+		</main>
+		<footer>
+			copyright all right reserved.
+		</footer>
+	</div> -->
+
+	<div class="wrap">
+		<header>
+			<h1>사이트제목</h1>
+		</header>
+		<section id="container">
+			<article id="contents">
+				<h2>본문</h2>
+				<p>
+					HTML (Hypertext Markup Language,하이퍼텍스트 마크업 언어)는 프로그래밍 언어는 아니고, 우리가 보는 웹페이지가 어떻게 구조화되어 있는지 브라우저로 하여금 알 수 있도록 하는 마크업 언어입니다.
+				</p>
+				<p>
+					이는 개발자로 하여금 복잡하게도 간단하게도 프로그래밍 할 수 있습니다. HTML은 elements로 구성되어 있으며, 이들은 적절한 방법으로 나타내고 실행하기 위해 각 컨텐츠의 여러 부분들을 감싸고 마크업 합니다.
+				</p>
+			</article>
+			<aside id="sidebar">
+				<p>
+					HTML 요소는 대소문자를 구분하지 않습니다.(소문자사용 추천)
+				</p>
+			</aside>
+		</section>
+		<footer id="footer">
+			copyright all right reserved.
+		</footer>
+	</div>
+
+</body>
+
+</html>

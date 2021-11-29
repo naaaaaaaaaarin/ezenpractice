@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/reset.css">
+    <title>포지션 absolute</title>
+    <style>
+        #wrap {
+            width: 300px;
+            height: 300px;
+            border: 1px solid #ccc;
+            position: relative;
+        }
+        .box {
+            width: 50px;
+            height: 50px;
+            background-color: #0094ff;
+            position: absolute;
+        }
+        #box1 {
+            background-color: red;
+        }
+        #box2 {
+            background-color: green;
+            top: 0;
+            right: 0;
+        }
+        #box3 {
+            background-color: purple;
+            top: 125px;
+            left: 125px;
+        }
+        #box4 {
+            background-color: blue;
+            bottom: 0;
+        }
+        #box5 {
+            background-color: gray;
+            bottom: 0;
+            right: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrap">
+        <div class="box" id="box1"></div>
+        <div class="box" id="box2"></div>
+        <div class="box" id="box3"></div>
+        <div class="box" id="box4"></div>
+        <div class="box" id="box5"></div>
+    </div>
+</body>
+
+</html>
