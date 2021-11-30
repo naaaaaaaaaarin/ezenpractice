@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+    <title>웹퍼블리싱 평가</title>
+    <script>
+        alert("HELLO javaScript");
+    </script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            font-size: 0.8em;
+            line-height: 1.5em;
+            color: #666666;
+            box-sizing: border-box;
+        }
+
+        h1 {
+            font-size: 16px;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        #wrap {
+            width: 960px;
+            margin: 30px auto;
+
+        }
+
+        .logo h1 {
+            text-transform: uppercase;
+            font-family: 'Oswald', sans-serif;
+            color: black;
+            font-size: 3em;
+            line-height: 150%;
+            margin-bottom: 20px;
+        }
+
+        header nav ul {
+            display: flex;
+            justify-content: center;
+        }
+
+        header nav ul li {
+            padding-right: 16px;
+            font-size: 20px;
+        }
+        header nav ul li:hover {
+            color: red;
+        }
+
+        header nav ul li:last-child {
+            padding-right: 0;
+        }
+
+        header .topimg img {
+            border: 10px solid #fff;
+            box-shadow: 5px 5px 20px #000;
+            margin: 30px 0;
+        }
+
+        main fieldset {
+            margin: 20px 30px;
+        }
+
+        main ul {
+            padding: 10px;
+        }
+
+        main ul li {
+            padding: 5px;
+        }
+        main textarea {
+            margin: 10px;
+        }
+
+        main button {
+            padding: 12px;
+            margin-bottom: 20px;
+        }
+
+        main .button .sub {
+            background: darkgray;
+        }
+
+        main .button .re {
+            background: silver;
+        }
+
+        footer {
+            position: relative;
+        }
+
+        footer .bottom h2 {
+            font-size: 30px;
+            color: aquamarine;
+            position: absolute;
+            top: 10%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrap">
+        <header>
+            <div class="logo">
+                <h1>logo</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#">COMPANY</a></li>
+                    <li><a href="#">VISION</a></li>
+                    <li><a href="#">PROTOFOLIO</a></li>
+                    <li><a href="#">REQUEST</a></li>
+                </ul>
+            </nav>
+            <div class="topimg">
+                <img src="https://cdn.pixabay.com/photo/2021/11/25/09/27/building-6822998_960_720.jpg" alt="프로필사진">
+            </div>
+            <div>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dignissimos adipisci debitis ea quaerat
+                aspernatur consequatur qui odio porro facere? Eum rem quo, suscipit placeat tempora maiores dolores
+                illo. Quos, sunt!
+            </div>
+        </header>
+        <main>
+            <section>
+                <article>
+                    <form action="#">
+                        <fieldset>
+                            <legend>Log-in</legend>
+                            <ul>
+                                <li><label for="ID">ID</label>
+                                    <input type="text" id="ID" value="ID를 입력하세요"></li>
+                                <li><label for="PW">PASSWORD</label>
+                                    <input type="text" id="PW" value="비밀번호를 입력하세요"></li>
+                            </ul>
+                        </fieldset>
+                        <fieldset>
+                            <legend>Wep-Part</legend>
+                            <ul>
+                                <li>
+                                    <input type="radio" name="web" id="w_1">
+                                    <label for="w_1">Web publishing</label>
+                                </li>
+                                <li>
+                                    <input type="radio" name="web" id="w_2">
+                                    <label for="w_2">Web Designer</label>
+                                </li>
+                                <li>
+                                    <input type="radio" name="web" id="w_3">
+                                    <label for="w_3">Web Planner</label>
+                                </li>
+                            </ul>
+                        </fieldset>
+                        <fieldset>
+                            <legend>Comment</legend>
+                            <textarea name="memo"  cols="50" rows="5"></textarea>
+                        </fieldset>
+                    </form>
+                    <div class="button">
+                        <button type="submit" class="sub">submit</button>
+                        <button type="reset" class="re">reset</button>
+                    </div>
+                </article>
+            </section>
+        </main>
+        <footer>
+            <div class="bottom">
+                <h2>EZEN COMPUTER ACADEMY</h2>
+                <img src="https://cdn.pixabay.com/photo/2021/11/26/20/44/lantern-6826687_960_720.jpg" alt="하단이미지">
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>

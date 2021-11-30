@@ -1,0 +1,76 @@
+body {
+  font: 14px/1.5 'Noto Sans KR', sans-serif;
+  color: #333;
+}
+
+#wrap {
+  width: 800px;
+  margin: 0 auto;
+  background-color: #ccc;
+}
+header {
+  background-color: #123456;
+  padding: 10px 0;
+}
+header h1 {
+  text-align: center;
+  font: bold 30px 'Noto Serif KR', serif; 
+  color: #cc0;
+}
+header h1 strong {
+  font-size: 300%;
+  color: #ffd;
+}
+
+header h1 span {
+  font-size: 150%;
+}
+header h1 em {
+  font-size: 200%;
+}
+
+section:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+/* 플롯 */
+section nav {
+  float: left;
+}
+section nav .lnb {
+  width: 200px;
+  padding: 20px;
+}
+section nav .lnb li{
+  padding: 8px 0;
+}
+section nav .lnb li a:hover{
+  color: #662;
+  border-bottom: 1px dashed #662;
+}
+
+section #contents_wrap {
+  width: 600px;
+  background-color: #fff;
+  /* 플롯 */
+  float: right;
+}
+section #contents_wrap h2 {
+  font: bold 24px 'Noto Serif KR', serif;
+  color: yellow;
+  background-color: #800;
+  padding: 10px 20px;
+}
+section #contents_wrap p {
+  padding: 20px;
+  text-align: justify;
+}
+
+footer {
+  background-color: #aaa;
+  color: #000;
+  padding: 10px 20px;
+  text-align: center;
+}

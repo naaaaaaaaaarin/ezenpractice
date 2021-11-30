@@ -1083,7 +1083,7 @@ table>tr*2>td{1행1열$}*3
     console.log(result); -> checked가 1의 값을 갖고 있으므로 true가 출력됨
   ```
 4. Undefined
-  - 값이 할당되지 않은 상태
+  - 값이 할당되지 않은 상태. 0의 값을 가진다
   ```
   let undef;
   let obj = {abc : 123};
@@ -1093,7 +1093,7 @@ table>tr*2>td{1행1열$}*3
   console.log(obj.xyz); -> undefined
   ```
 5. Null
-  - 어떤 값이 의도적으로 비어있음
+  - 어떤 값이 의도적으로 비어있음. 초기 설정값으로 많이 쓰임
   ```
   let empty = null;
   console.log(empty); -> null
@@ -1191,3 +1191,113 @@ table>tr*2>td{1행1열$}*3
 - prompt
   - 문자열을 입력받기 위해 사용하는 메소드 (팝업됨)
   - prompt(팝업메세지, text입력창에 기본값으로 입력되는 문자)
+
+# 21.11.30(화)
+1. 산술연산자
+  ```
+  var num1 = 10;
+  var num2 - 3;
+  result = num1 + num2;
+        document.write("두 수의 합은? " + result + "입니다.<br>");
+        result = num1 - num2;
+        document.write("두 수의 차는? " + result + "입니다.<br>");
+        result = num1 * num2;
+        document.write("두 수의 곱은? " + result + "입니다.<br>");
+        result = num1 / num2;
+        document.write("두 수의 나눈값은? " + result + "입니다.<br>");
+  // % : 나머지값을 구할 때 씀      
+  result = num1%num3;
+  document.write("두 수의 나머지값은? " + result + "입니다.<br>");
+  ```
+
+2. 복합대입연산자 : 기존 Data에 변수값 추가. 변수명을 한번만 사용하여 Data를 누적시키기 위해 사용
+  ```
+  var num1 = 10;
+  var num2 = 3;
+  var result = null;
+
+  num1 += num2; // num1 = num1 + num2; -> 13
+  num1 -= num2; // num1 = num1 - num2; -> 10
+  num1 *= num2; // num1 = num1 * num2; -> 30
+  num1 %= num2; // num1 = num1 % num2; -> 0
+  ```
+
+3. 증감연산자
+  ```
+  var num1 = 10;
+  var num2 = 20;
+  var result = null;
+
+  num1--; // 10-1 = 9
+  num1++; // 9+1 = 10
+
+  // 1. 증감연산자 전위(前位) : 초기값을 처음에 사용하고 싶을 때 사용
+  result = num2++;
+  document.write("증감연산자 전위(前位) : " + result + "<br>"); // result:20, num2:21
+  document.write("증감연산자 전위(前位) : " + num2 + "<br>"); // result:20, num2:21
+
+  // 1. 증감연산자 후위(後位) : 연산이 바로 적용
+  result = ++num2;
+  document.write("증감연산자 후위(後位) : " + result + "<br>"); // result:22, num2:22
+  document.write("증감연산자 후위(後位) : " + num2 + "<br>"); // result:22, num2:22
+  ```
+
+4. 비교연산자
+  ```
+  var a = 10;
+  var b = 20;
+  var c = 10;
+  var d = "20";
+  var result = null;
+
+  // 비교연산자
+  result = a > b; // false
+  result = a < b; // true
+  result = a >= c; // true
+  // 데이터형과 상관없이 같은 숫자일 경우 true 반환
+  result = b == d; // true
+  // 데이터형까지 일치해야 true 반환
+  result = b === d; // false
+  // not. 데이터형과 상관없이 같은 숫자일 경우 false 반환
+  result = b != d; // false
+  // not. 데이터형까지 일치해야 true 반환
+  result = b !== d; // true
+  ```
+
+5. 논리연산자
+  ```
+  var a,b,c,d,result;
+  a = 10;
+  b = 20;
+  c = 0;
+  d = "javascript"
+  result = null;
+
+  // 1. 논리연산자(논리합) : ||  논리식 중 하나라도 true면 true
+  result = b > a || b <= c || a > c; // true
+  
+  // 2. 논리연산자(논리곱) : &&  논리식 중 모두 true면 true
+  result = a <= b && b >= c && c < a // true
+
+  // 3. 논리연산자(논리부정) : ! not 단향연산자 = 부정
+  result = !(a > b) // true
+  
+
+  // 삼향조건연산자
+  // 형식 
+    : 조건식?js코드(조건식값이 true일 경우 실행):js코드2(조건식값이 false일 경우 실행);
+
+  var int = 10;
+  var int2 = 20;
+  var tf = int>int2?'true일 경우 실행':'false일 경우 실행';
+  document.write(tf + "<br><br>")
+
+  // 삼향조건연산자 실습
+  var cf = confirm("자바스크립트 어렵나요?");
+  var rf = cf?'Yes':'No';
+  document.write("자바스크립트 어렵나요?" + rf);
+  ```
+
+  
+
+
