@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>if문 실습</title>
+    <script>
+        /* 실습1. (프롬프트)나이를 입력받아,
+               만약 40세 이상이면 (경고창)"건강검진대상", 아니면 (경고창)"건강검진대상 아님" */
+         /* var age = Number(prompt("나이를 입력하세요", 40));
+         
+         if(age >= 40) {
+             alert("건강검진대상");
+         } else {
+             alert("건강검진대상 아님");
+         } */
+
+
+         /* 실습2. (프롬프트)나이를 입력받아,
+            만약 19세 이상 45세 미만이면(경고창)"서류심사통과", 아니면 (경고창)"서류심사보류" */
+
+         /* var age = Number(prompt("나이를 입력하세요"));
+
+         if(age>=19 && age<45) {
+             alert("서류심사통과");
+         } else {
+             alert("서류심사보류");
+         } */
+
+
+        /* 실습3. (프롬프트)ID를 입력받아,
+            만약 ID가 입력되면 (브라우저)"???님 반갑습니다", 아니면 (경고창)"ID를 입력하세요" */
+         var ID = prompt("아이디를 입력하세요");
+
+         if(ID){
+             document.write(ID + "님 반갑습니다");
+         } else {
+            alert("ID를 입력하세요")
+            location.reload();
+         }
+     </script>
+</head>
+<body>
+    
+</body>
+</html>

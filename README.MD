@@ -1298,6 +1298,137 @@ table>tr*2>td{1행1열$}*3
   document.write("자바스크립트 어렵나요?" + rf);
   ```
 
+  # 21.12.01(수)
+## 단일if문
+```
+if(조건식=true, false -> true일 경우만 실행){
+    실행문;
+}
+```
+- 점수를 입력받아 60점 이상이면 합격, 아니면 불합격 체크 
+```
+var score = Number(prompt("당신의 시험점수는 몇점입니까?"));
+if(score >= 60) {
+    alert("필기합격");
+}if(score < 60) {
+    document.write("필기불합격");
+}
+```
+- 홀수, 짝수 구분
+```
+var num = prompt("숫자를 입력하세요");
+num = Number(num);
+if (num%2 == 0){
+    alert("짝수입니다.");
+} if (num%2 == 1){
+    alert("홀수입니다.");
+}
+```
+---
+
+## if~else문
+```
+if(조건식=true, false -> true일 경우만 실행){
+    (true 실행문);
+}else {
+    (false 실행문);
+}
+```
+- if~else문을 이용한 홀수, 짝수 구분
+```
+var num = prompt("숫자를 입력하세요");
+num = Number(num);
+if(num%2==0){
+    alert("짝수")
+}else{
+    alert("홀수")
+}
+```
+- false가 되는 경우 : 0, null, undefined, ""
+```
+if(0){
+    alert("true일 때 실행")
+}else{
+    alert("false일 때 실행")
+}
+```
+- 19세 이상 45세 미만이면(경고창)"서류심사통과", 아니면 (경고창)"서류심사보류"
+```
+var age = Number(prompt("나이를 입력하세요"));
+
+if(age>=19 && age<45) {
+    alert("서류심사통과");
+} else {
+    alert("서류심사보류");
+}
+```
+- ID가 입력되면 (브라우저)"???님 반갑습니다", 아니면 (경고창)"ID를 입력하세요"
+```
+var ID = prompt("아이디를 입력하세요");
+
+if(ID){
+    document.write(ID + "님 반갑습니다");
+} else {
+    alert("ID를 입력하세요");
+    location.reload(); //location 객체 : 브라우저 관련 속성과 메서드 제공 ex)reload() = 새로고침
+}
+```
+- 국어, 영어, 수학점수를 입력받아 만약 3과목 평균이 80점이상이고, 각 과목의 점수가 60점 이상이면
+  (경고창)"시험통과", 아니면 (경고창)"재시험"
+- 모든 결과값은 함수에 넣어 사용하는것이 좋다. (score, result 참고)
+```
+var korean = Number(prompt("국어점수를 입력하세요"));
+var english = Number(prompt("영어점수를 입력하세요"));
+var math = Number(prompt("수학점수를 입력하세요"));
+
+var score = (korean+english+math)/3;
+var result = score>=80 && korean>=60 && english>=60 && math>=60 ;
+
+if(result) {
+    alert("시험통과");
+}else {
+    alert("재시험");
+}
+```
+---
+## else if문
+- 90점 이상(A학점), 80점 이상(B학점), 70점 이상(C학점), 60점 이상(D학점), 60점 미만(재수강) 
+```
+var grade = Number(prompt("점수입력", 0));
+if(grade >= 90){
+    alert('A학점');
+}else if(grade >= 80){
+    alert('B학점');
+}else if(grade >=70){
+    alert('C학점');
+}else if(grade >=60){
+    alert('D학점');
+}else{
+    alert('재수강');
+    location.reload();
+}
+```
+---
+## 중첩 if문
+- ID가 맞으면 PW를 입력할 수 있는 구조
+```
+var dbId = 'ezen';
+var dbPw = '1234';
+
+var id = prompt('ID 입력', 'ezen');
+if(dbId == id) {
+    var pw = prompt('pw 입력', '1234');
+    if(pw=='1234') {
+        alert('로그인 성공');
+    }else{
+        alert('로그인실패');
+    }
+}else {
+    alert('ID가 맞지 않음');
+}
+```
+
+
   
 
 
