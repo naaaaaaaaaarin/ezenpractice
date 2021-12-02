@@ -1283,7 +1283,7 @@ table>tr*2>td{1행1열$}*3
   result = !(a > b) // true
   
 
-  // 삼향조건연산자
+  // 삼항조건연산자
   // 형식 
     : 조건식?js코드(조건식값이 true일 경우 실행):js코드2(조건식값이 false일 경우 실행);
 
@@ -1428,7 +1428,120 @@ if(dbId == id) {
 }
 ```
 
+# 21.12.02
+## 선택문 : switch~case문
+- 형식
+```
+switch (조건문) {
+  case n: //조건값 일치 여부
+      실행문;
+      berak; // 조건이 만족된 후 마치기 위해 꼭 사용
+  default; // 위 조건값이 모두 false일 경우
+      실행문;
+```      
+1.  입력받은 수가 홀수인지 짝수인지 판별
+```
+var num = Number(prompt("숫자를 입력하세요.", "정수입력"));
 
-  
+switch(num%2){
+    case 0:
+        alert("짝수");
+        break;
+    case 1:
+        alert("홀수");
+        break;
+    default:
+        alert("숫자가 아닙니다.");
+}
+```
+2. 포털사이트 접속하기
+```
+var site = prompt('구글, 네이버, 다음 중 하나 입력','구글');
+var url = "";
 
+switch(site){
+    case "구글":
+        url = "http://google.co.kr"; // 문자열 변수 할당
+        break;
+    case "네이버":
+        url = "http://naver.com";
+        break;
+    case "다음":
+        url = "http://daum.net";
+        break;
+    default:
+        alert('다시 입력하세요');
+        location.reload();
+}
+console.log('site'); 
+if(url){
+    location.href = url; // 해당 사이트 주소로 이동
+}
+```
+3. 지역명 '서울', '경기도', '부산' 중 하나를 입력받아, 서울일 경우 지역번호 02, 경기도 031, 부산 051을 데이터로 사용<br>
+그 외 데이터 입력시 (경고창)"다시 입력하세요" 출력
+```
+var area = prompt("지역명을 입력하세요");
+var tel = "";
 
+switch(area){
+    case '서울':
+        tel = '02';
+        break;
+    case '경기도':
+        tel = '031';
+        break;
+    case '부산':
+        tel = '051';
+        break;
+    default:
+        alert('다시 입력하세요');
+}
+console.log(area);
+document.write(area + "의 지역번호는 " + tel + "입니다." );
+```
+<hr>
+
+## 반복문 : while문(거의 안씀)
+- 기본구조
+```
+// 1. 초기값
+var i = 1;
+// 2. 조건식
+while(i<=5){
+    document.write("안녕하세요" + i + "<br>")
+    // 3. 증감식
+    i++;
+}
+```
+<hr>
+
+## 반복문: for문(연속된 숫자)
+- 기본구조
+```
+for(초기값;조건식;증감식){
+    실행문;
+```
+1. (초기값)0, (브라우저)for문 반복 횟수 5번 나오도록 코딩
+```
+for(var i=0;i<=4;i++){
+    document.write('for문 반복 횟수: ' + i + '번<br>');
+```
+2. `<h1>~</h6>` 순으로 (브라우저) 각 태그별로 문자열 '웹퍼블리싱'이 나오도록 코딩
+```
+for(var i=1;i<=6;i++){
+    document.write("<h" + i + ">" + "웹퍼블리싱" + "</h" + i + ">");
+```
+2. `<h6>~<h1>` 순으로 (브라우저) 각 태그별로 문자열 '웹퍼블리싱'이 나오도록 코딩
+```
+for(var i=6;i>=1;i--){
+    document.write("<h" + i + ">" + "웹퍼블리싱" + "</h" + i + ">");
+```    
+3. 구구단 출력
+```
+var dan, i, result
+dan = prompt("원하는 구구단 단수를 입력하세요","2~9");
+for(i=1;i<=9;i++){
+    result = dan*i;
+    document.write("<h1>" + dan + "단</h1>" + dan +'x' + i + "=" + result);
+```

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>조건문 종합실습</title>
+    <script>
+        /* A. 삼향조건 연산자
+        실습1. (프롬프토)이름, 신장, 몸무게를 입력받아
+        적정체중이 아니면 ???님 건강을 위해 체중관리 요망, 적정체중이면 ???님 건강관리 잘 하셨네요
+        (브라우저) */
+        var num = 100
+        var name = prompt("당신의 이름은?", "김애리");
+        var tall = Number(prompt("당신의 신장은?", "160"));
+        var weight = Number(prompt("당신의 몸무게는?", "50"));
+        var avr = (tall-100)*0.9;
+        var result = avr<weight?"님 건강을 위해 체중관리 요망<br>":"님 건강관리 잘 하셨네요<br>"
+        document.write(name + result);
+
+        /* 실습2. (프롬프트) 1월~3월 급여를 입력받아 3개월 평균 급여가
+        1000 이상이면 고소득자, 1000 미만이면 평균임금자 (브라우저) */
+        var pay_1 = Number(prompt("1월 급여", 1000));
+        var pay_2 = Number(prompt("2월 급여", 2000));
+        var pay_3 = Number(prompt("3월 급여", 3000));
+        var pay_avr = (pay_1+pay_2+pay_3)/3;
+        var pay_result = pay_avr>=1000?"고소득자<br>":"평균임금자<br>";
+        document.write(pay_result);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS JS 실습</title>
+    <style>
+        body {
+            background-color: #0c3268;
+            color: silver;
+            text-align: center;
+        }
+        span {
+            color: yellow;
+            font-size: 30px;
+        }
+    </style>
+    <script>
+        var part = prompt("1-웹디자인, 2-웹개발, 3-웹기획  중 숫자 하나 선택", "1");
+        var cls = "";
+        var num = "";
+
+        switch(part) {
+            case "1":
+                cls = "웹디자인"
+                num = "401호";
+                break;
+            case "2":
+                 cls = "웹개발"
+                num = "402호";
+                break;    
+            case "3":
+                cls = "웹기획"
+                num = "403호";
+                break;
+            default:
+                alert('다시 입력하세요');
+        }
+        document.write(cls + " 섹션은 " + "<span>" + num + "</span>" + "에서 진행")
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
