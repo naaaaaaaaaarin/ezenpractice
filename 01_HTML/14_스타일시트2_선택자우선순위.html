@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>스타일시트 우선순위</title>
+    <style>
+        * {
+            color: blue;
+        }
+        p {
+            color: red;
+        }
+        .txt_2 {
+            color: pink !important;
+        }
+        #txt_1 {
+            color: black;
+        }
+        .txt_3 {
+            color: yellowgreen;
+        }
+    </style>
+</head>
+<body>
+    <h1>
+        선택자 우선 순위
+    </h1>
+    <p id="txt_1" class="txt_2">
+        선택자에는 우선 순위가 있음
+    </p>
+    <p class="txt_3">
+        내용 1
+    </p>
+    <p class="txt_3" style="color: aqua;">
+        내용 2
+    </p>
+
+    <h2>
+        선택자 우선순위
+    </h2>
+    <ol>
+        <li>!important</li>
+        <li>인라인 스타일</li>
+        <li>#id 선택자</li>
+        <li>.class 선택자</li>
+        <li>요소명 선택자</li>
+        <li>*전체 선택자</li>
+    </ol>
+</body>
+</html>

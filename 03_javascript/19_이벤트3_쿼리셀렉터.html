@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/reset.css">
+    <title>QuerySelect 이벤트 DOM</title>
+    <style>
+        ul {
+            width: 500px;
+            margin: 10px auto;
+        }
+        li {
+            width: 120px;
+            border: 1px solid #ccc;
+            border-radius: 14px;
+            padding: 10px 14px;
+            text-align: center;
+            display: inline-block;
+        }
+        #result {
+            width: 500px;
+            height: 300px;
+            margin: 30px auto;
+            border: 2px solid #ccc;
+            border-radius: 14px;
+        }
+    </style>
+    <!-- <script>
+        // body태그 안의 스크립트를 head태그에 쓸 경우. (window.onload는 익명함수에서만 쓸 수 있음)
+        window.onload = changeBg;
+        var changeBg = function (chColor){
+            var result = document.querySelector("#result");
+            result.style.backgroundColor = chColor;
+        }
+    </script> -->
+</head>
+<body>
+    <!-- 1. 인라인 이벤트(자체메소드) 호출 -->
+    <!-- <ul>
+        <li><a href="#" onclick="alert('버튼클릭');">RED</a></li>
+        <li><a href="#" onclick="alert('버튼클릭');">GREEN</a></li>
+        <li><a href="#" onclick="alert('버튼클릭');">BLUE</a></li>
+    </ul> -->
+
+    <!-- 2. 인라인 이벤트(이벤트리스너) 호출 -->
+    <ul>
+        <li><a href="#" onclick="changeBg('red')">RED</a></li>
+        <li><a href="#" onclick="changeBg('green')">GREEN</a></li>
+        <li><a href="#" onclick="changeBg('blue')">BLUE</a></li>
+    </ul>
+    <div id="result">배경색출력</div>
+    <script>
+        function changeBg(chColor){
+            var result = document.querySelector("#result");
+            result.style.backgroundColor = chColor;
+        }
+    </script>
+</body>
+</html>

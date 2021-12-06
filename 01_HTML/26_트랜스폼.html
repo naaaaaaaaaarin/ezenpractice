@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/reset.css">
+    <title>트랜스폼</title>
+    <style>
+        #wrap {
+            width: 1600px;
+            margin: 0 auto;
+        }
+        .origin {
+            width: 400px;
+            height: 300px;
+            border: 4px solid #ccc;
+            margin: 40px;
+            cursor: pointer;
+        }
+        img {
+            width: 100%;
+            height: 100%;
+        }
+        /* 접두어(prefix)필요 */
+        /* 1. x축, y축 이동 */
+        .movexy:hover {
+            transform: translate(10px, 20px);
+        }
+        .movex:hover {
+            transform: translateX(30px);
+        }
+        .movey:hover {
+            transform: translateY(-30px);
+        }
+
+        /* 2. 크기변환 */
+        .scale:hover {
+            transform: scale(0.8);
+        }
+        .scale_x:hover {
+            transform: scaleX(1.2);
+        }
+        .scale_y:hover {
+            transform: scaleY(1.2);
+        }
+
+        /* 3. 회전 */
+        .rotate1:hover {
+            transform: rotate(20deg);
+        }
+        .rotate2:hover {
+            transform: rotate(-20deg);
+        }
+
+
+        /* 플롯영역 */
+        #wrap:after{
+            content: "";
+            display: block;
+            clear: both;
+        }
+        #translate {
+            width: 400px;
+            float: left;
+        }
+        #scale {
+            width: 400px;
+            float: left;
+            padding-left: 200px;
+        }
+        #rotate {
+            width: 400px;
+            float: right;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <!-- 1. x축, y축 이동 -->
+        <div id="translate">
+            <div class="origin">
+                <div class="movexy">
+                    <img src="./images/dog.jpg" alt="강아지">
+                </div>
+            </div>
+            <div class="origin">
+                <div class="movex">
+                    <img src="./images/dog.jpg" alt="강아지">
+                </div>
+            </div>
+            <div class="origin">
+                <div class="movey">
+                    <img src="./images/dog.jpg" alt="강아지">
+                </div>
+            </div>
+        </div>
+        <!-- 2. 크기변환 -->
+        <div id="scale">
+            <div class="origin">
+                <div class="scale">
+                    <img src="./images/horse.jpg" alt="고양이">
+                </div>
+            </div>
+            <div class="origin">
+                <div class="scale_x">
+                    <img src="./images/horse.jpg" alt="고양이">
+                </div>
+            </div>
+            <div class="origin">
+                <div class="scale_y">
+                    <img src="./images/horse.jpg" alt="고양이">
+                </div>
+            </div>
+        </div>
+        <!-- 3. 회전 -->
+        <div id="rotate">
+            <div class="origin">
+                <div class="rotate1">
+                    <img src="./images/flower.jpg" alt="가을">
+                </div>
+            </div>
+            <div class="origin">
+                <div class="rotate2">
+                    <img src="./images/flower.jpg" alt="가을">
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

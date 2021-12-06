@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>수학객체 Math</title>
+    <script>
+        var num = 3.286592;
+        var maxNum = Math.max(10,8,21,40); //40
+        document.write("최댓값 : " + maxNum + "<br>");
+        var minNum = Math.min(10,8,21,40); //8
+        document.write("최소값 : " + minNum + "<br>");
+        var roundNum = Math.round(num); //3
+        document.write("반올림 : " + roundNum + "<br>");
+        var ceilNum = Math.ceil(num); //4
+        document.write("올림 : " + ceilNum + "<br>");
+        var floorNum = Math.floor(num); //3
+        document.write("내림 : " + floorNum + "<br>");
+        var randomNum = Math.random(); //0~1사이의 무작위 숫자(난수)를 발생시켜 리턴
+        document.write("랜덤 : " + randomNum + "<br>");
+        // 실습) 이미지 랜덤으로 바꾸기
+        var imgNum = 0;
+        imgNum = Math.floor(Math.random()*7)+1;
+        console.log("이미지수자 랜덤값 : " + imgNum);
+        // 브라우저 출력
+        document.write("<img src=./image/img" + imgNum + ".jpg alt='랜덤이미지' width='300' height='300'>");
+    </script>
+</head>
+<body>
+    <!-- <img src="./image/img1.jpg" alt="랜덤이미지" width="300" height="300">
+    <img src="./image/img2.jpg" alt="랜덤이미지" width="300" height="300">
+    <img src="./image/img3.jpg" alt="랜덤이미지" width="300" height="300">
+    <img src="./image/img4.jpg" alt="랜덤이미지" width="300" height="300">
+    <img src="./image/img5.jpg" alt="랜덤이미지" width="300" height="300">
+    <img src="./image/img6.jpg" alt="랜덤이미지" width="300" height="300">
+    <img src="./image/img7.jpg" alt="랜덤이미지" width="300" height="300"> -->
+</body>
+</html>

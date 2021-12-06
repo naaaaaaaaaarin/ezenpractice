@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이미지사용</title>
+    <style>
+        body {
+            background-color: #696969;
+        }
+    </style>
+</head>
+<body>
+    <!-- 1. CDN(Contents Delivery Network)방식으로 이미지 불러오기 -->
+    <img src="https://cdn.pixabay.com/photo/2016/07/15/15/55/dachshund-1519374_960_720.jpg" alt="강아지 이미지" width="300px">
+    <img src="https://images.unsplash.com/photo-1561948955-570b270e7c36?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=601&q=80" 
+         alt="고양이 이미지" width="100px">
+    <img src="https://images.pexels.com/photos/1477199/pexels-photo-1477199.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260" alt="가을">
+    <br><br>
+    
+    <!-- 2. 로컬 컴퓨터 이미지 불러오기 -->
+    <img src="./images/cat.jpg" alt="고양이" width="300">
+    <img src="./images/autumn.jpg" alt="가을" width="300">
+    <img src="./images/dog.jpg" alt="강아지" width="300">
+    
+    <!-- 3. 가상 이미지 사용 -->
+    <img src="http://placehold.it/640x480" alt="">
+
+    <!-- 4. 투명 이미지 사용 .png -->
+    <img src="./images/애플로고.png" alt="애플로고 투명이미지">
+
+    <!-- 5. 벡터방식 .svg -->
+    <img src="./images/나비.svg" alt="나비" width="500"> 
+</body>
+</html>

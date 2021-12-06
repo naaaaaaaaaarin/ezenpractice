@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>스타일 기본구조</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        #wrap {
+            width: 960px;
+            margin: 0 auto;
+            color: #fff;
+            text-align: center; /* 텍스트 정렬 */
+        }
+        header {
+            height: 100px;
+            line-height: 100px; /* 중앙 정렬 */
+            background-color: red;
+        }
+        main .slider {
+            height: 200px;
+            background-color: green;
+        }
+        main .contents {
+            height: 300px;
+            background-color: blue;
+        }
+        footer {
+            height: 100px;
+            background-color: navy;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <!-- Header -->
+        <header>
+            <p1>헤더영역</p1>
+        </header>
+        <!-- /Header -->
+        <main>
+            <!-- Slider -->
+            <article class="slider">
+                슬라이더 영역
+            </article>
+            <!-- /Slider -->
+            <!-- Contents -->
+            <section class="contents">
+                컨텐츠 영역
+            </section>
+            <!-- /Contents -->
+        </main>
+        <!-- Footer -->
+        <footer>
+            <p>
+                푸터 영역
+            </p>
+        </footer>
+        <!-- /Footer -->
+    </div>
+</body>
+</html>

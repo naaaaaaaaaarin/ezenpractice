@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이벤트</title>
+    <script>
+        //document가 다 읽히고 난 후 스크립트 실행. 익명함수에서만 실행됨
+        window.onload = function(){
+        var btn = document.getElementById("btn1");
+        console.log(btn);
+        // 이벤트 실행
+        btn.onclick = test; // <-test()를 쓰면 바로 실행되기 때문에 이벤트리스너명을 쓸 때는 괄호를 뺀다
+        }
+        // 이벤트 리스너
+        function test(){
+            alert('경고창');
+        }
+    </script>
+</head>
+<body>
+    <button id="btn1">버튼</button>
+</body>
+</html>

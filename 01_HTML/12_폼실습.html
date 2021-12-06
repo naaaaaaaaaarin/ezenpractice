@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    span {
+      color: red;
+    }
+
+    li {
+      list-style: none;
+    }
+  </style>
+</head>
+
+<body>
+  <form action="javascript:void(0)">
+    <fieldset>
+      <legend>필드 유효성 검사</legend>
+      <p><span>*</span>표시는 필수 항목입니다.</p>
+      <li>
+        <ul>
+          <span>*</span><label for="a_name">이름 : </label>
+          <input type="text" id="a_name" required autocomplete="off"  autofocus>
+        </ul>
+      </li>
+      <li>
+        <ul>
+          <span>*</span><label for="a_id">아이디 : </label>
+          <input type="text" id="a_id" required placeholder="비밀번호">
+        </ul>
+      </li>
+      <li>
+        <ul>
+          <span>*</span><label for="a_pw">비밀번호 : </label>
+          <input type="password" id="a_pw" required>
+        </ul>
+      </li>
+      <li>
+        <ul>
+          <span>*</span><label for="a_tel">전화번호 : </label>
+          <input type="tel" id="a_tel" required>
+        </ul>
+      </li>
+      <li>
+        <ul>
+          <label for="a_eamil">이메일 : </label>
+          <input type="email" id="a_eamil">
+        </ul>
+      </li>
+      <input type="submit" value="전송하기">
+      <input type="reset" value="취소하기">
+    </fieldset>
+  </form>
+</body>
+
+</html>

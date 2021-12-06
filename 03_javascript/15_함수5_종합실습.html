@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>함수종합실습</title>
+    <style>
+        #bgCh {
+            width: 100%;
+            height: 700px;
+        }
+    </style>
+    <script>
+        /* 실습1. 익명함수를 만들고, 로딩시 (경고창)"자바스크립트 수업" */
+        /* var java_1 = function(){
+            alert("자바스크립트 수업");
+        }
+        java_1(); */
+
+        /* 실습2. 선언적함수를 만들고, 로딩시 (브라우저)"자바스크립트 개념 정리" */
+        /* function java_2(){
+            document.write("자바스크립트 개념정리");
+        }
+        java_2(); */
+
+        /* 실습3. 배열명=cl 배열값=문자열 black blue green red 할당
+        button을 클릭할 때 마다 배경색이 바뀌도록 코딩 (처음 바뀌는 컬러순서 상관X)
+        배경색 바뀌는 영역 = ID= bgCh */
+
+        /* var cl = ["black", "blue", "green", "red"];
+        var i = 0;
+        function chColor(){
+            var selectId = document.getElementById("bgCh");
+            selectId.style.backgroundColor = cl[i];
+            i++;
+            if(i>=cl.length){
+                i=0;
+            }
+        } */
+        
+        /* 실습4.
+        1-1. 매개변수-msg 1개가 있는 선언적 함수=hi를 만드시오.
+        호출 시 매개변수를 사용하여 (경고창)안녕하세요 출력 */
+
+        /* function hi(msg){
+            alert(msg);
+        }
+        hi("안녕하세요"); */
+
+        /* 1-2. (매개변수 사용 호출)버튼1을 클릭했을 때, (경고창)"안녕하세요"
+           1-3. (매개변수 사용 호출)버튼2를 클릭했을 때, (경고창)"반갑습니다" */
+           function hi(b1){
+                alert(b1);
+           }
+           function hello(b2){
+               alert(b2);
+           }
+    </script>
+</head>
+
+<body>
+    <button onclick="hi('안녕하세요');">버튼1</button>
+    <button onclick="hello('반갑습니다');">버튼2</button>
+    <!-- <div id="bgCh">
+        <button onclick="chColor();">버튼</button>
+    </div> -->
+    
+</body>
+
+</html>

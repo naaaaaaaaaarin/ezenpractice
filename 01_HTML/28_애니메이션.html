@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/reset.css">
+    <title>애니메이션</title>
+    <style>
+        /* 접두어(prefix) 필요 */
+        div {
+            width: 100px;
+            height: 100px;
+            margin: 24px;
+            background-color: blue;
+            /* 1. 애니메이션 이름 */
+            animation-name: chg_bg;
+            /* 2. 애니메이션 시간 */
+            animation-duration: 1.5s;
+            /* 3. 애니메이션 실행 후 왔던 방향 그대로 돌아가기 */
+            animation-direction: alternate;
+            /* 4. 애니메이션 반복횟수 */
+            animation-iteration-count: infinite;
+        }
+        /* @keyframes chg_bg {
+            from {
+                background-color: blue;
+                border: 1ps solid #000;
+            }
+            to {
+                background-color: red;
+                border-radius: 50%;
+            }
+        } */
+        #box1 {
+            margin: 50px;
+            background-color: greenyellow;
+        }
+        #box2 {
+            margin: 50px;
+            background-color: purple;
+            animation: ani 1.5s infinite alternate;
+        }
+        @keyframes ani {
+            /* 0%{}
+            25%{}
+            50%{}
+            75%{}
+            100%{} */
+            form {
+                transform: rotate(0deg);
+            }
+            to {
+                background-color: orange;
+                transform: rotate(45deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="box1"></div>
+    <div id="box2"></div>
+</body>
+</html>

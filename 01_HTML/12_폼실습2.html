@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>폼실습</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+
+    }
+
+    .inner {
+      width: 1100px;
+      margin: 0 auto;
+    }
+
+    li {
+      list-style: none;
+    }
+    fieldset {
+      border: none;
+  </style>
+</head>
+
+<body>
+  <div class="inner">
+    <h1>
+      프론트엔드 개발자 지원서
+    </h1>
+    <p>
+      HTML, CSS, javascript에 대한 기술적 이해와 경험이 있는 분을 찾습니다.
+    </p>
+    <hr>
+    <form action="javascript:void(0)">
+      <fieldset>
+        <legend>개발자 지원서</legend>
+        <h2>
+          개인정보
+        </h2>
+        <ul>
+          <li>
+            <label for="name">이름 : </label>
+            <input type="text" id="name" placeholder="공백없이 입력하세요">
+          </li>
+          <li>
+            <label for="tel">연락처 : </label>
+            <input type="tel" id="tel">
+          </li>
+        </ul>
+        <h2>
+          지원분야
+        </h2>
+        <ul>
+          <li>
+            <label>
+              <input type="radio" name="application" id="webp">웹퍼블리싱
+            </label>
+          </li>
+          <ul>
+            <label>
+              <input type="radio" name="application" id="weba">웹애플리케이션
+            </label>
+          </ul>
+          <ul>
+            <label>
+              <input type="radio" name="application" id="webd">웹디자인
+            </label>
+          </ul>
+        </ul>
+        <h2>
+          지원동기
+        </h2>
+        <textarea cols="100" rows="5" placeholder="본사 지원동기를 간략히 써 주세요"></textarea>
+        <p>
+          <!-- <input type="submit" value="접수하기"> -->
+          <button type="submit">접수하기</button> &nbsp;&nbsp;&nbsp;
+          <!-- <input type="reset" value="다시쓰기"> -->
+          <button type="reset">다시쓰기</button>
+        </p>
+      </fieldset>
+    </form>
+  </div>
+</body>
+
+</html>

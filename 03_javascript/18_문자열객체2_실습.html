@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>문자열 객체 실습</title>
+    <script>
+        /* 실습1. (프롬프트)비밀번호를 입력받아
+                (경고창)8자 미만이면 "8자 이상으로 다시 입력"
+                (브라우저)8자 이상이면 "비밀번호 ???자 입력되었습니다." */
+        
+       /*  var pw = prompt("비밀번호를 입력하세요.")
+        pwLength = pw.length
+
+        if(pwLength<8) {
+            alert("8자 이상으로 다시 입력");
+            location.reload();
+        }else{
+            document.write("비밀번호" + pwLength + "자 입력되었습니다." );
+        } */
+
+        /* 실습2. (프롬프트) 이름을 소문자로 입력받아 대문자로 치환.
+            (브라우저)입력한 이름은 ???입니다. */
+
+        /* var name = prompt("소문자 이름 입력", "kim ae li");
+        upper = name.toUpperCase()
+        document.write("입력한 이름은" + upper + "입니다."); */
+
+        /* 실습3. (프롬프트)영문 이름 입력받아 대문자 입력시 소문자로 치환
+        (브라우저)입력받은 이름은 ??? 입니다.
+        (프롬프트)전화번호 입력받아, 끝 네지리를 "****"로 치환 = substr(), replace(), length()
+        (브라우저)전화번호는 0101234**** 입니다 */
+
+        var name = prompt("대문자 이름 입력하기", "KIM AE LI");
+        var tel = prompt("전화번호 입력", "01012346283")
+        var lower = name.toLowerCase();
+        var telSubstr = tel.replace(tel.substr(7,4), "****");
+
+        document.write("입력받은 이름은" + lower + "입니다<br>");
+        document.write("전화번호는" + telSubstr);
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

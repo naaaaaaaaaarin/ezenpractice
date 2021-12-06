@@ -1427,6 +1427,19 @@ if(dbId == id) {
     alert('ID가 맞지 않음');
 }
 ```
+- 나이와 출생연도를 입력받아<br>
+  40세 이상, 출생연도와 나이가 짝수일 경우 (브라우저) "건강검진 대상자"<br>
+  아닐 경우 "건강검진 대상자가 아닙니다."
+```
+var age = Number(prompt("나이입력",30));
+var year = Number(prompt("출생연도",1991));
+var result = age>=40 && (year%2)==0 && (age%2)==0
+if(result){
+    document.write("건강검진 대상자");
+}if(result==false){
+    document.write("건강검진 대상자가 아닙니다");
+}
+```
 
 # 21.12.02
 ## 선택문 : switch~case문
@@ -1517,6 +1530,7 @@ while(i<=5){
 <hr>
 
 ## 반복문: for문(연속된 숫자)
+### for문
 - 기본구조
 ```
 for(초기값;조건식;증감식){
@@ -1537,11 +1551,358 @@ for(var i=1;i<=6;i++){
 for(var i=6;i>=1;i--){
     document.write("<h" + i + ">" + "웹퍼블리싱" + "</h" + i + ">");
 ```    
-3. 구구단 출력
+3. 단수를 입력받아, 입력받은 단만 출력
 ```
-var dan, i, result
-dan = prompt("원하는 구구단 단수를 입력하세요","2~9");
+var dan, i ,result;
+dan = Number(prompt("단수를 입력하세요"));
+document.write("<h1>" + dan + "단</h1>")
+
 for(i=1;i<=9;i++){
     result = dan*i;
-    document.write("<h1>" + dan + "단</h1>" + dan +'x' + i + "=" + result);
+    document.write(dan + "x" + i + "=" + result + "<br>");
+}
 ```
+### 이중for문
+- 2단~9단 구구단 출력
+```
+var i, j;
+for(i=2;i<=9;i++){
+    document.write("<h1>" + i + "단</h1>");
+    for(j=1;j<=9;j++){
+        document.write(i + "x" + j + "=" + i*j + "<br>");
+    }
+}
+```
+# 21.12.03(금)
+## 익명함수 : 함수명 대신 변수명에 함수 코드를 저장하는 구현 방식
+```
+var count = 0;
+var noName = function(){
+                count++;
+                document.write("익명함수 : " + count + "<br>");
+            } */
+noName(); // 익명함수 호출 : 반드시 익명함수 아래에서 호출(top-down)
+```
+
+## 선언함수
+```
+var count = 0;
+function pub(){
+    count++;
+    document.write("선언적함수 : " + count + "<br>");
+}
+pub(); // 선언함수호출 : 호출 위치 상관없음
+```
+## 함수 연습
+1. 익명함수 연습
+  - 숫자를 입력받아 (경고창)입력받은 숫자에 +10 결괏값을 반환하는 함수 제작
+```
+var plsuTen = function(){
+  var num = Number(prompt("숫자를 입력하세요));
+  alert(num+10);
+}
+plusTen();
+```
+
+2. 선언함수 연습
+  - 함수명 print. (경고창) "자바스크립트 선언적함수 호출" 함수 제작 
+  ```
+  function print(){
+    alert("자바스크립트 선언적함수 호출");
+  }
+  print();
+  ```
+3. 버튼을 누를때마다 배열데이터에 입력한 색상대로 배경색을 변경
+```
+<script>
+    // 1-a. 배열선언
+    var color = [];
+    // 1-b. 배열값 할당
+    color = ["red", "green", "blue", "black", "pink", "cyan"];
+
+    /* 2. 전역변수 숫자형 초기값 세팅 */
+    var i = 0;
+    function chColor(){
+        // 2-a. 적용할 DOM객체 선택
+        var selectId = document.getElementById("bgc"); // ID값을 찾는 메소드
+        // 2-b. 사용할 배열값 할당
+        selectId.style.backgroundColor = color[i];  
+        // = #bgc {background: 배열데이터 color의 i번째}
+        i++;
+        console.log("배열length 값 : " + color.length); 
+        //배열데이터의 길이(개수)를 찾는 속성
+        if(i>=color.length){
+            i=0;            
+        }
+    }
+</script>
+<body>
+    <div id="bgc">
+        <!-- 3- 인라인이벤트 호출 -->
+        <button onclick="chColor();">배경색 바꾸기</button>
+    </div>
+</body>    
+```
+
+## 함수의 매개변수, 인수
+- 매개변수가 있는 선언적 함수 형식
+  - 매개변수 = 함수 호출 시 넘겨주는 데이터를 받는 변수
+```  
+function ezFn(name, area){
+    document.write("저는" + name + "입니다.<br>");
+    document.write("사는 곳은 " + area + "입니다.");
+}
+ezFn("narin", "동대문구");
+
+<body>
+    <button>버튼1</button>
+    <button>버튼2</button>
+</body>
+```
+
+# 21.12.06(월)
+## 수학 객체 : Math
+- Math.max : 최대값을 구하는 메소드
+```
+var maxNum = Math.max(10,8,21,40);
+document.write("최댓값 : " + maxNum); // -> 40
+```
+- Math.min : 최소값을 구하는 메소드
+```
+var minNum = Math.min(10,8,21,40); /
+document.write("최소값 : " + minNum); /-> 8
+```
+- Math.round : 소수점 이하 반올림
+```
+var num = 3.286592;
+var roundNum = Math.round(num); 
+document.write("반올림 : " + roundNum); // -> 3
+```
+- Math.ceil : 소수점 이하 올림
+```
+var num = 3.286592;
+var ceilNum = Math.ceil(num); //4
+document.write("올림 : " + ceilNum);
+```
+- Math.floor : 소수점 이하 버림
+```
+var num = 3.286592;
+var floorNum = Math.floor(num); //3
+document.write("내림 : " + floorNum + "<br>");
+```
+- Math.random : 0~1사이의 무작위 숫자(난수)를 발생시켜 리턴
+```
+var randomNum = Math.random();
+document.write("랜덤 : " + randomNum + "<br>");
+```
+- 실습) 이미지 랜덤으로 바꾸기 (이미지 파일명이 img1 ~ img7 까지 있을 때)
+```
+var imgNum = 0;
+// (0~1의 난수*7)+1 의 값에서 소수점을 버린 숫자(즉, 1~7의 숫자가 나옴)
+imgNum = Math.floor(Math.random()*7)+1;
+
+// 브라우저 출력
+document.write("<img src=./image/img" + imgNum + ".jpg alt='랜덤이미지' width='300' height='300'>");
+```
+
+## 날짜객체
+```
+var today = new Date();
+
+var thisMonth = today.getMonth()+1; // 月 :  0(1월) ~ 11(12월) 셋팅
+var thisDate = today.getDate() // 日
+var thisDay = today.getDay(); // 요일 : 일요일(0) ~ 토요일(6)
+var thisHour = today.getHours(); // 시간
+var thisMin = today.getMinutes(); // 분
+var thisSec = today.getSeconds(); // 초
+var thisMillSec = today.getMilliseconds(); //밀리세컨(1/1000초)
+var thisTime = today.getTime(); // 1970년 1월 1일부터 밀리세컨으로 경과된 시간
+
+// switch문을 이용하여 해당 요일 나오게 하기
+switch(thisDay){
+    case 0 : thisDay = "일요일";
+        break;
+    case 1 : thisDay = "월요일";
+        break;
+    case 2 : thisDay = "화요일";
+        break;
+    case 3 : thisDay = "수요일";
+        break;
+    case 4 : thisDay = "목요일";
+        break;
+    case 5 : thisDay = "금요일";
+        break;
+    case 6 : thisDay = "토요일";
+        break;
+};
+```
+## 문자열 객체 메소드/속성
+`var str = "Hello Thank you good luck to you";` (문자열은 0부터 시작)
+- charAt() : 문자열에서 인덱스 번호에 해당하는 문자를 반환 
+```
+document.write(str.charAt(10)); // -> k
+```
+- indexOf() : 문자열에서 왼쪽부터 찾을 문자와 제일 먼저 일치하는 문자의 인덱스번호를 반환
+- lastIndexOf() : 문자열에서 오른쪽부터 찾을 문자와 제일 먼저 일치하는 문자의 인덱스번호를 반환
+```
+document.write(str.indexOf("you")); // -> 12
+document.write(str.lastIndexOf("you")); // -> 29
+```
+- match() : 문자열에서 왼쪽부터 찾을 문자와 제일 먼저 일치하는 문자를 찾아 반환. 없으면 -1 반환.
+```
+document.write(str.match("luck")) // luck
+```
+- replace() : 문자열에서 왼쪽부터 바꿀 문자와 일치하는 문자를 찾아 제일 먼저 찾은 문자를 새 문자로 치환
+```
+document.write(str.replace("you", "me")); // 첫번째 you->me로 변경
+```
+- search() : 문자열에서 왼쪽부터 찾을 문자와 제일 먼저 찾는 문자의 인덱스번호를 반환
+```
+document.write(str.search("you")); // 12
+```
+- slice() : 문자열에서 문자를 자른 후 남는 문자를 반환
+```
+document.write(str.slice(3,7)); // lo T(인덱스번호 3번부터~ 7이전까지 반환)
+```
+- substr() : 문자열에서 지정한 문자 갯수만큼 문자열 반환
+```
+document.write(str.substr(21,4)); // luck(인덱스번호 21부터 4자 반환)
+```
+- toLowerCase() : 문자열에서 영문 대문자를 소문자로 치환
+- toUpperCase() : 문자열에서 영문 소문자를 대문자로 치환
+```
+document.write(str.toLowerCase()); // hello thank you good luck to you
+document.write(str.toUpperCase()); // HELLO THANK YOU GOOD LUCK TO YOU
+```
+- length : 문자결 갯수 반환
+```
+document.write(str.length); // 32
+```
+- trim() : 문자의 앞 또는 뒤에 공백 문자열 삭제
+```
+document.write(str.trim());
+```
+
+### 문자열객체 실습
+1. (프롬프트)비밀번호를 입력받아<br>
+(경고창)8자 미만이면 "8자 이상으로 다시 입력",<br>
+(브라우저)8자 이상이면 "비밀번호 ???자 입력되었습니다." */
+```
+var pw = prompt("비밀번호를 입력하세요.")
+pwLength = pw.length
+
+if(pwLength<8) {
+    alert("8자 이상으로 다시 입력");
+    location.reload();
+}else{
+    document.write("비밀번호" + pwLength + "자 입력되었습니다." );
+}
+```
+
+2. 실습3. (프롬프트)영문 이름 입력받아 대문자 입력시 소문자로 치환하기
+  (브라우저)입력받은 이름은 ??? 입니다.<br>
+  (프롬프트)전화번호 입력받아, 끝 네지리를 "****"로 치환 = substr(), replace()<br>
+  (브라우저)전화번호는 `0101234****` 입니다
+```
+var name = prompt("이름을 입력하세요(대문자)");
+var lower = name.toLowerCase();
+document.write("입력받은 이름은" + name "입니다.<br>");
+
+var tel = prompt("전화번호를 입력하세요","01012345678");
+var telStr = tel.replce(tel.substr(7, 4),"****");
+document.write("전화번호는" + telStr + "입니다.");
+```
+
+## 이벤트
+- body태그 안에 있는 항목을 head태그 안의 자바스크립트로 효과를 줄 경우 아래 코드를 우선 입력해야 한다.<br>
+- `window.onload` : document가 다 읽히고 난 후 스크립트 실행. 익명함수에서만 실행됨.
+```
+window.onload = function(){
+var btn = document.getElementById("btn1");
+// 이벤트 실행
+btn.onclick = test; // <-test()를 쓰면 바로 실행되기 때문에 이벤트리스너명을 쓸 때는 괄호를 뺀다
+}
+
+// 이벤트 리스너
+function test(){
+    alert('경고창');
+}
+
+<body>
+  <div id="btn1">버튼</div>
+</body>
+```
+
+## 이벤트 DOM
+- 버튼을 클릭하면 글씨가 파란색으로 바뀌고 내용이 추가되게 하기
+```
+window.onload = function(){
+// 1. DOM객체 변수에 할당.
+var button = document.getElementById("button");
+var heading = document.getElementById("header");
+
+// 2. 이벤트 리스너(선언적 함수) 작성.
+function whenClick1(){
+    heading.style.color = "blue"; // #header의 글씨 색깔이 파란색으로 바뀜
+}
+function whenClick2(){ 
+    heading.innerHTML = "JS Event 방식 + 새로 바뀌는 글자"; // #header의 내용을 바꿈
+}
+
+// 3. 이벤트 DOM에 이벤트를 리스너 연결
+button.addEventListener('click', whenClick1);
+button.addEventListener('click', whenClick2);
+}
+
+<body>
+    <button id="button">DOM2이벤트</button>
+    <h3 id="header">JS Event 방식</h3>
+</body>
+```
+
+## 쿼리셀렉터
+1. 인라인 이벤트(자체메소드) 호출
+  - 글씨를 클릭하면 (경고창)"버튼클릭"
+  ```
+  <ul>
+        <li><a href="#" onclick="alert('버튼클릭');">RED</a></li>
+        <li><a href="#" onclick="alert('버튼클릭');">GREEN</a></li>
+        <li><a href="#" onclick="alert('버튼클릭');">BLUE</a></li>
+    </ul>
+  ```
+
+2. 인라인 이벤트(이벤트리스너) 호출  
+ - 글씨를 클릭하면 배경색이 바뀜
+ ```
+<ul>
+  <li><a href="#" onclick="changeBg('red')">RED</a></li>
+  <li><a href="#" onclick="changeBg('green')">GREEN</a></li>
+  <li><a href="#" onclick="changeBg('blue')">BLUE</a></li>
+</ul>
+<div id="result">배경색출력</div>
+
+<!-- 스크립트를 body태그 안에 작성 시 -->
+<script>
+  function changeBg(chColor){
+      var result = document.querySelector("#result");
+      result.style.backgroundColor = chColor;
+      }
+</script>
+
+<!-- 스크립트를 head태그 안에 작성 시 -->
+<script>
+  window.onload = changeBg;
+    var changeBg = function (chColor){
+        var result = document.querySelector("#result");
+        result.style.backgroundColor = chColor;
+    }
+</script>
+```
+
+
+
+
+
+
+
+

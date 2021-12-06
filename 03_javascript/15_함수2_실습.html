@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>함수실습</title>
+    <style>
+        #bgc {
+            width: 100%;
+            height: 480px;
+        }
+        button {
+            width: 130px;
+            height: 80px;
+            background-color: silver;
+            border: none;
+            border-radius: 10px;
+            color: #fff;
+            font-size: 18px;
+            cursor: pointer;
+        }
+    </style>
+    <script>
+        // 실습. 버튼을 클릭할 때 마다 배경색 바꾸기
+        // 1. 배열(Array)객체 = 같은 변수명에 여러개의 데이터를 저장
+        // 1-a. 배열선언
+        var color = [];
+        // 1-b. 배열값 할당
+        color = ["red", "green", "blue", "black", "pink", "cyan"];
+        // alert(color[2]);
+        // console.log(typeof color);
+
+        /* 2. 전역변수 숫자형 초기값 세팅 */
+        var i = 0;
+        function chColor(){
+            // 2-a. 적용할 DOM객체 선택
+            var selectId = document.getElementById("bgc"); // ID값을 찾는 메소드
+            // 2-b. 사용할 배열값 할당
+            selectId.style.backgroundColor = color[i];  // = #bgc {background:}
+            // 배열 인덱스 값 1씩 증가
+            i++;
+            console.log(i);
+            console.log("배열length 값" + color.length);
+            if(i>=color.length){
+                i=0;            
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div id="bgc">
+        <!-- 3- 인라인이벤트 호출 -->
+        <button onclick="chColor();">배경색 바꾸기</button>
+    </div>
+</body>
+
+</html>
