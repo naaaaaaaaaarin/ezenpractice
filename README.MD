@@ -1653,11 +1653,6 @@ function ezFn(name, area){
     document.write("사는 곳은 " + area + "입니다.");
 }
 ezFn("narin", "동대문구");
-
-<body>
-    <button>버튼1</button>
-    <button>버튼2</button>
-</body>
 ```
 
 # 21.12.06(월)
@@ -1667,7 +1662,8 @@ ezFn("narin", "동대문구");
 var maxNum = Math.max(10,8,21,40);
 document.write("최댓값 : " + maxNum); // -> 40
 ```
-- Math.min : 최소값을 구하는 메소드
+
+
 ```
 var minNum = Math.min(10,8,21,40); /
 document.write("최소값 : " + minNum); /-> 8
@@ -1774,7 +1770,7 @@ document.write(str.substr(21,4)); // luck(인덱스번호 21부터 4자 반환)
 document.write(str.toLowerCase()); // hello thank you good luck to you
 document.write(str.toUpperCase()); // HELLO THANK YOU GOOD LUCK TO YOU
 ```
-- length : 문자결 갯수 반환
+- length : 문자열 갯수 반환
 ```
 document.write(str.length); // 32
 ```
@@ -1818,9 +1814,9 @@ document.write("전화번호는" + telStr + "입니다.");
 - `window.onload` : document가 다 읽히고 난 후 스크립트 실행. 익명함수에서만 실행됨.
 ```
 window.onload = function(){
-var btn = document.getElementById("btn1");
-// 이벤트 실행
-btn.onclick = test; // <-test()를 쓰면 바로 실행되기 때문에 이벤트리스너명을 쓸 때는 괄호를 뺀다
+  var btn = document.getElementById("btn1");
+  // 이벤트 실행
+  btn.onclick = test; // <-test()를 쓰면 바로 실행되기 때문에 이벤트리스너명을 쓸 때는 괄호를 뺀다
 }
 
 // 이벤트 리스너
@@ -1829,7 +1825,7 @@ function test(){
 }
 
 <body>
-  <div id="btn1">버튼</div>
+  <button id="btn1">버튼</button>
 </body>
 ```
 
