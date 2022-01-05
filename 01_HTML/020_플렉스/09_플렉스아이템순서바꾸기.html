@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        플렉스아이템 순서 바꾸기(order) : 플렉스아이템에 배치
+        : HTML 코딩이나 탭 순서와 상관없이 화면에 보이는 순서에만 영향을 줌
+          order의 순서값이 동일한 경우, 구조 코딩 순서 기준으로 순서가 정해짐
+    </title>
+    <style>
+        #wrap {
+            width: 90%;
+            height: auto;
+            margin: 0 auto;
+            border: 2px solid #000;
+            display: flex;
+            flex-flow: row wrap;
+        }
+        #wrap div {
+            width: 33.33%;
+            height: 100px;
+            font-size: 2rm;
+            color: #fff;
+        }
+        #wrap div:nth-child(1){background-color: red; order: 3;}
+        #wrap div:nth-child(2){background-color: green; order: 4;}
+        #wrap div:nth-child(3){background-color: blue; order: 1;}
+        #wrap div:nth-child(4){background-color: yellowgreen; order: 2;}
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+    </div>
+</body>
+</html>

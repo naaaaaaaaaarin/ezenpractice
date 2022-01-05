@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/font.css">
+    <title>조합선택자</title>
+    <!-- 1. 제이쿼리 코어파일 사용 -->
+    <script src="./js/jquery-1.12.4.min.js"></script>
+    <script src="./js/jquery-3.3.1.min.js"></script>
+    <script src="./js/jquery-3.4.1.min.js"></script>
+    <title>제이쿼리 파일 세팅</title>
+
+    <!-- 2. 제이쿼리 코어파일 CDN 사용 -->
+    <script src="http://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="http://code.jquery.com/jquery-1.3.1.min.js"></script>
+    <script src="http://code.jquery.com/jquery-1.4.1.min.js"></script>
+    <style>
+        h1 {
+            font-size: 36px;
+            margin-bottom: 32px;
+        }
+    </style>
+    <!-- 3. 제이쿼리 코딩 -->
+    <script>
+        $(document).ready(function(){
+             $("*").css('color', 'gray');
+            //  맨처음 선택자만 선택
+             $("#a").css('fontSize','24px');
+
+            //  div 태그에 #a인 요소만 선택
+            $('div#a').css('color', 'orange');
+            //  div 태그에 .test인 요소만 선택
+            $('div.test').css('color', 'green');
+
+            // 하위 선택자
+            $('div h2').css('fontStyle', 'italic');
+
+            // 그룹 선택자
+            $('#a, h2, .main').css('textDecoration', 'underline');
+        });
+    </script>
+</head>
+
+<body>
+    <h1>제이쿼리 선택자</h1>
+    <div class="content">
+        <div id="a">
+            제이쿼리
+        </div>
+        <div>
+            여러가지 선택자
+        </div>
+        <div class="test">
+            애플 제품들
+        </div>
+        <div class="test main">
+            맥프로
+        </div>
+        <div>
+            <span>맥북프로</span>
+            <h2 id="a">맥북에어</h2>
+        </div>
+        <div id="b">
+            아이패드
+        </div>
+        <div class="test">
+            아이패드 프로
+        </div>
+        <div class="test">
+            아이패드 에어
+        </div>
+        <div class="test">
+            에어팟
+        </div>
+        <div id="a">
+            애플워치
+        </div>
+        <div>
+            애플태그
+        </div>
+    </div>
+</body>
+
+</html>

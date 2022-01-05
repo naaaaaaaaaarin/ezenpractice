@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/reset.css">
+    <title>
+        플렉스아이템 교차축 방향배치(align-itemx)
+        : 주축(row일 때 x축, column일 때 Y축)의 수직방향으로 플렉스 아이템 배치
+    </title>
+    <style>
+        #wrap {
+            width: 240px;
+            height: 200px;
+            margin: 40px auto;
+            background-color: #8c8c8c;
+            display: flex;
+            flex-flow: row wrap;
+            /* 교차축 방향 플렉스 아이템 정렬 */
+            align-items: stretch; /* 기본값 */
+            align-items: flex-start;
+            align-items: flex-end;
+            align-items: center;
+            align-items: baseline;
+        }
+        #wrap div {
+            border: 2px solid #8c8c8c;
+            width: 50px;
+        }
+        #item1 {background-color: #8cffa0; min-height: 30px;}
+        #item2 {background-color: #8265da; min-height: 30px;}
+        #item3 {background-color: #d4adcb; min-height: 70px;}
+        #item4 {background-color: #d7e07f; min-height: 40px; font-size: 40px;}
+        #item5 {background-color: #ffcd8c; min-height: 70px;}
+        #item6 {background-color: #ff8c8c; min-height: 70px;}
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div id="item1">1</div>
+        <div id="item2">2</div>
+        <div id="item3">3</div>
+        <div id="item4">4</div>
+        <div id="item5">5</div>
+        <div id="item6">6</div>
+    </div>
+</body>
+</html>

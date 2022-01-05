@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/reset.css">
+    <title>플렉스박스 레이아웃 목업</title>
+    <style>
+        body {
+            width: 90%;
+            margin: 0 auto;
+            height: 100%;
+            position: relative;
+            
+        }
+        header {
+            background-color: coral;
+            height: 75px;
+        }
+        header nav {
+            text-align: center;
+            line-height: 75px;
+        }
+        article .main {
+            display: flex;
+            text-align: center;
+            height: 300px;
+        }
+        article .main div:nth-child(1){
+            background-color: royalblue;
+            width: 50%;
+            line-height: 300px;
+        }
+        article .main div:nth-child(2){
+            background-color: yellow;
+            width: 30%;
+        }
+        article .main div:nth-child(3){
+            background-color: rgb(96, 221, 96);
+            width: 20%;
+        }
+        article .sub {
+            text-align: center;
+            display: flex;
+            height: 200px;
+        }
+        article .sub .new{
+            background-color: violet;
+            line-height: 200px;
+            width: 30%;
+        }
+        article .sub div:nth-child(2){
+            background-color: orange;
+            width: 30%;
+        }
+        article .sub div:nth-child(3){
+            display: flex;
+            flex-direction: column;
+            width: 20%;
+        }
+        article .sub div:nth-child(3) .banner{
+            background-color: red;
+            height: 50%;
+            width: 100%;
+        }
+        article .sub div:nth-child(3) div:nth-child(2){
+            background-color: navy;
+            height: 50%;
+            width: 100%;
+        }
+        article .sub div:nth-child(4){
+            background-color: pink;
+            width: 20%;
+        }
+        footer {
+            background-color: gray;
+            text-align: center;
+            height: 50px;
+            line-height: 50px;
+        }
+        aside {
+            background-color: coral;
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            text-align: center;
+            line-height: 100px;
+            top: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>GNB메뉴</nav>
+    </header>
+    <article>
+        <section class="main">
+            <div>슬라이더</div>
+            <div>갤러리</div>
+            <div>인기검색어</div>
+        </section>
+        <section class="sub">
+            <div class="new">최근글</div>
+            <div>인기글</div>
+            <div>
+                <div class="banner">배너1</div>
+                <div>배너2</div>
+            </div>
+            <div>소셜 네트워크</div>
+        </section>
+    </article>
+    <footer>
+        <p>푸터</p>
+    </footer>
+    <aside>FLEXIBLE BOX</aside>
+</body>
+</html>

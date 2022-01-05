@@ -1,0 +1,82 @@
+#wrap {
+    width: 1030px;
+    height: 510px;
+    margin: 40px auto;
+}
+.gray {
+    color: gray;
+}
+
+.head::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+.head h1{
+    float: left;
+    font-size: 36px;
+    font-weight: bold;
+}
+.head div {
+    float: right;
+}
+.head div p {
+    float: left;
+    font-size: 24px;
+    font-weight: bold;
+}
+.head div i {
+    float: right;
+    width: 11px;
+    height: 11px;
+}
+
+.main::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+.main .main_left {
+    float: left;
+}
+.main .main_left img {
+    width: 305px;
+    margin-right: 116px;
+    position: relative;
+    left: 150px;
+
+}
+.main .main_right {
+    float: right;
+}
+.main .main_right .main_top {
+    margin-bottom: 94px;
+}
+.main .main_right .main_top h2 {
+    font-size: 36px;
+}
+
+.main .main_middle {
+    margin-bottom: 53px;
+}
+.main .main_middle p {
+    margin-bottom: 25px;
+}
+.main .main_middle .sns i{
+    font-size: 30px;
+    color: rgb(107, 107, 107);
+}
+.main .main_middle .sns img {
+    width: 28px;
+    height: 28px;
+    border-radius: 4px;
+}
+
+.main .main_bottom p:nth-child(1) {
+    margin-bottom: 5px;
+}
+
+footer {
+    text-align: center;
+    margin: 50px 0;
+}

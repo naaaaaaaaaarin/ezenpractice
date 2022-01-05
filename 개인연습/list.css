@@ -1,20 +1,89 @@
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-
-li {
-  list-style: none;
-}
-
-h1, h2, h3 {
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal;
   font-size: 16px;
 }
 a {
   text-decoration: none;
-  color: #000;
+  color: inherit;
+}
+li {
+  list-style: none;
+}
+img {
+  vertical-align: top;
+}
+/* --------------------------------------------- reset */
+.container {
+  width: 95%;
+  margin: 0 auto;
+  text-align: center;
 }
 
-/* --------------------------------------------- reset */
+/* Header */
+header .head_top {
+  display: flex;
+  justify-content: space-between;
+}
+header .menu {
+  cursor: pointer;
+}
+header ul {
+  margin: 20px 0 20px;
+  text-align: left;
+}
+header ul li {
+  margin-bottom: 10px;
+}
+header ul li a {
+  font-size: 14px;
+  color: gray;
+}
 
+header input {
+  display: none;
+}
+#c_checkbox:checked+nav {
+  display: none;
+}
+
+/* Main content */
+#main_content {
+  background-color: rgb(47, 133, 124);
+  color: rgb(255, 233, 233);
+}
+#main_content h2 {
+  padding: 20px 0;
+}
+#main_content p {
+  font-size: 12px;
+  padding-bottom: 20px;
+}
+
+/* Sub content */
+#sub_content h2 {
+  font-size: 20px;
+  font-weight: bold;
+  padding: 50px 0 30px;
+}
+#sub_content img {
+  width: 80%;
+}
+#sub_content p {
+  font-size: 14px;
+  margin: 10px 0 20px;
+}
+
+/* Footer */
+footer {
+  background-color: gray;
+  padding: 20px;
+}
+footer p {
+  font-size: 14px;
+  color: #fff;
+}

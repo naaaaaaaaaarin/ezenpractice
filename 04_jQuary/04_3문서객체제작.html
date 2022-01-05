@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/font.css">
+    <title>제이쿼리 문서객체제작</title>
+
+    <!-- 1. 제이쿼리 코어파일 사용 -->
+    <script src="./js/jquery-1.12.4.min.js"></script>
+    <script src="./js/jquery-3.3.1.min.js"></script>
+    <script src="./js/jquery-3.4.1.min.js"></script>
+    <!-- 2. 제이쿼리 코어파일 CDN 사용 -->
+    <script src="http://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="http://code.jquery.com/jquery-1.3.1.min.js"></script>
+    <script src="http://code.jquery.com/jquery-1.4.1.min.js"></script>
+    <!-- 부트스트랩 -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <!-- 3. 제이쿼리 코딩 -->
+    <script>
+        $(document).ready(function(){
+            // 1. remove() : 선택된 DOM객체 제거 = 인자값, 매개변수 없음. 태그 자체를 삭제
+            // $('h3').eq(0).remove();
+            /* $('h3:first').remove();
+            $('h3').first().remove(); */
+
+            // 2. empty() : 선택된 DOM객체의 자식 노드를 제거
+            // $('div').empty();
+
+            /* 3. $() = jQuery()
+                a. DOM객체 선택
+                b. 태그 생성 : 인자값으로 HTML 요소명을 문자열로 DOM객체(문서객체) 생성
+                b-a. appendTO() : 인자값의 맨 마지막 자식요소로 태그 생성 */
+            // $('<h2>Dead poet society</h2>').css('color','purple').appendTo('body');
+
+            /* 실습. jQuery메서드를 이용하여 body요소의 자식으로 img태그 생성
+            attr()과 함께 사용하여 너비 300 높이 300 대체텍스트=이미지1 */
+
+            $('<img>').attr({'src':'./images/candle.jpg','width':300, 'height':300, 'alt':"이미지1"}).appendTo('body');
+
+        });
+    </script>
+</head>
+
+<body>
+    <div>
+        <h1>Carpe Dime!!</h1>
+        <h2>현재를 즐겨라</h2>
+    </div>
+    <h3>나의 금기어</h3>
+    <h3>
+        &quot;언젠가&quot; &quot;아마도&quot; &quot;만약에&quot;
+    </h3>
+    <h4>
+        Written By 파울로 코엘로
+    </h4>
+    <h5>ONE</h5>
+    <h5>Two</h5>
+    <h6>Three</h6>
+    <h6>Four</h6>
+</body>
+
+</html>

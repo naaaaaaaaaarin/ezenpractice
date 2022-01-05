@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/font.css">
+    <title>문서객체(DOM) 객체</title>
+    <!-- 1. 제이쿼리 코어파일 사용 -->
+    <script src="./js/jquery-1.12.4.min.js"></script>
+    <script src="./js/jquery-3.3.1.min.js"></script>
+    <script src="./js/jquery-3.4.1.min.js"></script>
+    <!-- 2. 제이쿼리 코어파일 CDN 사용 -->
+    <script src="http://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="http://code.jquery.com/jquery-1.3.1.min.js"></script>
+    <script src="http://code.jquery.com/jquery-1.4.1.min.js"></script>
+    <!-- 부트스트랩 -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <!-- 3. 제이쿼리 코딩 -->
+    <script>
+        $(document).ready(function(){
+            // 1. filter() : 기본적으로 제공하지 않는 범위의 문서객체를 보다 편리하게 선택할 때 사용
+            //               선택된 배열에서 특정 문서객체를 걸러내서 선택할 목적이 주 사용 이유
+            $('li').css('color','red');
+            $('li').filter(':even').css('color','blue');
+            $('li').filter(':odd').css('color','green');
+
+            // 2. eq() : 요소들의 인덱스번호(0부터 시작)를 이용하여 선택
+            $('li').eq(1).css('color','red');
+            $('li').eq(-1).css({'color':'orange','fontWeight':'bold'});
+
+            // 3. first() / last() : 요소의 맨 처음과 마지막을 선택
+            $('li').first().css('backgroundColor','green');  // bgc : 상속안됨. 기본값 투명
+            $('li').last().css('background','yellow');  // bg : 기본값 none
+
+            // 4. find() : 선택된 DOM객체의 후손문서객체를 선택
+            $('body').find('span').css('color','cyan');
+            $('h3').find('span').css('color','pink');
+            $('h3,h4').find('span').css('border','1px solid #000');
+
+            // 5. is() : 주어진 인자값(요소명)과 하나라도 일치하면 true 리턴
+            // 실습. h3, h4의 자식중에 span이 있으면 true를 변수명 isChild에 할당
+            // if() = span이 있으면 '경고창' 자삭있음, 없으면 '경고창'자식없음
+            let isChild = $('h3,h4').children().is("span");
+            console.log(isChild)
+            /* if(isChild){
+                alert('자식있음');
+            } else {
+                alert('자식없음');
+            } */
+
+            /* 6. has() : 주어진 인자값의 요소명(태그)과 일치하면 선택됨
+                       배열에 있는 요소 내부에 해당 태그가 있는지 판별 */
+            let div = $('div').has('h6').css('color','orange');
+            console.log(div);
+
+            // 실습. table의 첫번째 tr에 배경색 darkgray 적용
+            // $('.table tr:first').css('backgroundColor','darkgray');
+            $('table').find('tr').eq(0).css('backgroundColor','darkgray');
+
+        });
+    </script>
+</head>
+
+<body>
+    <!-- <div class="card-body"> -->
+        <h2>문서객체 선택자1</h2>
+        <h3>문서객체 선택자2</h3>
+        <ul>
+            <li>ONE</li>
+            <li>Two</li>
+            <li><small>THREE</small></li>
+            <li><small>THREE</small></li>
+            <li>Five</li>
+        </ul>
+
+        <table class="table">
+            <tr>
+                <td>내용1</td>
+                <td>내용2</td>
+            </tr>
+            <tr>
+                <td>내용3</td>
+                <td>내용4</td>
+            </tr>
+            <tr>
+                <td>내용5</td>
+                <td>내용6</td>
+            </tr>
+            <tr>
+                <td>내용7</td>
+                <td>내용8</td>
+            </tr>
+        </table>
+
+        <h3><span>find메서드 - FOUR</span></h3>
+        <h4><span>find메서드 - FIVE</span></h4>
+        <h5><span>find메서드 - ONE</span></h5>
+        <h5>find메서드 - TWO</h5>
+        <h5>find메서드 - THREE</h5>
+
+        <div>
+            <h6>has메서드 1</h6>
+        </div>
+        <div>
+            <h6>has메서드 2</h6>
+        </div>
+        
+    <!-- </div> -->
+
+    
+</body>
+
+</html>

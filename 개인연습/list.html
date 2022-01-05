@@ -1,64 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./list.css">
     <title>Document</title>
-    <style>
-        * {
-            padding: 0;
-            margin: 0;
-        }
-        body {
-            width: 600px;
-            margin: 20px auto;
-        }
-        ul, li {
-            list-style: none;
-        }
-        ul {
-            text-align: center;
-            margin-bottom: 20px;
-        }
-        li {
-            display: inline;
-            text-align: center;
-            padding: 10px 30px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            
-        }
-        div {
-            text-align: center;
-            border: 1px solid #000;
-            padding: 100px;
-        }
-        
-
-    </style>
-    <!-- <script>
-        window.onload = changeBg;
-        var changeBg = function(chColor){
-            var result = document.querySelector('#result');
-            result.style.backgroundColor = chColor;
-        }
-    </script> -->
-
 </head>
-<body>
-    <ul>
-        <li><a href="#" onclick="changeBg('red')">Red</a></li>
-        <li><a href="#" onclick="changeBg('green')">Green</a></li>
-        <li><a href="#" onclick="changeBg('blue')">BLUE</a></li>
-    </ul>
-    <div id="result">배경색 변환</div>
 
-    <script>
-        function changeBg(chColor){
-            var result = document.querySelector('#result');
-            result.style.backgroundColor = chColor;
-        }
-    </script>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="head_top">
+                <label for="c_checkbox" class="menu">
+                    <img src="./image/ham.png" alt="메뉴">
+                </label>
+                <a href="#">
+                    <img src="./image/27logo.png" alt="로고">
+                </a>
+                <img src="./image/27search.png" alt="찾기">
+            </div>
+            <input type="checkbox" id="c_checkbox" checked>
+            <nav>
+                <ul>
+                    <li><a href="#">WEB</a></li>
+                    <li><a href="#">VISION</a></li>
+                    <li><a href="#">PORTFOLIO</a></li>
+                    <li><a href="#">REQUEST</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div id="main_content">
+        <div class="container">
+            <h2>WEB VISION</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis facere dolores, deleniti laboriosam est
+                fuga nobis nihil cumque! Officia voluptas dolorem cum animi nemo ex eos assumenda nihil a placeat.
+            </p>
+        </div>
+    </div>
+    <article id="sub_content">
+        <div class="container">
+            <section>
+                <h2>Brand Color</h2>
+                <img src="https://cdn.pixabay.com/photo/2021/12/23/16/38/animal-6889575_960_720.jpg" alt="">
+                <p>Red Green Blue Cyan Magenta Yellow</p>
+            </section>
+            <section>
+                <h2>Brand vision</h2>
+                <img src="https://cdn.pixabay.com/photo/2019/12/08/19/50/winter-4682051_960_720.jpg" alt="">
+                <p>Lorem ipsum dolor sit amet consectetur</p>
+            </section>
+        </div>
+    </article>
+    <footer>
+        <div class="container">
+            <p>
+                Copyright © 2021 WEBAL Inc. All Right Reserved.
+            </p>
+        </div>
+    </footer>
 </body>
+
 </html>

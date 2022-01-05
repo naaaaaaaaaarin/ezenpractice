@@ -1,0 +1,134 @@
+body {
+    font: 13px 'Noto Sans KR', sans-serif; 
+    background-color: #aaa;
+    box-sizing: border-box;
+}
+
+#wrap {
+    width: 800px;
+    margin: 0 auto;
+    background-color: #fff;
+    
+}
+
+/* Header */
+header {
+    background-color: #fa0;
+    color: #fff;
+    text-align: center;
+}
+header h1 {
+    font-size: 800%;
+    font-weight: 700;
+}
+header span {
+    font-size: 1.25rem;
+    padding: 4px;
+    display: block;
+}
+header p {
+    font-size: 12px;
+    font-size: 0.75rem;
+    background-color: #ccc;
+    color: #333;
+    padding: 5px;
+}
+
+/* Contents */
+#container::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+/* 2-1. 콘텐츠(내용) */
+#container .cover {
+    width: 600px;
+    float: left;
+}
+/* 2-1-1. 콘텐츠(내용) */
+#container .content{
+    width: 400px;
+    background-color: #ddd;
+    color: #123456;
+    float: right;
+}
+#container .content dt a{
+    font: bold 1.3rem "Noto Sans Rk", sans-serif;
+    color: #ddd;
+    padding: 5px;
+    background-color: #123456;
+    display: block;
+}
+/* 인접선택자 */
+#container .content dt+dd {
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+/* 2-1-2. 왼쪽메뉴 */
+#container .sidemenu {
+    width: 200px;
+    background-color: #666;
+    float: left;
+}
+#container .sidemenu dt{
+    font: bold 1.3rem "Noto Sans Rk", sans-serif;
+    color: fff;
+    background-color: #900;
+}
+#container .sidemenu dd a{
+    color: #000;
+    border-bottom: 1px doted #000;
+}
+#container .sidemenu dd a:hover{
+    border-bottom: 1px doted #900;
+}
+.cover::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+/* 2-2. 오른쪽 메뉴 */
+#container .aside {
+    width: 200px;
+    float: right;
+}
+#container .aside dt{
+    font: bold 1.3rem "Noto Sans Rk", sans-serif;
+    color: #999;
+}
+#container .aside a {
+    color: #000;
+    font-size: 13px;
+}
+#container .all {
+    text-decoration: underline;
+}
+#container .love {
+    color: orange;
+    border-bottom: 1px solid orange;
+}
+#container .aside strong {
+    color: #333;
+}
+#container .aside span{
+    display: block;
+}
+
+/* 3. 푸터 */
+footer p {
+    font: bold 1rem "Noto Sans Rk", sans-serif;
+    color: #eee;
+    padding: 10px;
+    background-color: #123456;
+    text-align: center;
+}
+footer p a {
+    color: eee;
+}
+
+/* dt, dd CSS */
+dt, dd {
+    padding: 10px;
+}

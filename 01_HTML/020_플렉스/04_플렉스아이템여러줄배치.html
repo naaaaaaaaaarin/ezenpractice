@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/reset.css">
+    <title>
+        플렉스아이템 여러줄 배치(flex-wrap)
+        no-wrap : 기본값. 플렉스 박스 안의 아이템이 한줄로 배치
+        wrap : 부모의 너비값을 넘치면 다음줄로 넘어감.
+    </title>
+    <style>
+        h3 {
+            margin: 24px 0;
+            font-size: 32px;
+        }
+        /* no-wrap 예시 */
+        .content1 {
+            height: 150px;
+            color: #fff;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+        }
+        .content1 div {
+            width: 50%;
+            height: 50%;
+        }
+        
+        /* wrap 예시 */
+        .content2 {
+            height: 150px;
+            color: #fff;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+        .content2 div {
+            width: 50%;
+            height: 50%;
+        }
+
+
+
+
+        .red {background-color: red;}
+        .green {background-color: green;}
+        .blue {background-color: blue;}
+        .purple {background-color: purple;}
+        
+    </style>
+</head>
+<body>
+    <h3>flex-wrap:no-wrap 예시</h3>
+    <div class="content1">
+        <div class="red">1</div>
+        <div class="green">2</div>
+        <div class="blue">3</div>
+        <div class="purple">4</div>
+    </div>
+
+    <h3>flex-wrap:wrap 예시</h3>
+    <div class="content2">
+        <div class="red">1</div>
+        <div class="green">2</div>
+        <div class="blue">3</div>
+        <div class="purple">4</div>
+    </div>
+</body>
+</html>

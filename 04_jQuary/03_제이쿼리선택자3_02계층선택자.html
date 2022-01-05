@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/font.css">
+    <title>계층선택자</title>
+    
+    <!-- 제이쿼리 코어파일 사용 -->
+    <script src="./js/jquery-1.12.4.min.js"></script>
+    <script src="./js/jquery-3.3.1.min.js"></script>
+    <script src="./js/jquery-3.4.1.min.js"></script>
+    <!-- 제이쿼리 코어파일 CDN 사용 -->
+    <script src="http://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="http://code.jquery.com/jquery-1.3.1.min.js"></script>
+    <script src="http://code.jquery.com/jquery-1.4.1.min.js"></script>
+    <!-- 부트스트랩 -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <!-- 제이쿼리 코딩 -->
+    <script>
+        $(document).ready(function(){
+            // 자식 선택자
+            $('#one>div').css('color', 'orange');
+            // 인접 형제 선택자 = 가장 가까운 형제 선택, 없으면 무시
+            $('#one+div').css('border', '1px solid gray');
+            // 형제선택자 = 모든 형제 선택
+            $('#one~div').css('color','green');
+            // table은 모던 브라우저에서 <tbody>자동으로 추가 = 자식선택자 사용시 포함시켜야 함
+            $('#foods>tbody>tr').css('color','darkgray');
+            // 하위선택자 = 자식, 자손 모두 선택
+            $('#foods tr').css('color', 'red');
+        });
+    </script>
+    <style>
+        h3 {
+            color: #000;
+            font-size: 24px;
+            margin-bottom: 16px;
+        }
+    </style>
+<title></title>
+</head>
+
+<body>
+    <!-- 구조1 -->
+    <div class="card-body">
+        It`s not your fault
+    </div>
+    <div class="card-body" id="one">
+        <div>
+            "네 잘못이 아니야"
+        </div>
+        <span>
+            <div>
+                [GOOD WILL HUNTING, 1997]
+            </div>
+        </span>
+        <div>
+            로빈 윌리암스
+        </div>
+    </div>
+    <div class="card-body">
+        Don`t waste your life, stark
+    </div>
+    <div class="card-body">
+        "인생을 낭비하지 말아요, 스타크"
+    </div>
+    <div class="card-body">
+        IRON MAN, 2008
+    </div>
+
+    <!-- 구조2 -->
+    <div class="card-body">
+        <h3>좋아하는 음식</h3>
+        <table class="table" id="foods">
+            <tr>
+                <th>ID</th>
+                <th>먹을거리</th>
+                <th>분류</th>
+            </tr>
+            <tr>
+                <td>F001</td>
+                <td>짜장면</td>
+                <td>중식</td>
+            </tr>
+            <tr>
+                <td>F002</td>
+                <td>라면</td>
+                <td>한식</td>
+            </tr>
+            <tr>
+                <td>F003</td>
+                <td>김치찌개</td>
+                <td>한식</td>
+            </tr>
+            <tr>
+                <td>F004</td>
+                <td>돈까스</td>
+                <td>일식</td>
+            </tr>
+            <tr>
+                <td>F005</td>
+                <td>초밥</td>
+                <td>일식</td>
+            </tr>
+            <tr>
+                <td>F006</td>
+                <td>안심스테이크</td>
+                <td>양식</td>
+            </tr>
+        </table>
+    </div>
+</body>
+
+</html>
