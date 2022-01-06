@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/font.css">
+    <title>제이쿼리 선언적 함수와 이벤트연결</title>
+    <!-- 1. 제이쿼리 코어파일 사용 -->
+    <script src="./js/jquery-1.12.4.min.js"></script>
+    <script src="./js/jquery-3.3.1.min.js"></script>
+    <script src="./js/jquery-3.4.1.min.js"></script>
+    <!-- 2. 제이쿼리 코어파일 CDN 사용 -->
+    <script src="http://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="http://code.jquery.com/jquery-1.3.1.min.js"></script>
+    <script src="http://code.jquery.com/jquery-1.4.1.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- 부트스트랩 -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <!-- 3. 제이쿼리 코딩 -->
+    <script>
+        $(document).ready(function(){
+            // 입력양식선택자 = type 속성
+            /* let out = $(':text').val();
+            alert(out); */
+            let fcs = $(':text').focus()
+            $(fcs).css({'backgroundColor':'blue','color':'#fff','fontSize':20});
+            
+            // 선언적함수(이벤트리스너)와 이벤트 연결
+            $(':button').on('click', chCss);
+            // 선언적함수(이벤트리스너)
+            function chCss(){
+                $('h3').text('바뀌는 문자열').css('color','red');
+            }
+
+        });
+    </script>
+    <style>
+        h3, button {
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="card-body">
+        <input type="text" value="텍스트박스" class="form-control"> <br><br>
+        <input type="button" value="텍스트박스" class="form-control"><br><br>
+        <button class="from-control">버튼</button><br><br>
+
+        <h3>제이쿼리 이벤트</h3>
+    </div>
+</body>
+
+</html>

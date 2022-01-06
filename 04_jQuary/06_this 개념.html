@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/font.css">
+    <title>this 개념</title>
+    <style>
+        .clickTest {
+            border: 1px solid #000;
+            background-color : yellowgreen;
+            border-radius: 5px;
+            padding: 10px;
+            margin-bottom: 10px;
+            cursor: pointer;
+        }
+    </style>
+    <!-- 1. 제이쿼리 코어파일 사용 -->
+    <script src="./js/jquery-1.12.4.min.js"></script>
+    <script src="./js/jquery-3.3.1.min.js"></script>
+    <script src="./js/jquery-3.4.1.min.js"></script>
+    <!-- 2. 제이쿼리 코어파일 CDN 사용 -->
+    <script src="http://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="http://code.jquery.com/jquery-1.3.1.min.js"></script>
+    <script src="http://code.jquery.com/jquery-1.4.1.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- 부트스트랩 -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <!-- 3. 제이쿼리 코딩 -->
+    <script>
+        $(document).ready(function(){
+            // 1. 클래스 선택자 변수 할당 elm
+            let elm = $('.clickTest');
+
+            // 2. 이벤트 연결
+            // 클래스 선택자를 클릭했을 때 텍스트 노드를 '클릭되었습니다'로 변경
+            /* $(elm).on('click',function(){            // = elm.on('click',function)
+                $('div').text('클릭되었습니다');         // = elm.text('클릭되었습니다')
+            }); */
+
+            /* 실습. id값을 이용해서 각각의 박스에 이벤트 연결
+            각각 박스를 클릭했을 때 클릭한 박스만 텍스트 노드를 '클릭되었습니다'로 변경 */
+            
+            /* let id1 = $('#div1');
+            let id2 = $('#div2');
+            let id3 = $('#div3');
+            let id4 = $('#div4');
+            let id5 = $('#div5');
+
+            id1.on('click', function(){
+                id1.text('클릭되었습니다');
+            });
+            id2.on('click', function(){
+                id2.text('클릭되었습니다');
+            });
+            id3.on('click', function(){
+                id3.text('클릭되었습니다');
+            });
+            id4.on('click', function(){
+                id4.text('클릭되었습니다');
+            });
+            id5.on('click', function(){
+                id5.text('클릭되었습니다');
+            }); */
+
+            /* this로 함축 가능 = this : DOM요소 $(this)
+            this : 상황에 따라 들어있는 변수가 바뀌는 '특수한 변수'
+                   이벤트리스너 안의 this는 이벤트가 발생한 요소가 들어감 */
+            
+            $('.clickTest').click(function(){
+                $(this).text('클릭되었습니다');
+            });
+
+        });
+    </script>
+</head>
+    <div id="div1" class="clickTest">div!!</div>
+    <div id="div2" class="clickTest">div!!</div>
+    <div id="div3" class="clickTest">div!!</div>
+    <div id="div4" class="clickTest">div!!</div>
+    <div id="div5" class="clickTest">div!!</div>
+<body>
+    
+</body>
+
+</html>
