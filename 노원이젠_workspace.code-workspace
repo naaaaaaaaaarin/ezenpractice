@@ -5,6 +5,6 @@
 		}
 	],
 	"settings": {
-		"liveServer.settings.multiRootWorkspaceName": "노원이젠"
+		"git.ignoreLimitWarning": true
 	}
 }

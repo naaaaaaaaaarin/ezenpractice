@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="./css/reset.css"> -->
+    <link rel="stylesheet" href="./css/font.css">
+    <title>제이쿼리 애니메이션</title>
+    <!-- 1. 제이쿼리 코어파일 사용 -->
+    <script src="./js/jquery-1.12.4.min.js"></script>
+    <script src="./js/jquery-3.3.1.min.js"></script>
+    <script src="./js/jquery-3.4.1.min.js"></script>
+    <!-- 2. 제이쿼리 코어파일 CDN 사용 -->
+    <script src="http://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="http://code.jquery.com/jquery-1.3.1.min.js"></script>
+    <script src="http://code.jquery.com/jquery-1.4.1.min.js"></script>
+    <!-- 부트스트랩 -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <!-- 3. 제이쿼리 코딩 -->
+    <script>
+        $(document).ready(function(){
+            /* 1. 형식 : animate({속성},시간,속도,콜백함수);
+            a. 속성 : 반드시 인자값으로 입력(속성값이 숫자로 사용되는 속성만 사용가능) = 제이쿼리 코어 플러그인 경우
+            b. 시간 : 'slow', 'nomal', 'fast', 밀리초
+            c. 속도 : linear(동일속도), swing(처음/마지막에 애니메이트 속도가 살짝 느려짐)
+            d. 콜백함수 : 해당 매서드가 실행이 된 후 호출되어 사용하는 함수 */
+
+            /* $('div').mouseover(function(){
+                $(this).stop().animate({'width':100, 'height':100}, 'slow', 'linear');
+            });
+            $('div').mouseout(function(){
+                $(this).stop().animate({width:50, height:50}, 'slow', 'linear');
+            }); */
+
+            // 실습1. 위 효과를 마우스엔터, 마우스리브를 사용해서 똑같은 애니메이션이 작동하도로 코딩
+            /* $('div').mouseenter(function(){
+                $(this).stop().animate({width:100, height:100}, 'slow', 'linear');
+            });
+            $('div').mouseleave(function(){
+                $(this).stop().animate({width:50, height:50}, 'slow', 'linear');
+            }); */
+
+            // 실습2. 버튼1을 클릭할 때 마다 오른쪽으로 50px 이동하도록 코딩
+           /*  $('button').eq(0).click(function(){
+                $('.box').stop().animate({left:'+=50'}, 'slow');
+            });
+
+            // 실습3. 버튼2를 클릭할 때 마다 왼쪽으로 50px 이동하도록 코딩
+            $('button').eq(1).click(function(){
+                $('.box').stop().animate({left:'-=50'}, 'slow');
+            });
+            
+            // 실습4. 버튼3을 클릭하면 원래 자리로 이동하도록 코딩
+            $('button').eq(2).click(function(){
+                $('.box').stop().animate({left:200, top:200});
+            });
+
+            // 실습5. DELAY를 클릭하면 delay 박스가 나타나도록 코딩
+            $('button').eq(3).click(function(){
+                $('.delay').stop().show();
+            }); */
+
+            // dealy() : 설정한 밀리초 후에 애니메이션 실행
+            $('button').eq(-1).click(function(){
+                $('.delay').stop().delay(1000).animate({left:500});
+            });
+        });
+    </script>
+    <style>
+        body {
+            margin: 10px;
+        }
+        .btn {
+            display: flex;
+            width: 500px;
+        }
+        button {
+            cursor: pointer;
+            width: 500px;
+        }
+
+        .box {
+            width: 50px;
+            height: 50px;
+            margin: 20px;
+            background-color: skyblue;
+            cursor: pointer;
+            position: absolute;
+            left: 200px;
+            top: 200px;
+        }
+        .delay {
+            width: 300px;
+            height: 100px;
+            background-color: purple;
+            cursor: pointer;
+            position: absolute;
+            left: 200px;
+            top: 120px;
+            /* display: none; */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box"></div>
+    <div class="delay"></div>
+    <div class="btn">
+        <button class="form-control">버튼1</button>
+        <button class="form-control">버튼2</button>
+        <button class="form-control">버튼3</button>
+        <button class="form-control">DELAY</button>
+    </div>
+</body>
+
+</html>

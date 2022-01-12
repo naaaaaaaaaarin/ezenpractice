@@ -1,0 +1,128 @@
+@charset "utf-8";
+
+body {
+    font-family: 'Noto Sans Kr', sans-serif;
+}
+#wrap {
+    min-width: 1920px;
+}
+/* Safe Area 1280 */
+.w1280 {
+    width: 1280px;
+    margin: 0 auto;
+}
+
+
+/* Header */
+header {
+    height: 698px;
+    background-image: url("../image/header_image1.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding-top: 24px;
+}
+
+/* 3단 레이아웃 */
+header::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+header .logo_gnb_left {
+    width: 1200px;
+    float: left;
+}
+header .logo_gnb_left .logo {
+    float: left;
+}
+header .logo_gnb_left .logo img {
+    width: 350px;
+}
+header .logo_gnb_left .gnb {
+    float: right;
+}
+header .logo_gnb_left .gnb li {
+    /* 플롯 */
+    float: left;
+    margin-top: 10px;
+    margin-right: 24px;
+    font-weight: 400;
+}
+header .logo_gnb_left .gnb li:hover {
+    font-size: 24px;
+    font-weight: bold;
+}
+header .search {
+    width: 80px;
+    text-align: right;
+    float: right;
+}
+
+/* ImageText Deco */
+header .img_deco {
+    padding-left: 20px;
+}
+header .img_deco h2 {
+    font-size: 72px;
+    font-weight: bold;
+    margin-top: 140px;
+    line-height: 98px;
+    color: rgb(0, 0, 0);
+    /* -webkit-text-stroke: #000 2px; */
+}
+header .img_deco p {
+    margin-top: 27px;
+    font-size: 14px;
+    color: rgb(255, 249, 249);
+    
+}
+header .img_deco button {
+    width: 167px;
+    height: 48px;
+    background-color: rgb(32, 32, 32);
+    /* margin-top: 10px; */
+}
+header .img_deco button a{
+    font-size: 14px;
+    font-weight: 600;
+    color: #fff;
+}
+
+/* Section Cardbox */
+.card_box {
+    background-image: url(../image/header_image2.png);
+    background-size: cover;
+}
+.card_boxs {
+    width: 1363px;
+    display: flex;
+    justify-content: space-between;
+    /* transform: translateY(-80px); */
+    position: relative;
+    top: -80px;
+    z-index: 1;
+}
+
+/* CardText 지워질 내용*/
+.card_box_info {
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-40px);
+}
+.card_box_info h2 {
+    color: aliceblue;
+    
+}
+.card_box_info h2 span{
+    font-weight: bold;
+    font-size: 20px;
+}
+.card_box_info p {
+    display: flex;
+    justify-content: right;
+}
+.card_box_info p a img {
+    transform: translateY(3px);
+    margin-left: 10px;
+}

@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/font.css">
-    <title>이베트 기본링크 제거</title>
+    <title>이벤트 기본링크 제거</title>
     <!-- 1. 제이쿼리 코어파일 사용 -->
     <script src="./js/jquery-1.12.4.min.js"></script>
     <script src="./js/jquery-3.3.1.min.js"></script>
@@ -28,11 +28,11 @@
             }); */
 
             // 2-1. 기본링크 기능 제거
-            /* $('.btn1').on('click',function(){
+            $('.btn1').on('click',function(){
                 $('.txt1').css({'color':'red', 'backgroundColor':'black'});
                 // 기본링크 제거
                 return false; // 여기까지 하고 빠져나감
-            }); */
+            });
             // 2-2. 기본링크 기능 제거 = preventDefault()
             $('.btn2').on('click',function(e){
                 $('.txt2').css({'color':'red', 'backgroundColor':'black'});
@@ -65,11 +65,6 @@
             내용2
         </p>
         <p>
-            <button class="btn3">버튼3</button>
-        </p>
-        <p class="txt3">
-            내용3
-        </p>
     </div>
 </body>
 

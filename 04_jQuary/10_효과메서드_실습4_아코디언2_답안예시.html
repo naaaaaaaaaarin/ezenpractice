@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/font.css">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
+    <style>
+
+    </style>
+    <title>제이쿼리 메뉴토글 효과 </title>
+    <!-- 제이쿼리 코어파일 추가 -->
+    <script src="./js/jquery-1.12.4.min.js"></script>
+    <script src="./js/jquery-3.3.1.min.js"></script>
+    <script src="./js/jquery-3.4.1.min.js"></script>
+    <!-- 제이쿼리 코어 CDN 파일 추가 -->
+    <script src="http://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="http://code.jquery.com/jquery-1.3.1.min.js"></script>
+    <script src="http://code.jquery.com/jquery-1.4.1.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- 부트스트랩 -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <script>
+        $(document).ready(function () {
+            // 1. 로딩 시 내용 안보이게 하기
+            $('#wrap>p').hide();
+            // 2. CSS 코딩
+            $('#wrap>p').css({border: '1px solid #ddd', padding: 5, color: 'orange'});
+            $('#wrap>p').eq(-1).css({color: 'yellowgreen', fontSize: 24});
+            // 3. 이벤트 : 버튼 클릭 시 다른 영역 내용 안보이게 하기
+            $('#wrap>h2 a').on('click',function(){
+                $('#wrap>p').hide();
+                $(this).parent().parent().next().stop().show();
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div id="wrap">
+        <h2>
+            <button><a href="#">버튼 1</a></button>
+        </h2>
+        <p>내용1</p>
+        <h2>
+            <button><a href="#">버튼 2</a></button>
+        </h2>
+        <p>내용2</p>
+    </div>
+</body>
+
+</html>
