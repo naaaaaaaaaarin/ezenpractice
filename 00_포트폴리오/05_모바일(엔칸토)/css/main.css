@@ -1,0 +1,140 @@
+@charset "utf-8";
+
+#wrap {
+    width: 100%;
+    background-image: url("../image/encanto_bgimg.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+    padding: 8px;
+}
+.header {
+    padding: 24px;
+}
+/* 체크박스 none */
+.header input[id="menuicon"] {
+    display: none;
+}
+/* 햄버거메뉴 그리기 */
+.header input[id="menuicon"]+label {
+    display: block;
+    width: 24px;
+    height: 14px;
+    cursor: pointer;
+    position: relative;
+}
+.header input[id="menuicon"]+label span {
+    width: 100%;
+    height: 2px;
+    position: absolute;
+    background-color: #fff;
+    transition: all .3s;
+    z-index: 100;
+}
+.header input[id="menuicon"]+label span:nth-child(1) {
+    top: 0;
+}
+.header input[id="menuicon"]+label span:nth-child(2) {
+    top: 50%;
+    transform: translateY(-50%);
+}
+.header input[id="menuicon"]+label span:nth-child(3) {
+    bottom: 0;
+}
+/* 햄버거 클릭 시 X모양 만들기 */
+.header input[id="menuicon"]:checked+label span:nth-child(1){
+    top: 50%;
+    transform: translateY(-50%) rotate(45deg);
+}
+.header input[id="menuicon"]:checked+label span:nth-child(2){
+    opacity: 0;
+}
+.header input[id="menuicon"]:checked+label span:nth-child(3){
+    bottom: 50%;
+    transform: translateY(50%) rotate(-45deg);
+}
+/* 햄버거 슬라이드 메뉴 */
+.header .mobile_gnb {
+    width: 250px;
+    height: 100%;
+    background-color: #823ba3;
+    padding-top: 64px;
+    position: absolute;
+    left: -250px;
+    top: 0;
+    z-index: 90;
+    transition: all .3s ;
+}
+.header input[id="menuicon"]:checked+label+nav {
+    left: 0;
+    top: 0;
+}
+.header .mobile_gnb .gnb li{
+    height: 42px;
+    line-height: 42px;
+    padding-left: 24px;
+}
+.header .mobile_gnb .gnb li a{
+    display: block;
+    color: #fff;
+}
+.header .mobile_gnb .gnb li:hover{
+    background-color: #fff;
+}
+.header .mobile_gnb .gnb li a:hover{
+    color: #cca4df;
+    font-weight: 700;
+}
+/* share hover제거 */
+.header .mobile_gnb .gnb li:last-child:hover{
+    background-color: transparent;
+}
+.header .mobile_gnb .gnb li:last-child a:hover{
+    color: #fff;
+    font-weight: normal;
+}
+
+/* sns */
+.header .mobile_gnb .sns {
+    display: table;
+    padding-left: 24px;
+    width: 234px;
+    height: 48px;
+}
+.header .mobile_gnb .sns li {
+    display: table-cell;
+    width: 70px;
+    font-size: 24px;
+    text-align: center;
+}
+.header .mobile_gnb .sns li i{
+    color: #fff;
+    padding: 12px 25px 12px 24px;
+}
+.header .mobile_gnb .sns .facebook{
+    margin-left: 24px;
+    background-color: #3c5a98;
+}
+.header .mobile_gnb .sns .twitter {
+    background-color: #56acef;
+    
+}
+.header .mobile_gnb .sns .instagram{
+    margin-right: 24px;
+    background-color: #5cbf4a;
+}
+
+/* footer */
+footer {
+    background-color: #c3c3c3;
+    text-align: center;
+}
+footer>p {
+    padding-top: 24px;
+}
+footer p img {
+    width: 250px;
+}
+footer .copyright {
+    padding: 36px 0 40px 0;
+}

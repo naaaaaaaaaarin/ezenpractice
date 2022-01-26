@@ -1,0 +1,45 @@
+#wrap {
+    width: 1440px;
+    margin: 0 auto;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.header .logo img{
+    width: 150px;
+}
+.header .gnb {
+    display: flex;
+    justify-content: space-between;
+}
+.header .gnb li {
+    margin-left: 20px;
+}
+.header .login{
+    display: flex;
+}
+.header .login li{
+    margin-left: 14px;
+}
+#slider {
+    width: 1960px;
+    position: relative;
+}
+.slider__item {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    z-index: 0;
+    opacity: 0;
+    transition: all .5s ease-in-out;
+    transform: translateX(-100%);
+    
+}
+.showing {
+    opacity: 1;
+    z-index: 1;
+    transform: none;
+}

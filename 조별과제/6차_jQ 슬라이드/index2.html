@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>조별과제_jQ 슬라이더</title>
+    <!-- Meta Data : FaceBook -->
+    <meta name="author" content="light">
+    <meta name="description" content="조별과제_jQuery 슬라이드">
+    <meta property="og:image" content=""> <!-- 링크전송 시 카드형으로 나타나는 내용 -->
+    <meta property="og:title" content="Light_slide">
+    <meta property="og:description" content="프로젝트 상세설명">
+    <meta property="og:url" content="프로젝트 url 주소">
+    <meta property="og:locale" content="ko_KR"> <!-- 메인서비스 국가 -->
+    <meta property="og:site_name" content="프로젝트 사이트 이름">
+    <meta property="og:type" content="조별과제">
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/notosans_kr_CDN.css">
+    <link rel="stylesheet" href="./css/font.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <!-- HTML5 JS File -->
+    <script src="./js/html5shiv.js"></script>
+    <script src="./js/respond.src.js"></script> <!-- 반응형 -->
+    <!-- jQ PlugIn -->
+    <script src="./js/jquery-1.12.4.min.js"></script>
+    <script src="./js/jquery-3.3.1.min.js"></script>
+    <script src="./js/jquery-3.4.1.min.js"></script>
+    <!-- JQ Plugin - Box Slider (jQ, CSS) -->
+    <script src="./js/jquery.bxslider.min.js"></script>
+    <link rel="stylesheet" href="./css/jquery.bxslider.css">
+    <!-- JS -->
+    <script>
+        $(function(){
+            $('.slideImage').bxSlider({
+                mode : 'fade',
+                pager : true,
+                auto : true,
+                // slideWidth : 1960
+            });
+        })
+    </script>
+
+</head>
+
+<body>
+    <div id="wrap">
+        <header class="header">
+            <div class="logo">
+                <a href="#"><img src="./image/faulbassett_logo/02_PNG/폴바셋_BI_combination.png" alt="폴바셋 로고" /></a>
+            </div>
+            <nav>
+                <ul class="gnb">
+                    <li><a href="#">ABOUT&nbsp;US</a></li>
+                    <li><a href="#">MENU</a></li>
+                    <li><a href="#">STORE</a></li>
+                    <li><a href="#">COCIETY</a></li>
+                    <li><a href="#">WHAT`S&nbsp;NEW</a></li>
+                    <li><a href="#">E-SHOP</a></li>
+                </ul>
+            </nav>
+            <ul class="login">
+                <li><a href="#">LogIn</a></li>
+                <li><a href="#">Search</a></li>
+            </ul>
+        </header>
+    </div>
+    <div id="slide">
+        <ul class="slideImage">
+            <li><img src="./image/slide01.jpg" alt=""></li>
+        </ul>
+    </div>
+</body>
+
+</html>

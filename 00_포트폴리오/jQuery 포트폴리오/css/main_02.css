@@ -1,0 +1,88 @@
+#wrap {
+    max-width: 960px;
+    margin: 0 auto;
+    text-align: center;
+}
+header {
+    height: 60px;
+    line-height: 60px;
+    background-color: #333;
+}
+header .logo {
+    color: #fff;
+    font-size: 1.5rem;
+}
+
+/* 1depth GNB메뉴 */
+nav {
+    background-color: #555;
+}
+nav #menu {
+    height: 45px;
+    line-height: 45px;
+}
+nav .gnb {
+    display: table;
+}
+nav .gnb li {
+    display: table-cell;
+}
+nav .gnb li a{
+    display: table-cell;
+    width: 192px;
+    color: #fff;
+    background-color: red;
+    transition: all 0.5s;
+}
+nav .gnb li a:hover{
+    background-color: darkred;
+    transform: translateY(-2px);
+}
+
+/* 2depth GNB 서브메뉴 */
+nav {
+    /* 포지션 기준 */
+    position: relative;
+}
+nav #menu_dept {
+    width: 100%;
+    text-align: center;
+    /* 포지션 */
+    position: absolute;
+}
+nav #menu_dept .gnb_sub {
+    display: flex;
+    justify-content: space-between;
+}
+nav .sub_menu {
+    width: 192px;
+    padding: 30px 0;
+    border-right: 1px dotted #000;
+    background-color: rgba(192, 192, 192, 0.7);
+}
+nav .sub_menu li {
+    padding: 10px 0;
+}
+nav .sub_menu li a{
+    color: #fff;
+}
+nav .sub_menu li a:hover{
+    color: darkred;
+}
+
+/* 닫기버튼 */
+#menu_dept span {
+    color: darkred;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+
+footer {
+    font-weight: 500;
+    padding-top: 24px;
+}
+
+.slide img{
+    width: 100%;
+}

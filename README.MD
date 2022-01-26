@@ -1614,9 +1614,9 @@ if (gender === "M" && (name === "Mike" || isAudult)){
 // 형식
   : 조건식?js코드(조건식값이 true일 경우 실행):js코드2(조건식값이 false일 경우 실행);
 
-var int = 10;
-var int2 = 20;
-var tf = int>int2?'true일 경우 실행':'false일 경우 실행';
+let int = 10;
+let int2 = 20;
+let tf = int>int2?'true일 경우 실행':'false일 경우 실행';
 document.write(tf + "<br><br>")
 
 // 삼향조건연산자 실습

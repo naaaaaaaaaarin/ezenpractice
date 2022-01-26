@@ -1,0 +1,36 @@
+/* 배경 바꾸기 */
+#wrap {
+    background-image: url('');
+    background-color: #000;
+}
+.header input[id="menuicon"]+label {
+    /* background-color: transparent; */
+    background: none;
+}
+/* 위치기준값 */
+header {
+    position: relative;
+}
+/* Ticket 페이지 링크 버튼 */
+aside.ticket {
+    position: absolute;
+    right: 0;
+    top: 14px;
+    z-index: 1;
+    padding-right: 10px;
+}
+aside.ticket button {
+    width: 114px;
+    height: 32px;
+    background-color: #fff;
+    font-family: 'Loto', sans-serif;
+}
+
+/* Contents */
+#contents .youtube {
+    padding: 0 10px;
+    transform: translateY(0);
+}
+#contents .youtube iframe {
+    width: 100%;
+}

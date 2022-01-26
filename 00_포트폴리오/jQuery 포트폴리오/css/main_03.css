@@ -1,0 +1,77 @@
+#wrap {
+    max-width: 960px;
+    margin: 0 auto;
+    text-align: center;
+}
+header {
+    height: 60px;
+    line-height: 60px;
+    background-color: #333;
+}
+header .logo {
+    color: #fff;
+    font-size: 1.5rem;
+}
+
+/* Tap Menu */
+nav {
+    color: #000;
+}
+nav #menu_gnb {
+    height: 45px;
+    line-height: 45px;
+}
+nav #menu_gnb {
+    display: table;
+}
+nav #menu_gnb .gnb li {
+    display: table-cell;
+    background-color: #555;
+}
+nav #menu_gnb .gnb li a {
+    display: table-cell;
+    width: 192px;
+    transition: all 0.5s;
+}
+/* nav #menu_gnb .gnb li:hover{
+    color: #343434;
+} */
+
+/* 처음 로딩 시 해당 영역에만 스타일 적용을 위한 클래스 */
+nav .gnb li.active a {
+    color: #fff;
+    background-color: #613434;
+}
+
+
+/* Tap Menu Contents */
+section div {
+    width: 100%;
+}
+section div img {
+    max-width: 100%;
+    width: 100%;
+}
+
+/* 로딩시 첫번째 컨텐츠박스만 보이도록 코딩 */
+/* section div~div {
+    display: none;
+} */
+section div:nth-child(2),
+section div:nth-child(3),
+section div:nth-child(4),
+section div:nth-child(5) {
+    display: none;
+}
+
+
+
+
+
+footer {
+    text-align: center;
+    color: #333;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 80px;
+}

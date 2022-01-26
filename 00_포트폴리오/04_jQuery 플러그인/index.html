@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jquery Box Slider PlugIn Setting</title>
+    <!-- Meta Data : FaceBook -->
+    <meta name="author" content="al">
+    <meta name="description" content="프로젝트 상세 설명">
+    <meta property="og:image" content=""> <!-- 링크전송 시 카드형으로 나타나는 내용 -->
+    <meta property="og:title" content="프로젝트 타이틀">
+    <meta property="og:description" content="프로젝트 상세설명">
+    <meta property="og:url" content="프로젝트 url 주소">
+    <meta property="og:locale" content="ko_KR">  <!-- 메인서비스 국가 --> 
+    <meta property="og:site_name" content="프로젝트 사이트 이름">
+    <meta property="og:type" content="프로젝트 종류">
+    <!-- 부트스트랩 CDN -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <!-- Favicon PC / Mobile -->
+    <link rel="shortcut icon" href="./image/">
+    <link rel="apple-touch-icon=precomposed" href="./image/">
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/notosans_kr_CDN.css">
+    <link rel="stylesheet" href="./css/font.css">
+    <!-- System Font CSS -->
+    <!-- <link rel="stylesheet" href="./css/system_font.css"> -->
+    <!-- no scroll CSS -->
+    <!-- <link rel="stylesheet" href="./css/no_scrollbar.css"> -->
+    
+    <!-- HTML5 JS File -->
+    <script src="./js/html5shiv.js"></script>
+    <script src="./js/respond.src.js"></script> <!-- 반응형 -->
+    <!-- jQ PlugIn -->
+    <script src="./js/jquery-1.12.4.min.js"></script>
+    <script src="./js/jquery-3.3.1.min.js"></script>
+    <script src="./js/jquery-3.4.1.min.js"></script>
+    <!-- JQ Plugin - Box Slider (jQ, CSS) -->
+    <script src="./js/jquery.bxslider.min.js"></script>
+    <link rel="stylesheet" href="./css/jquery.bxslider.css">
+    <!-- PreFix FRee -->
+    <script src="./js/prefixfree.min.js"></script>
+
+
+    <!-- 프로젝트 페이지 script -->
+    <!-- // 1. BxSlider 기본 속성들 -->
+    <!-- <script>
+        $(document).ready(function(){
+            $('.slide_gallery').bxSlider({
+                // 기본값 (논리형 값)
+                // 1. 슬라이더 이동방향 : 'horizontal'(기본값), 'vertical', 'fade'
+                mode : 'horizontal',
+                // 2. 슬라이드 속도 : 숫자형 값(ms)
+                speed : 500,
+                // 3. 슬라이드 자동실행 전환 속도 : 숫자형 값(ms)
+                pause : 3000,
+                // 4. 불릿(버튼) 노출 여부 : 논리형 값
+                pager : true,
+                // 5. 슬라이드 박스 가로너비 설정 : 숫자형 값(css에서 width값이 코딩되어 있으면 적용X)
+                slideWidth : 1440,
+                // 6. 자동 슬라이드 멈추기 여부 : 논리형 값
+                stopAutoOnClick : true,
+                // 7. 슬라이드 자동전환 여부 : 논리형 값
+                auto : true,
+                // 8. 슬라이듣 마우스 호버 시 자동전환 멈춤 여부 : 논리형 값
+                autoHover : true,
+                // 9. 플레이 버튼 노출 여 부 : 논리형 값
+                autoControls : true,
+                // 10. 썸네일 이미지 연결 : 구조의 클래스명
+                pagerCustom : '.slide_pager'
+
+            });
+        });
+    </script> -->
+    <!-- 2. 기본효과 -->
+    <!-- <script>
+        $(function(){
+            $('.slide_gallery').bxSlider({
+                auto : true,
+                autoControls : true,
+                autoHover : true,
+                pager : true,
+                pagerCustom : 'slide_pager',
+                slideWidth : 1440
+            });
+        });
+    </script> -->
+    <!-- 3. 실제 사용효과 -->
+    <script>
+        $(function(){
+            $('.slide_gallery').bxSlider({
+                mode : 'fade',
+                pager : true,
+                auto : true,
+                slideWidth : 1440
+            });
+        });
+    </script>
+
+    <!-- 프로젝트 페이지 CSS -->
+    <style>
+        /* BxSlider 이미지 */
+        #gallery_wrap {
+            width: 1440px;
+            margin: 0 auto;
+        }
+        /* Thumnail */
+        .slide_pager {
+            text-align: center;
+        }
+        .slide_pager li{
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <!-- BoxSlider 박스 = 액자역할 -->
+    <div id="gallery_wrap">
+        <!-- BxSlider 이미지 -->
+        <ul class="slide_gallery">
+            <li><img src="./image/img_bxSlider/slider1.png" alt="슬리아드이미지01"></li>
+            <li><img src="./image/img_bxSlider/slider2.png" alt="슬리아드이미지02"></li>
+            <li><img src="./image/img_bxSlider/slider3.png" alt="슬리아드이미지03"></li>
+        </ul>
+        <!-- /BxSlider 이미지 -->
+        
+        <!-- Thumnail 이미지 -->
+        <!-- data-*속성 : 
+        웹 문서의 레이아웃이나 내용에는 영향을 주지 않으면서, 구분할 특정 속성을 지정하고 싶을 때 사용
+        (-뒤 속송명은 마음대로 지정 가능)
+        주로 자바스크립트/제이쿼리 등 스크립트와 연동해서 사용 -->
+        <ul class="slide_pager">
+            <li><a href="#" data-slide-index="0"><img src="./image/img_bxSlider/photo1.png" alt="썸네일 이미지01"></a></li>
+            <li><a href="#" data-slide-index="1"><img src="./image/img_bxSlider/photo2.png" alt="썸네일 이미지02"></a></li>
+            <li><a href="#" data-slide-index="2"><img src="./image/img_bxSlider/photo3.png" alt="썸네일 이미지03"></a></li>
+        </ul>
+        <!-- /Thumnail 이미지 -->
+
+    </div>
+</body>
+</html>
