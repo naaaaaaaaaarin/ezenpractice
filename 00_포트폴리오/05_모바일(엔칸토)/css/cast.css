@@ -1,0 +1,48 @@
+@charset "utf-8";
+
+#wrap {
+    background-image: url(../image/encanto_bgimg_opacity.png);
+}
+
+.cast {
+    display: flex;
+    flex-wrap: wrap;
+}
+.cast li {
+    display: flex;
+    margin: 0 0 10px 5px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ccc;
+    
+}
+.cast li:last-child {
+    border-bottom: none;
+}
+/* .cast li::before {
+    content: "";
+    display: block;
+    width: 200px;
+    border-bottom: 1px solid #ccc;
+    position: absolute;
+    
+    
+} */
+.cast img {
+    width: 30%;
+}
+.cast li .cast_explain {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.cast li .cast_explain p:first-child{
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    /* transform: translateX(10px); */
+}
+.cast li .cast_explain p:last-child{
+    font-size: 12px;
+    margin-left: 10px;
+}

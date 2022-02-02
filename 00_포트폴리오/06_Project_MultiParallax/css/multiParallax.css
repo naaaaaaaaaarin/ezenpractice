@@ -1,0 +1,109 @@
+@charset "utf-8";
+body, html {
+    background: #fff;
+    color: #39313c;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 1.125rem;
+    line-height: 1.875;
+}
+/* 전체 너비 공통 클래스 */
+.wrapper {
+    width: 100%;
+    margin: 0 auto;
+}
+header h1 {
+    font-size: 3.75rem;
+    line-height: 1.1;
+    margin-bottom: 1em;
+}
+main .cast_name {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: rgb(43, 13, 13);
+}
+main .cast_log {
+    font-size: 1.2rem;
+}
+header .wrapper {
+    background: url('../image/nowayhome.jpg') no-repeat 4.16667% center;
+    padding: 10% 4.16667% 10% 41.6667%;
+    background-size: 33.3333% auto;
+
+}
+
+/* Contents 01 */
+#cast_1 .wrapper {
+    background: url('../image/image01.jpeg') no-repeat 4.16667% center;
+    padding: 10% 4.16667% 10% 41.6667%;
+    background-size: 33.3333% auto;
+}
+/* Contents 02 */
+#cast_2 .wrapper {
+    background: url('../image/image02.jpg') no-repeat 4.16667% center;
+    padding: 10% 4.16667% 10% 41.6667%;
+    background-size: 33.3333% auto;
+    background-size: 25%;
+}
+/* Contents 03 */
+#cast_3 .wrapper {
+    background: url('../image/image03.jpg') no-repeat 4.16667% center;
+    padding: 10% 4.16667% 10% 41.6667%;
+    background-size: 33.3333% auto;
+}
+/* Contents 04 */
+#cast_4 .wrapper {
+    background: url('../image/image04.jpg') no-repeat 4.16667% center;
+    padding: 10% 4.16667% 10% 41.6667%;
+    background-size: 33.3333% auto;
+}
+/* Contents 05 */
+#cast_5 .wrapper {
+    background: url('../image/image05.jpg') no-repeat 4.16667% center;
+    padding: 10% 4.16667% 10% 41.6667%;
+    background-size: 33.3333% auto;
+}
+/* 패럴렉스 효과 */
+/* 각각의 박스 영역 뒤에 가상클래스 :after을 사용하여 공간을 만든 후 각각의 배경이미지를 고정 */
+header:after,
+section:after {
+    width: 100%;
+    height: 400px;
+    display: block;
+    content: "";
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    /* 배경이미지 위치 고정 */
+    background-attachment: fixed;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.6);
+}
+/* 패럴렉스 각각 적용 */
+header::after{
+    background-image: url('../image/nowayhome.jpg');
+}
+#cast_1::after {
+    background-image: url('../image/bg01.jpg');
+}
+#cast_2::after {
+    background-image: url('../image/bg02.jpg');
+}
+#cast_3::after {
+    background-image: url('../image/bg03.jpg');
+}
+#cast_4::after {
+    background-image: url('../image/bg04.jpeg');
+}
+#cast_5::after {
+    background-image: url('../image/bg05.jpg');
+}
+
+/* Footer */
+footer {
+    background-color: #e01a1a;
+    text-align: center;
+    padding: 2.083335% 3.33333%;
+}
+footer p {
+    font-weight: 700;
+    color: #fafafa;
+}

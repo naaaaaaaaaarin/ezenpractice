@@ -6,7 +6,7 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: 100% 100%;
-    padding: 8px;
+    /* padding: 8px; */
 }
 .header {
     padding: 24px;
@@ -112,7 +112,6 @@
     padding: 12px 25px 12px 24px;
 }
 .header .mobile_gnb .sns .facebook{
-    margin-left: 24px;
     background-color: #3c5a98;
 }
 .header .mobile_gnb .sns .twitter {
@@ -120,7 +119,6 @@
     
 }
 .header .mobile_gnb .sns .instagram{
-    margin-right: 24px;
     background-color: #5cbf4a;
 }
 
