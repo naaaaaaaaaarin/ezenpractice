@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        Vue.js 개요
+        :Node.js와 webpack을 따로 사용하지 않아도 브라우저에서 HTML 파일을 읽어 들이기만 해도 Vue.js 실행
+        [자바스크립트 데이터]를 변경하기만 해도 (브라우저)그려지는 내용이 함께 변하는 것 -> [데이터바인딩]
+
+        Vue.js 특징
+        : 고기능 사이트 구축, 한번 만든 리소스(컴포넌트) 쉽게 재사용,
+        [데이터바인딩] 포함 DOM과 관련된 다양한 기능 제공,
+        HTML과 자바스크립트가 조합된 컴포넌트 기능 지원
+
+        Vue.js 프레임워크
+        : 쉽고 간단하게 시작 -> Vue.js 콘셉트
+        쉽게 배울 수 있는 프레임워크지만 개발사의 안정성이 떨어짐
+
+        Vue.js 개발환경 및 라이브러리 버전
+        : 버전 -> 2.X
+        버전 2.x 계열은 ECMA5 기능을 사용, ES5를 해석할 수 있는 엔진을 가진 모던 브라우저에서만 사용 가능(IE8 이하 X)
+
+        Vue Dev 확장프로그램
+        : Vue.js 개발을 지원해주는 도구 (필수X) -> 애플리케이션의 현재 데이터 상태를 확인, 변수 변경 상황을 추적하는 기능이 있어 개발시 편리
+
+        Vue.js 서드파티 라이브러리
+        : 유틸리티 라이브러리 -> lodash
+        Ajax 전용 라이브러리 -> axios
+
+        Veu.js 공부법
+        : Vue.js는 내부에서 여러가지 일을 함 -> 내부는 굉장히 복잡한 구조
+        하지만 어떤 일을 하는지 알 필요X -> 프레임워크의 장점
+        (중요)Vue.js가 제공해주는 몇가지 규칙들만 기억하고 찾아서 사용하면 됨
+    </title>
+</head>
+
+<body>
+    <div id="app">
+        <h1>{{message}}</h1>
+        <h1>{{message}}</h1>
+        <h1>{{message2}}</h1>
+    </div>
+
+<!-- Vue cdn -->
+<script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+<script>
+    var app = new Vue({
+        el: '#app',
+        data: {
+            message: 'Hello Vue.js',
+            message2: '반가워요 Vue.js'
+        },
+    });
+</script>
+</body>
+
+</html>

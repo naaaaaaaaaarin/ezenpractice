@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        ES6 템플릿 문자열 : 문자열 안에 변수와 연산식을 혼합하여 사용
+    </title>
+    <!-- 부트스트랩 CDN -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/font.css">
+
+
+    <!-- 프로젝트 페이지 JS -->
+    <style>
+        body {
+            line-height: 2;
+        }
+    </style>
+    <!-- 프로젝트 페이지 CSS -->
+    <script>
+    // 1. ES5 SCRIPT
+        // a. 문자열과 변수의 결합 : +연산자 사용
+        let string1 = "안녕하세요";
+        let string2 = "반갑습니다 <br>";
+        let result1 = string1 + "  " + string2;
+        document.write(result1);
+
+        // b-1. 객체 데이터
+        let product1 = {name: "도서", price : "5,000원"};
+        console.log(typeof(product1));
+        // b-2. 객체 데이터 접근방법
+        let data1 = "제품" + product1.name + "의 가격은" + product1.price + "입니다.";
+        document.write(data1 + "<br>");
+
+        // c. 숫자 데이터
+        let value1 = 10;
+        let value2 = 2;
+        let op1 = "곱셈값은 " + (value1*value2) + " 입니다. <br>";
+        document.write(op1);
+
+        // d. 논리 데이터
+        let bool1 = false;
+        // let op2 = "불린값은 " + 삼항조건 연산자 -> 거짓을 출력 + "입니다.";
+        let op2 = "불린값은" + (bool1?" 참":" 거짓") + " 입니다.";
+        document.write(op2);
+
+
+
+        document.write("<br><br>================<br><br>")
+    // 2. ES6 SCRIPT
+        // a. 문자열과 변수의 결합 : ``으로 묶은 후 ${변수 or 식} (ES5를 개선한 템플릿 문자열)
+        let string3 = "ES6 안녕하세요 <br>";
+        let string4 = "ES6 반갑습니다 <br>";
+        let result2 = `${string3} ${string4}`;
+        document.write(result2);
+
+        // b-1. 객체 데이터
+        let product2 = {name: "도서", price : "5,000원"};
+        // b-2. 객체 데이터 접근방법
+        let data2 = `제품 ${product2.name}의 가격은 ${product2.price} 입니다.`;
+        document.write(data2 + "<br>");
+
+        // c. 숫자 데이터
+        let value3 = 10;
+        let value4 = 2;
+        let op3 = `곱셈값은 ${value3*value4} 입니다.`;
+        document.write(op3 + "<br>");
+
+        // d. 논리 데이터
+        let bool2 = false;
+        // let op2 = "불린값은 " + 삼항조건 연산자 -> 거짓을 출력 + "입니다.";
+        let op4 = `불린값은 ${bool2?" 참":" 거짓"} 입니다.`;
+        document.write(op4);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

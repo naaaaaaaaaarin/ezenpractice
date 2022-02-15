@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        ES6 : 가변변수 | 불변변수
+        기본 자바스크립트 문법 변수 선언 : var 키워드 사용
+        ES6 : let -> 변수명 변경X. 값을 수정할 수 있는 가변변수
+        ES6 : const -> 변수명, 값 변경X. 불변변수
+    </title>
+    <!-- 부트스트랩 CDN -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/font.css">
+
+
+    <!-- 프로젝트 페이지 JS -->
+    <style>
+        body {
+            line-height: 2;
+        }
+    </style>
+    <!-- 프로젝트 페이지 CSS -->
+    <script>
+    // 1. const 불변변수 : 변수값, 변수명 변경x
+        /* // a. 숫자형 데이터
+        const num = 1;
+        num = 100;  // 타입에러 발생
+        alert(num);  
+        // b. 문자형 데이터
+        const str = "애리";
+        str = "김애리";  // 타입에러 발생
+        console.log(str);
+        // c. 논리형 데이터
+        const bool = true;
+        bool = false;  // 타입에러 발생
+        console.log(bool);
+        // d. 배열형 데이터
+        const arr = [];
+        arr = [1, 2, 3];  // 타입에러 발생
+        // e. 객체데이터
+        const obj = {};
+        obj = {name:"al"};  // 타입에러 발생 */
+        
+        // a. for문을 사용하여 array값의 데이터 출력
+        /* const arr = [1, 2, 3];
+        for (let i=0; i<arr.length; i++) {
+            document.write(i+"<br>");
+            console.log(arr[i]);
+        }; */
+
+        /* // b. for-in 루프 : iterator 방식
+        const array = [1, 2, 3];
+        for(const item in array){  
+            console.log("array index값", item);  // item -> array의 index값
+            document.write("array 배열값", array[item], "<br>");  // item -> array의 배열값
+        }; */
+
+        /* c. forEach 루프 : 화살표 함수
+        [형식]
+        가져올배열.forEach(item, index)=> {실행문;} */
+        const cc = [10, 20, 30];
+        cc.forEach((item,index)=>{
+            console.log('배열 index값 : ' + index);
+            console.log('배열 item값 : ' + item);
+        });
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

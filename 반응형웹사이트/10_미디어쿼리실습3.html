@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>미디어쿼리 실습1 (모바일 퍼스트)</title>
+    <!-- 부트스트랩 CDN -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/notosans_kr_CDN.css">
+    <link rel="stylesheet" href="./css/font.css">
+    <!-- System Font CSS -->
+    <!-- <link rel="stylesheet" href="./css/system_font.css"> -->
+    <!-- no scroll CSS -->
+    <!-- <link rel="stylesheet" href="./css/no_scrollbar.css"> -->
+    <!-- HTML5 JS File -->
+    <script src="./js/html5shiv.js"></script>
+    <script src="./js/respond.src.js"></script> <!-- 반응형 -->
+    <!-- jQ PlugIn -->
+    <script src="./js/jquery-1.12.4.min.js"></script>
+    <script src="./js/jquery-3.3.1.min.js"></script>
+    <script src="./js/jquery-3.4.1.min.js"></script>
+    <!-- PreFix Ree -->
+    <script src="./js/prefixfree.min.js"></script>
+
+
+    <!-- 프로젝트 페이지 JS -->
+
+    <!-- 프로젝트 페이지 CSS -->
+    <style>
+        /* 공통 css : 미디어쿼리에 코딩되지 않는 영역 (모바일퍼스트 시 모바일 영역 미디어쿼리로 간주)*/
+        html {
+            font-size: 62.5%;
+        }
+
+        #wrap {
+            /* 960px */
+            width: 90%;
+            margin: 0 auto;
+            /* 플롯해제 */
+            overflow: hidden;
+        }
+
+        #wrap div {
+            font-size: 6rem;
+            padding-left: 50px;
+            margin-bottom: 30px;
+        }
+
+        #wrap div:nth-child(3n) {
+            background-color: pink;
+        }
+
+        #wrap div:nth-child(3n+1) {
+            background-color: yellowgreen;
+        }
+
+        #wrap div:nth-child(3n+2) {
+            background-color: green;
+        }
+
+        /* 480px 이상 */
+        @media screen and (min-width:480px) {
+            #wrap div {
+                width: 400px;
+                /* (400/960)*100 */
+                width: 41.66%;
+                margin: 40px;
+                /* (40/960)*100 */
+                margin: 4.166%;
+                /* 플롯 */
+                float: left;
+            }
+        }
+
+        /* 690px 이상 */
+        @media screen and (min-width:690px) {
+            #wrap div {
+                width: 300px;
+                /* (300/960)*100 */
+                width: 31.25%;
+                margin: 20px;
+                /* ((20/960)*100)/2 */
+                margin: 1.0416%;
+                /* 플롯 */
+                float: left;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrap">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+    </div>
+
+</body>
+
+</html>

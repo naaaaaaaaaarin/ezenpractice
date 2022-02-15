@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        ES6
+        : 화살표 함수(arrow function)
+        ES6에 추가된 표현식을 사용하는 함수.
+        화살표 =>로 함수 선언.
+        기본적으로 익명함수로 선언함. 변수에 할당하여 사용
+        function 키워드 생략
+        인자블록()코드블록{} 사이에 =>를 표기
+        [형식]
+        (인자)=>{실행문;}
+    </title>
+    <!-- 부트스트랩 CDN -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/font.css">
+    <style>
+        body {
+            line-height: 2;
+        }
+    </style>
+
+    <script>
+        // 1. ES5 SCRIPT
+        // 1-a. 선언적 함수
+        /* function add(first, second){
+            return first+second;
+        };
+        alert(add(3,2)); // 호이스팅 */
+        /* // 1-b. 익명 함수
+        var add = function(first, second){
+            return first+second;
+        };
+        alert(add(3,2)); */
+
+        // 2. ES6 SCRIPT
+        /* // 2-a. 화살표 함수 => 기본 사용법(매개변수가 있는 경우)
+        let add = (first,second)=>{
+            return first+second;
+        };
+        alert(add(4,1)); */
+
+        /* // 2-b. 화살표 함수 => 기본 사용법(매개변수가 없는 경우)
+        let first = 1;
+        let second = 2;
+        let add = () => {
+            return first + second;
+        };
+        alert(add()); */
+
+        // 2-c. 화살표 함수 : 본문 블록은 비어있고 결과값을 바로 반환하는 경우 중괄호 생략 가능
+        let add = (first, second) => first+second;
+
+        /* // 2-d. 화살표 함수 : 반환값이 객체면 ()로 감싸 간결하게 표현 가능
+        let add = (first, second) => ({add: first+second, multiple: first*second}); */
+
+        alert(add(4, 1));
+        
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

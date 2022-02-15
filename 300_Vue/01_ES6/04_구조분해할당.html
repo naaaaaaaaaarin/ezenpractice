@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        ES6 구조분해할당 (destructuring)
+        : 객체나 배열의 특정값을 손쉽게 추출할 수 있는 [JS 표현식]
+        객체나 배열의 속성을 해체하여, 그 값을 개변 변수에 담을 수 있게 하는 [JS 표현식]
+        (중요)구조분해할당은 JSON 데이터로 변환 시 유용함
+    </title>
+    <!-- 부트스트랩 CDN -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/font.css">
+    <style>
+        body {
+            line-height: 2;
+        }
+    </style>
+
+    <script>
+        // 1. 배열
+        // 배열명 list / item 0, 1 할당
+        let list = [0, 1]
+        
+
+        // 2. 객체
+        let obj = {
+            key1 : 'one',
+            key2 : 'two',
+        };
+        let {
+            // 새로운 키값 할당
+            key1 : newKey1,
+            key2 : newKey2,
+            // 객체에 새로운 키 추가
+            key3 = 'new key3 value'
+        } = obj; // 새로운 객체에 재할당
+    </script>
+</head>
+
+<body>
+
+</body>
+    
+</html>

@@ -1,0 +1,81 @@
+@charset "utf-8";
+/* 공통 css */
+html {
+    font-size: 62.5%;
+}
+body {
+
+    font-family: 'Noto Sans KR', sans-serif;
+}
+#wrap {
+    width: 960px;
+    margin: 0 auto;
+}
+
+/* Header */
+header {
+    width: 100%;
+    background-color: rgb(221, 131, 191);
+}
+header::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+header .logo {
+    width: 96px;
+    float: left;
+}
+header nav {
+    float: right;
+}
+header ul {
+    display: flex;
+}
+header ul li {
+    width: 40px;
+    margin-top: 40px;
+}
+
+/* Article */
+article {
+    background-color: #e3bb6a;
+    text-align: center;
+    padding: 16px 0;
+    color: #fff;
+}
+article h2 {
+    font-size: 24px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+}
+article p {
+    font-family: 'oswald', cursive;
+    font-size: 21px;
+    line-height: 24px;
+    font-weight: 600;
+}
+/* Gallery */
+.gallery {
+    padding: 10px 0;
+}
+.gallery ul li {
+    width: 200px;
+    margin: 10px;
+    /* display: flex; */
+}
+.gallery ul li img {
+    max-width: 100%;
+    width: 100%;
+    border-radius: 5px;
+}
+
+/* Footer */
+footer {
+    background-color: #b1adac;
+    color: #000;
+    text-align: center;
+    padding: 20px;
+    font-size: 13px;
+    font-family: 'Montserrat', sans-serif;
+}

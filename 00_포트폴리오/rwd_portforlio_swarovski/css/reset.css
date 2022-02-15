@@ -1,0 +1,38 @@
+@charset "UTF-8";
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-weight: normal;
+    font-size: 16px;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+li {
+    list-style: none;
+}
+img {
+    vertical-align: top;
+}
+
+/* 플롯해제 - 클리어픽스 */
+.cf {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+/* 모든 환경에 안보여되 되지만, 반드시 입력해야 할 HTML태그가 존재(웹접근성)
+해당 요소를 숨기기 위해 사용되는 Class */
+.blind {
+    position: absolute;
+    width: 0;
+    height: 0;
+    line-height: 0;
+    text-indent: -9999px;
+    overflow: hidden;
+}

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SWAROVSKI</title>
+  <!-- Meta Data : FaceBook -->
+  <meta name="author" content="al">
+  <meta name="description" content="프로젝트 상세 설명">
+  <meta property="og:image" content=""> <!-- 링크전송 시 카드형으로 나타나는 내용 -->
+  <meta property="og:title" content="프로젝트 타이틀">
+  <meta property="og:description" content="프로젝트 상세설명">
+  <meta property="og:url" content="프로젝트 url 주소">
+  <meta property="og:locale" content="ko_KR"> <!-- 메인서비스 국가 -->
+  <meta property="og:site_name" content="프로젝트 사이트 이름">
+  <meta property="og:type" content="프로젝트 종류">
+  <!-- 부트스트랩 CDN -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <!-- Favicon PC / Mobile -->
+  <link rel="shortcut icon" href="./image/">
+  <link rel="apple-touch-icon=precomposed" href="./image/">
+  <!-- CSS -->
+  <link rel="stylesheet" href="./css/reset.css">
+  <link rel="stylesheet" href="./css/notosans_kr_CDN.css">
+  <link rel="stylesheet" href="./css/font.css">
+  <!-- 프로젝트 페이지 CSS -->
+  <link rel="stylesheet" href="./css/rwd_template.css">
+
+  <!-- 페이지 스타일 -->
+  <style>
+    body {
+      font-family: 'Noto Sans Kr', 'Roboto', sans-serif;
+      color: #1b1b1b;
+      text-align: center;
+      line-height: 2.4;
+    }
+    /* 1. Header */
+    .header {
+      height: 60px;
+      background-color: red;
+    }
+    /* 2. Slider */
+    .slider {
+      height: 520px;
+      background-color: orange;
+    }
+    /* 3. Content */
+    .content {
+      background-color: green;
+    }
+    .content .display_section,
+    .content .promotion_section,
+    .content .work_section,
+    .content .blog_section,
+    .content .contact_section {
+      height: 200px;
+    }
+    .content .display_section {background-color: pink;}
+    .content .promotion_section {background-color: rebeccapurple;}
+    .content .work_section {background-color: palegreen;}
+    .content .blog_section {background-color: palevioletred;}
+    .content .contact_section {background-color: paleturquoise;}
+
+    /* 4. Footer */
+    .footer {
+      height: 80px;
+      background-color: indianred;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="wrap">
+    <!-- Header -->
+    <header class="header">
+      1. 로고&메뉴 | 태블릿+모바일 : 토글 버튼 출력(제이쿼리)
+    </header>
+    <!-- /Header -->
+    <!-- 2. Slide -->
+    <article class="slider">
+      2-1. 슬라이더 영역 : 사이트 Identity 이미지가 포함되는 영역 | 가로너비 전체 사용
+    </article>
+    <!-- 2. /Slide -->
+    <!-- 3. Contents -->
+    <section class="content">
+      <!-- 3-1. Display -->
+      <section class="display_section">
+        3-1-1. 디스플레이 영역 : 타이틀, 내용 | PC_가로배치 / 태플릿+모바일_세로배치
+      </section>
+      <!-- /3-1. Display -->
+      <!-- 3-2. Promotion -->
+      <section class="promotion_section">
+        3-2-1. 프로모션 영역 : 아이콘, 타이틀, 간단한 내용, 광고를 위한 영역<br>
+                                    흥미를 위해 아이콘 배치. 클릭 유도.<br>
+                                    PC+태블릿_가로배치 / 모바일_세로배치
+      </section>
+      <!-- /3-2. Promotion -->
+
+      <hr class="divider">
+
+      <!-- 3-3. Portfolio -->
+      <section class="work_section">
+        3-3-1. 최근 작업영역 : 최근에 작업한 작업물을 보여주기 위한 영역<br>
+                                    최대한 잘 보이도록 퀄리티 높은 이미지 사용<br>
+                                    PC+태블릿_가로배치 / 모바일_세로배치
+      </section>
+      <!-- 3-3. /Portfolio -->
+      <!-- 3-4. Blog -->
+      <section class="blog_section">
+        3-4-1. 블로그 영역 : 최근에 작성한 글들을 보여주는 영역<br>
+                                  PC_가로배치 / 태블릿+모바일_세로배치
+      </section>
+      <!-- 3-4. /Blog -->
+      <!-- 3-5. Contact -->
+      <section class="contact_section">
+        3-5-1. 연락처 영역 : 웹사이트 관리자에게 연락하기 위한 영역<br>
+                                  PC_가로배치 / 태블릿+모바일_세로배치
+      </section>
+      <!-- 3-5. /Contact -->
+    </section>
+    <!-- 3. /Contents -->
+    <!-- 4. Footer -->
+    <footer class="footer">
+      4-1. 푸터영역 : 웹사이트 저작권, 회사주소, 회사지도, 로고 등을 보여주는 영역
+    </footer>
+    <!-- 4. /Footer -->
+  </div>
+
+
+
+
+
+
+  <!-- HTML5 JS File -->
+  <script src="./js/html5shiv.js"></script>
+  <script src="./js/respond.src.js"></script> <!-- 반응형 -->
+  <!-- jQ PlugIn -->
+  <script src="./js/jquery-1.12.4.min.js"></script>
+  <script src="./js/jquery-3.3.1.min.js"></script>
+  <script src="./js/jquery-3.4.1.min.js"></script>
+  <!-- PreFix Ree -->
+  <script src="./js/prefixfree.min.js"></script>
+  <!-- 프로젝트 페이지 JS -->
+  <script src="./js/rwd_template.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,50 @@
+#wrap {
+  width: 1280px;
+  margin: 0 auto;
+  text-align: center;
+}
+#wrap header {
+  height: 140px;
+  background: #222;
+}
+#wrap header>h1 {
+  font-size: 2rem;
+  color: #fff;
+  height: 80px;
+  line-height: 80px;
+  letter-spacing: -1px;
+}
+#wrap header>nav {
+  background: #555;
+}
+#wrap header ul {
+  width: 960px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+#wrap header ul li {
+  height: 60px;
+  line-height: 60px;
+}
+#wrap header ul li a {
+  color: #fff;
+  font-size: 1rem;
+}
+#wrap img {
+  width: 100%;
+}
+footer {
+  width: 100%;
+  text-align: center;
+  font-size: 0.8rem;
+  height: 40px;
+  line-height: 48px;
+  background-color: #ccc;
+  color: #fff;
+}
+footer span {
+  color: rgb(2,76,150);
+  font-weight: 500;
+  letter-spacing: -1px;
+}

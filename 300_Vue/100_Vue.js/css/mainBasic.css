@@ -1,0 +1,13 @@
+@charset "utf-8";
+
+/* JSON데이터 렌더링 */
+img {
+    width: 100%;
+}
+
+h3 {
+    display: flex;
+}
+h3>div {
+    margin: 2%;
+}

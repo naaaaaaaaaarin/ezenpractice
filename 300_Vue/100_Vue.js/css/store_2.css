@@ -1,0 +1,142 @@
+@charset "utf-8";
+/* 공통 css */
+html {
+    font-size: 62.5%;
+}
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+    background: url("../image/bg.jpg") no-repeat;
+    background-size: cover;
+}
+#wrap {
+    width: 960px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+/* Header */
+header {
+    width: 100%;
+    background-color: rgb(221, 131, 191);
+}
+header::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+header .logo {
+    width: 96px;
+    float: left;
+}
+header .logo img {
+    width: 96px;
+}
+header nav {
+    float: right;
+}
+header ul {
+    display: flex;
+}
+header ul li {
+    width: 40px;
+    margin-top: 40px;
+}
+
+/* Article */
+article {
+    background-color: #e3bb6a;
+    text-align: center;
+    padding: 16px 0;
+    color: #fff;
+}
+article h2 {
+    font-size: 24px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+}
+article p {
+    font-family: 'Nanum Pen Script', cursive; 
+    font-size: 21px;
+    line-height: 24px;
+    font-weight: 600;
+}
+/* Gallery */
+.gallery {
+    /* padding: 10px 0; */
+    /* (10/960)*100 */
+    padding: 1.0416% 0;
+}
+.gallery ul::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+.gallery ul li {
+    /* width: 200px; */
+    /* (200/960)*100 */
+    width: 20.83%;
+    width: 24%;
+    /* margin: 10px; */
+    /* (10/960)*100/2 */
+    margin: 0.52083%;
+    margin: 0.5%;
+    float: left;
+}
+.gallery ul li img {
+    max-width: 100%;
+    width: 100%;
+    border-radius: 5px;
+}
+
+/* Footer */
+footer {
+    background-color: #b1adac;
+    color: #000;
+    text-align: center;
+    padding: 20px;
+    font-size: 13px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* 추가 반응형 css - PC퍼스트 */
+/* 공통영역 css */
+/* 추가 햄버거 메뉴 */
+header {
+    position: relative;
+}
+header nav:nth-child(3) {
+    position: absolute;
+    right: 2%;
+    top: 0;
+    z-index: 999;
+    transform: translateY(-3px);
+    display: none;
+}
+header nav:nth-child(3) i {
+    font-size: 2.4rem;
+    color: #fff;
+}
+
+/* 768이하 - 2단*/
+@media screen and (max-width:768px){
+    header nav:nth-child(3){
+        display: none;
+    }
+    .gallery ul li {
+        width: 48%;
+        margin: 1%;
+    }
+}
+/* 375이하 */
+@media screen and (max-width:375px){
+    header nav:nth-child(2) {
+        display: none;
+    }
+    header nav:nth-child(3) {
+        display: block;
+    }
+    .gallery ul li {
+        width: 98%;
+        margin: 1%;
+    }
+}

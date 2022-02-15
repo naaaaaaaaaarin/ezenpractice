@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>고정그리드 -> 가변그리드 계산하기</title>
+    <!-- 부트스트랩 CDN -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/notosans_kr_CDN.css">
+    <link rel="stylesheet" href="./css/font.css">
+    <!-- System Font CSS -->
+    <!-- <link rel="stylesheet" href="./css/system_font.css"> -->
+    <!-- no scroll CSS -->
+    <!-- <link rel="stylesheet" href="./css/no_scrollbar.css"> -->
+    <!-- HTML5 JS File -->
+    <script src="./js/html5shiv.js"></script>
+    <script src="./js/respond.src.js"></script> <!-- 반응형 -->
+    <!-- jQ PlugIn -->
+    <script src="./js/jquery-1.12.4.min.js"></script>
+    <script src="./js/jquery-3.3.1.min.js"></script>
+    <script src="./js/jquery-3.4.1.min.js"></script>
+    <!-- PreFix Ree -->
+    <script src="./js/prefixfree.min.js"></script>
+
+
+    <!-- 프로젝트 페이지 JS -->
+    
+    <!-- 프로젝트 페이지 CSS -->
+    <style>
+        /* 960px 기준값으로 정할 경우 */
+        #wrap {
+            width: 960px;
+            width: 90%;
+            margin: 30px auto;
+        }
+        header {
+            height: 120px;
+            background-color: red;
+        }
+        header h1 {
+            font-size: 36px;
+            color: #fff;
+            text-align: center;
+        }
+        section {
+            width: 600px;
+            /* (600/960)*100 */
+            width: 62.5%;
+            height: 400px;
+            background-color: green;
+            float: left;
+        }
+        aside {
+            width: 360px;
+            /* (360/960)*100 */
+            width: 37.5%;
+            height: 400px;
+            background-color: blue;
+            float: right;
+        }
+        footer {
+            height: 120px;
+            background-color: yellowgreen;
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <header>
+            <h1>가변그리드</h1>
+        </header>
+        <section>
+            <h2>Contents</h2>
+        </section>
+        <aside>
+            <h2>aside</h2>
+        </aside>
+        <footer>
+            <p>footer</p>
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,96 @@
+@charset "utf-8";
+/* 공통 css */
+html {
+    font-size: 62.5%;
+}
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+    background: url("../image/bg.jpg") no-repeat;
+    background-size: cover;
+}
+#wrap {
+    width: 960px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+/* Header */
+header {
+    width: 100%;
+    background-color: rgb(221, 131, 191);
+}
+header::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+header .logo {
+    width: 96px;
+    float: left;
+}
+header .logo img {
+    width: 96px;
+}
+header nav {
+    float: right;
+}
+header ul {
+    display: flex;
+}
+header ul li {
+    width: 40px;
+    margin-top: 40px;
+}
+
+/* Article */
+article {
+    background-color: #e3bb6a;
+    text-align: center;
+    padding: 16px 0;
+    color: #fff;
+}
+article h2 {
+    font-size: 24px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+}
+article p {
+    font-family: 'Nanum Pen Script', cursive; 
+    font-size: 21px;
+    line-height: 24px;
+    font-weight: 600;
+}
+/* Gallery */
+.gallery {
+    /* padding: 10px 0; */
+    /* (10/960)*100 */
+    padding: 1.0416% 0;
+}
+.gallery ul::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+.gallery ul li {
+    /* width: 200px; */
+    width: 22.916%;
+    /* margin: 10px; */
+    /* (10/960)*100 */
+    margin: 1.0416%;
+    float: left;
+}
+.gallery ul li img {
+    max-width: 100%;
+    width: 100%;
+    border-radius: 5px;
+}
+
+/* Footer */
+footer {
+    background-color: #b1adac;
+    color: #000;
+    text-align: center;
+    padding: 20px;
+    font-size: 13px;
+    font-family: 'Montserrat', sans-serif;
+}
