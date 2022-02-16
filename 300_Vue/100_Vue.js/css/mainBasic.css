@@ -1,4 +1,7 @@
 @charset "utf-8";
+body {
+    padding-bottom: 40px;
+}
 
 /* JSON데이터 렌더링 */
 img {
@@ -10,4 +13,29 @@ h3 {
 }
 h3>div {
     margin: 2%;
+}
+
+/* 3-2 */
+.btns {
+    display: flex;
+    flex-direction: column;
+}
+.btns span {
+    color: red;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+/* 4. 폼 동기화 */
+h5>p {
+    padding: 24px 0;
+}
+
+/* 6. 트랜지션, 애니메이션 */
+.v-enter-active,
+.v-leave-active {
+    transition: opacity 1s;
+}
+.v-enter, .v-leave-to {
+    opacity: 0;
 }

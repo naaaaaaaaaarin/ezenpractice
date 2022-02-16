@@ -31,6 +31,24 @@ let swiper = new Swiper(".mySwiper", {
     }
 });
 
+
+// 사이드페이지
+// 사이드 햄버거 클릭 시 사이드페이지 나오기 (body 고정)
+const sideHam = document.querySelector('#sideHam');
+const sidePage = document.querySelector('.side_menu_page');
+const body = document.querySelector('body');
+
+const openSide = () => {
+    body.style.overflow = 'hidden';
+    body.classList.add('body_active');
+};
+sideHam.addEventListener('click', openSide);
+
+// 사이드메뉴 화살표 회전, 하단메뉴 출력
+$('.s_top').click(function(){
+    $(this).next().stop().slideToggle(300);
+    // $(this).children('.plus').last().css({'transform':'rotate(360deg)'});
+});
 // 블랙패밀리 
 let tab = $('.black_family .left ul').find('li');
 // console.log(tab);

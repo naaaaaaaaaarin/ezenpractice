@@ -48,10 +48,10 @@ function tab_menu(num){
 
 // 준비중 모달창 팝업
 const modal = document.querySelector('.modal-overlay');
-const modalBtn_Open = document.querySelector('.modalOpen');
+let modalBtn_Open = document.querySelector('.modalOpen');
 const modalBtn_Close = document.querySelector('.close-area');
 const body = document.querySelector('body');
-console.log(modalBtn_Close);
+console.log(modalBtn_Open);
 
 // .modalOpen을 클릭하면 모달창 팝업 (body 스크롤X)
 /* modalBtn_Open.addEventListener('click', () => {

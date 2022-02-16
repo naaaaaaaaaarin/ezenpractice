@@ -22,7 +22,14 @@
             <p>{{ message }}</p>
             <p>{{ message }}</p>
             <p>{{ message2 }}는 {{text}}입니다</p>
+
+            <!-- 이미지 바인딩 -->
+            <img v-bind:src="imageSrc">
+            <!-- 약식 -->
+            <img :src="imageSrc2">
+            <img :src="`./image/${imageSrc3}`">
         </h1>
+
         <!-- 2. 반복 렌더링
             : 템플릿 data 옵션에 등록한 배열 또는 객체에 v-for 디렉티브를 적용하여 반복 렌더링 -->
         <h2>
@@ -38,6 +45,56 @@
                 <p>{{photo.desc}}</p>
             </div>
         </h3>
+
+
+        <!-- 3-1. 이벤트 사용 : DOM 이벤트 연결시(바인딩) v-on 디렉티브 사용 -->
+        <!-- jQuery구문 
+        $('선택자').on('이벤트명', 이벤트리스너)-->
+        <!-- 자바스크립트 구문
+        DOM객체.addEventListener('이벤트명',이벤트리스트)-->
+        <h3 class="btns">
+            <!-- 버튼 클릭시 템플릿의 이벤트리스너 호출 -->
+            <button v-on:click="eventClick" class="form-control">Click</button>
+            <!-- 3-2. 이벤트 사용 js 사용-->
+            <!-- <button v-on:click="countPlus" class="form-control">PLUS_1</button>
+            <button v-on:click="countMinus" class="form-control">MINUS_1</button> -->
+            <!-- 3-2. 이벤트 인라인 사용 -->
+            <button v-on:click="counter += 1" class="form-control">PLUS_1</button>
+            <button v-on:click="counter -= 1" class="form-control">MINUS_1</button>
+            <p>위 버튼을 클릭한 횟수는 <span>{{counter}}</span>번 입니다</p>
+        </h3>
+
+        <!-- 4. 폼 동기화 : 데이터와 폼 항목 바인딩시 v-model 디렉티브 사용-->
+        <!-- 폼에 입력 또는 선택을 하면 곧바로 데이터와 DOM에 반영 -->
+        <h5>
+            <input type="text" v-model="inputValue" placeholder="입력하면 동기화가 됩니다" class="form-control">
+            <!-- 입력폼 내용이 여기에 동기화 -->
+            <p>{{inputValue}}</p>
+            <!-- .number 장식자를 추가하면 입력값을 숫자로 인식 -->
+            <input v-model.number="numValue" placeholder="숫자로 인식됩니다" class="form-control">
+            <p>{{numValue}}</p>
+        </h5>
+
+        <!-- 5. 조건문 분기 : 조건에 따라 코드블록 렌더링, 템플릿기반 조건분기 가능. v-if 디렉티브 사용 -->
+        <h5>
+            변수값이 true일때만 렌더링(브라우저에 그려짐)
+            <p v-if="show">v-if 참일때만 실행</p>
+            <p v-if="hide">v-if 참일때만 실행</p>
+            <!-- 이벤트 연동 -->
+            <p v-if="eventShow">Event v-if</p>
+            <!-- 값이 변하면서 보였다 안보였다 하기 -->
+            <button v-on:click="eventShow = !eventShow" class="form-control">Event v-if</button>
+        </h5>
+        <!-- 6. 트랜지션, 애니메이션 : CSS와 연동 -->
+        <h6>
+            <!-- <button v-on:click="test" class="form-control">트렌지션 적용</button> -->
+            <button v-on:click="transition = !transition" class="form-control">트렌지션 적용</button>
+            <!-- 사용자정의 태그(커스텀태그) 사용 -->
+            <!-- 참조 : https://kr.vuejs.org/v2/guide/transitioning-state.html -->
+            <transition>
+                <p v-if="transition">트랜지션 실행하기</p>
+            </transition>
+        </h6>
     </div>
 
 <!-- Vue CORE JS -->
